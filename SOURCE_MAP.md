@@ -4,6 +4,8 @@ Stand 19.10.2026. Gelesener lokaler Quellstand `open-research-branches-childdron
 
 | Auf der Seite | Quelle / tatsächlich gelesener Umfang | Status und Grenze |
 | --- | --- | --- |
+| Visueller 24-Sekunden-Film | `dist/vision-film.js`, `dist/assets/observer-valley-20261019.png` und daraus gerendertes `dist/assets/c-drohne-observer-film.mp4` | Originale synthetische Konzeptvisualisierung. Die Flugbewegung, Beobachtungsringe und Nachrichtenspuren sind programmiert; sie sind keine Sensormessung. |
+| Filmfall: A beobachtet eine Person, B ein Hindernis, C leitet A weiter | Feste Timeline und Grafiken in `dist/vision-film.js` | Drei dargestellte Berichte, zwei deklarierte Ursprungssichten innerhalb der synthetischen Szene. Der Film zeigt eine gewünschte Benutzererfahrung, keine validierte Fusion realer Sensorsignale. |
 | Vier Git-Commits | öffentlicher Draft-PR #35, Commit-Liste mit `7039af1`, `3f061a0`, `c5b63d9`, `0beafbd`, am 19.10.2026 auf GitHub eingesehen | Öffentliche Git-Spur des Forschungszweigs; getrennt von der lokalen Historie dieser Präsentationsseite. |
 | Objekt-offene Beobachtung, flüchtige Verarbeitung und Testmaskierung | `branches/childdrone-relevance-review/README.md` vollständig; `AUDIT_2026-10-18.md` und `TECHNOLOGY_PREP.md` vollständig | Synthetischer lokaler Softwarestand. Kein realer Sensor oder Flugversuch. |
 | Drei Weitergaben, ein deklarierter Ursprung | dieselben Dateien, besonders Abschnitt „Fürsorge“ und das Forschungs-Audit; Browserprobe der neuen Website | Der Klick ist eine Illustration des deklarierten Ursprungs, kein unabhängiger Zeugennachweis. |
@@ -18,6 +20,12 @@ Stand 19.10.2026. Gelesener lokaler Quellstand `open-research-branches-childdron
 | Rechercheweg und „White-Hat“-Stil | `AGENTS.md`, `START_HERE_AI.md`, `PUBLICATION_POLICY.md` und die genannten Audits | Darstellung der Methode, keine Behauptung über eine externe Autorisierung oder bestandene Sicherheitsprüfung. |
 | Person und Beruf | Selbstauskunft des Projektinitiators: „Arbeitgeber-Service“ | Keine spezifische Behörde, Besoldung, Ausbildung oder Sicherheitsfreigabe behauptet. |
 | Vergütete Machbarkeitsstudie | vom Nutzer gewünschte mögliche Zusammenarbeit; lokale Anfragefassung V3 | Angebot zur Verhandlung. Kein Auftrag, Betrag oder Ergebnis zugesagt. |
+
+## Forschungsbezug und prüfbare Eigenleistung
+
+Mehrere UAVs, aktive Beobachtungsplanung und probabilistische Fusion sind bereits Forschungsgegenstand: [Habibi und Marques (2026)](https://arxiv.org/abs/2606.10986) untersuchen diese Kombination für Geländekartierung im Agrarbereich. [Agrawal und Cleland-Huang (2021)](https://ojs.aaai.org/index.php/HCOMP/article/view/18936) untersuchen, wie Erklärungen autonomer Schwarmentscheidungen die menschliche Lagewahrnehmung beeinflussen. Beide Arbeiten begründen keine Behauptung, dass C-DROHNE diese Techniken bereits integriert oder einen Neuheitsanspruch auf den Schwarm an sich hat.
+
+Die konkrete C-DROHNE-Frage verbindet die Bewegungsidee mit **Herkunft und Abhängigkeit von Meldungen**: Erkennt eine Fachperson in einer Darstellung zuverlässig, dass C nur A weitergegeben hat, während B eine zweite Perspektive liefert? Die nächste sinnvolle Prüfung ist ein verblindeter Vergleich desselben Falls in zwei Ansichten mit vorab festgelegter Trefferfrage und Bearbeitungszeit. Erst danach ließe sich ein Nutzen dieser Darstellung behaupten. Sensorik, Flugregelung, Kommunikationsrobustheit und Schutz persönlicher Daten bleiben eigenständige Entwicklungs- und Prüfstrecken.
 
 ## Ausgelassener Rest
 

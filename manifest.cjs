@@ -5,7 +5,7 @@ const assert = require('node:assert/strict');
 
 const root = path.join(__dirname, 'dist');
 const manifestPath = path.join(root, 'manifest.json');
-const allowed = new Set(['.html', '.css', '.js', '.mjs', '.json', '.png']);
+const allowed = new Set(['.html', '.css', '.js', '.mjs', '.json', '.png', '.mp4']);
 const forbiddenText = [
   ['private-key-block', /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/],
   ['credential-prefix', /(?:sk-proj-|ghp_|gho_|github_pat_)[A-Za-z0-9_-]{8,}/],

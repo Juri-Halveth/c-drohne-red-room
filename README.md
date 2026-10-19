@@ -4,7 +4,7 @@ Stand: 19.10.2026. Die Website liegt vollständig in `dist/`. Sie ist eine öffe
 
 ## Öffnen
 
-`dist/index.html` im Browser öffnen. Es werden keine externen Skripte, Schriften, Kameras, Konten, Analysewerkzeuge oder APIs verwendet. Die externen Links im Forschungsarchiv öffnen erst auf Klick.
+`dist/index.html` im Browser öffnen. Die [24-Sekunden-Systemdemo](dist/vision.html) zeigt den beabsichtigten Ablauf als eigenständigen Konzeptfilm: Anflug, Beobachtung einer Person und eines Hindernisses, Austausch im Schwarm und eine begründete Lagefrage. Es werden keine externen Skripte, Schriften, Kameras, Konten, Analysewerkzeuge oder APIs verwendet. Die externen Links im Forschungsarchiv öffnen erst auf Klick.
 
 Für die Browserprüfungen: `npm install`, `npx playwright install chromium` und `npm test`. Bei einem bereits installierten Chromium kann `CHROME_PATH` auf dessen ausführbare Datei zeigen. Die statische Seite selbst benötigt weder npm noch einen Server.
 
@@ -34,6 +34,8 @@ Für die Browserprüfungen: `npm install`, `npx playwright install chromium` und
 ## Gestaltungsasset
 
 `dist/assets/red-room-entrance.png` wurde für diese Website mit dem eingebauten Bildgenerator erstellt. Prompt: „Cinematic wide website hero background, stylized editorial near-future noir; open industrial garage doorway with welcoming crimson neon research room, wet pavement, small anonymous seated silhouette at far right gesturing toward the open door; humane, intriguing, dark negative space for HTML text; no text, logos, uniforms, drones or weapons.“
+
+`dist/assets/observer-valley-20261019.png` ist eine ebenfalls eigens generierte synthetische Landschaft. Der Film `dist/assets/c-drohne-observer-film.mp4` wurde mit `dist/vision-film.js` als 24-Sekunden-Animation dieser Szene gerendert. Er ist eine Visualisierung der Produktidee, keine Aufnahme eines Flugversuchs. Die ausführbare Arbeitsprobe besteht weiterhin aus den lokal prüfbaren Browserfällen.
 
 ## Quellen und Status
 
