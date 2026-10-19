@@ -1,6 +1,6 @@
 {
   "schema": "C_DROHNE_STATIC_PACKAGE_V1",
-  "generatedAt": "2026-10-19T00:21:11.404Z",
+  "generatedAt": "2026-10-19T13:58:09.018Z",
   "scope": "Bytes of this local static package only; no authorship, deployment or field-effect claim",
   "files": [
     {
@@ -12,6 +12,21 @@
       "path": "app.js",
       "bytes": 27528,
       "sha256": "ee9504b0e50fd90688f6062626e45a946805b4d1e3dfc3fdec22b58ede3d7f93"
+    },
+    {
+      "path": "assets/c-drohne-film-poster.png",
+      "bytes": 870536,
+      "sha256": "4b4d6d4a4c00c03f0c97cdd4bfe9e3578e16121923d5940cbabde7907743e2fb"
+    },
+    {
+      "path": "assets/c-drohne-observer-film.mp4",
+      "bytes": 3445340,
+      "sha256": "1af9899390f35304996aa25c40a0e40bc76217c92c7435a598a725fb02495155"
+    },
+    {
+      "path": "assets/observer-valley-20261019.png",
+      "bytes": 2364222,
+      "sha256": "2334b496654b951f3b00c0bcff96083bbd77b1c683a2b64f0d51b2228ea972c0"
     },
     {
       "path": "assets/red-room-entrance.png",
@@ -40,8 +55,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 34606,
-      "sha256": "a15e9fbed84c4bd1673fb9d1e11390d67e797703900ae595f1e998876e2edddb"
+      "bytes": 34740,
+      "sha256": "c653765a61c0a823e6e457a81e2e853e2cc23b5162d6781534a44b40f9ba3419"
     },
     {
       "path": "leseraum.html",
@@ -95,8 +110,23 @@
     },
     {
       "path": "style.css",
-      "bytes": 33185,
-      "sha256": "97d7d98513bf75b79e80794c7f4334bd81310b57218af0d320b658433adcbd9c"
+      "bytes": 33524,
+      "sha256": "5c50d6b9bef8478b36a7b47a6952d98d6fc7bbf95fdf379f3c172d9add066771"
+    },
+    {
+      "path": "vision-film.js",
+      "bytes": 12618,
+      "sha256": "a15ebb490e5d6ad75914d42b45d553b4f2a08d61a5aa5c20b2bd6df3bf6f48e6"
+    },
+    {
+      "path": "vision.css",
+      "bytes": 3348,
+      "sha256": "870dbc82f5c0c3b611eb496d9f12a3894547fe387587b0b9e3ab46462015d1d9"
+    },
+    {
+      "path": "vision.html",
+      "bytes": 2838,
+      "sha256": "a56a88412093280779aff1004359dd201bbcb0ba1dd6e0306974d7972a505d22"
     }
   ]
 }
