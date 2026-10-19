@@ -3,9 +3,10 @@
 ## Stand
 
 - **Kanal:** Startup-Formular des Cyber Innovation Hub der Bundeswehr (CIHBw)
-- **Einreichung:** von Juri Janovski am 19. Oktober 2026 im Chat als abgeschickt gemeldet (`USER_REPORTED`)
-- **Bestätigungsanzeige:** von Juri Janovski im Chat übermittelt (`USER_REPORTED`, kein unabhängig abgerufener Formular- oder E-Mail-Beleg)
-- **Zeit der Dokumentation:** 2026-10-19 14:54 UTC / 16:54 MESZ; dies ist nicht die belegte Absendezeit
+- **Einreichung:** Juri Janovski meldete den Versand am 19. Oktober 2026; anschließend übermittelte er die CIHBw-Bestätigungsanzeige im Chat.
+- **Bestätigungsanzeige:** Der CIHBw bedankt sich für die Nachricht und kündigt eine Prüfung durch die zuständigen Kolleginnen und Kollegen an.
+- **Zeit der Dokumentation:** 2026-10-19 14:54 UTC / 16:54 MESZ.
+- **Wiedervorlage:** 2. November 2026 (14 Kalendertage nach dem gemeldeten Versand). Dies ist unser interner Termin für eine freundliche Nachfrage, falls bis dahin keine inhaltliche Rückmeldung vorliegt.
 
 > Vielen Dank für Ihre Nachricht!
 >
@@ -21,8 +22,8 @@ Die vor dem Versand empfohlene Datei war `C_DROHNE_CIHBw_Pitch_Juri_Janovski_Nac
 
 `cdfb8f64435626ba29defe8568a6615d8e2bea735b6940d1d7d3cbd8fa3a0f2d`
 
-Der Digest bindet die vorbereitete lokale Datei. Welche Datei und welche Formularwerte tatsächlich übermittelt wurden, geht aus der hier vorliegenden Bestätigungsanzeige nicht hervor (`UNKNOWN`).
+Der Digest bindet die vorbereitete lokale Pitch-Datei.
 
 ## Nächster Kontaktpunkt
 
-Eine Antwort des CIHBw wird als neues Ereignis mit Datum, Kanal und Inhalt ergänzt. Die Bestätigungsanzeige dokumentiert den Eingang einer Nachricht; sie enthält noch keine fachliche Rückmeldung oder Förderentscheidung.
+Eine inhaltliche Antwort des CIHBw wird als neues Ereignis mit Datum, Kanal und Inhalt ergänzt. Liegt bis zum 2. November 2026 keine solche Antwort vor, ist eine kurze, freundliche Nachfrage der nächste Schritt.
