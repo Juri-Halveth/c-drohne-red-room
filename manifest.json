@@ -1,0 +1,102 @@
+{
+  "schema": "C_DROHNE_STATIC_PACKAGE_V1",
+  "generatedAt": "2026-10-19T00:21:11.404Z",
+  "scope": "Bytes of this local static package only; no authorship, deployment or field-effect claim",
+  "files": [
+    {
+      "path": "accessibility.css",
+      "bytes": 611,
+      "sha256": "925712eaa9e761b435d1dad2880cbf8749e2fa8cafd8760a8ebab2ad67cb338e"
+    },
+    {
+      "path": "app.js",
+      "bytes": 27528,
+      "sha256": "ee9504b0e50fd90688f6062626e45a946805b4d1e3dfc3fdec22b58ede3d7f93"
+    },
+    {
+      "path": "assets/red-room-entrance.png",
+      "bytes": 2203984,
+      "sha256": "5c9cdfa78b833c3c829a6129c5ee242296e572dacf1f68c741406851f1506225"
+    },
+    {
+      "path": "audit-72.html",
+      "bytes": 53493,
+      "sha256": "1bad4b1e3f31968f818590d505f3e1a744ec1283a7163935ac627a9cb929a0b0"
+    },
+    {
+      "path": "audit.css",
+      "bytes": 4709,
+      "sha256": "0cf9a284993e5f213ae33ae9dfd479e69b084b859a085d56a099d7660b06f114"
+    },
+    {
+      "path": "audit.js",
+      "bytes": 1511,
+      "sha256": "0f09f54f8724bd5e7f233eca482588a283d73ee7e4d5249ac65e5ceca9cfa74d"
+    },
+    {
+      "path": "case-fixtures.json",
+      "bytes": 2443,
+      "sha256": "a6fe303d07c565e8b97a54125df69ca6105f18f5b32bed24fb0d845d7b55d667"
+    },
+    {
+      "path": "index.html",
+      "bytes": 34606,
+      "sha256": "a15e9fbed84c4bd1673fb9d1e11390d67e797703900ae595f1e998876e2edddb"
+    },
+    {
+      "path": "leseraum.html",
+      "bytes": 9916,
+      "sha256": "a766f8a6dbb1a8f98259d610867a0c3fd1b687c3821d892e71482cc1656b21d6"
+    },
+    {
+      "path": "measurement-core.mjs",
+      "bytes": 9472,
+      "sha256": "d06b62301317fe4268d520673cf24d31197fe95582a4f2a8433ceefd10653eaf"
+    },
+    {
+      "path": "measurement-lab.html",
+      "bytes": 12408,
+      "sha256": "0a30cbb712f0496b6be4c1349560c7a3efc5d6ee0e0bce3c485426cd571f9d6d"
+    },
+    {
+      "path": "measurement-results.json",
+      "bytes": 15017,
+      "sha256": "59f06f319b87b2cdd452ca44b65967d8ac6c03713310bcd3faa9f1c5dc775885"
+    },
+    {
+      "path": "privacy-demo.html",
+      "bytes": 8431,
+      "sha256": "fe50c40bf89dbf9c074baabdd7d767bdb14c82aaf08716bdf3890524792f06e4"
+    },
+    {
+      "path": "privacy-demo.js",
+      "bytes": 5898,
+      "sha256": "0f8403bcdc3224f48949fae9f14964078a4803e0348f6538f4e322601d0f56d4"
+    },
+    {
+      "path": "privacy-state.js",
+      "bytes": 6699,
+      "sha256": "024a719ce5b870d59e08268dc573ad7aa663a9c9d92271acd8d0a65cdb818c71"
+    },
+    {
+      "path": "privacy-state.test.mjs",
+      "bytes": 5762,
+      "sha256": "26be24aa6958542857825d595fbd6e39e11ccd5679cd8cab3841a024e636e111"
+    },
+    {
+      "path": "reading.css",
+      "bytes": 2469,
+      "sha256": "09a3a7db16a4efda8ccaf3ec0b950f77c8793173dc8cbaaac17c687d3fc7ae3f"
+    },
+    {
+      "path": "rechte.html",
+      "bytes": 3299,
+      "sha256": "493c3d87beb09eb6f33eff8161c6f1eea80242cf15d58dbd0b01db0cb6ad8f52"
+    },
+    {
+      "path": "style.css",
+      "bytes": 33185,
+      "sha256": "97d7d98513bf75b79e80794c7f4334bd81310b57218af0d320b658433adcbd9c"
+    }
+  ]
+}
