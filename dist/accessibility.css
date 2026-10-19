@@ -1,0 +1,18 @@
+/* Add after style.css and each page-specific stylesheet. Browser-only fixes
+   verified by accessibility-qa.cjs; no claims about screenreader behavior. */
+
+:where(a, button, input, select, summary):focus-visible {
+  outline: 3px solid #8de4e7;
+  outline-offset: 3px;
+}
+
+/* The audit's search and status filters do nothing when scripting is off.
+   Keep the static section jump links and all 72 answer cards available. */
+@media (scripting: none) {
+  .audit-page .audit-controls > label,
+  .audit-page .audit-controls > input,
+  .audit-page .audit-filters,
+  .audit-page #audit-count {
+    display: none;
+  }
+}

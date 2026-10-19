@@ -1,0 +1,72 @@
+1|SEITE|Der Einstieg trennt Forschungsentwurf, Browserfall und nicht vorhandenes Fluggerät.|Unvorbereitete Besuchende sollen diese drei Ebenen nach einer Minute selbst zuordnen.
+2|SEITE|Nachbarn mit derselben Nachricht und der Unwetterfall stehen im ersten und zweiten Abschnitt.|Eine Person soll Problem und offene Weglage ohne Erklärung benennen.
+3|SEITE|Falter sind direkt an der Szene als Gestaltung bezeichnet; der Fall trägt „synthetisch“ und eigene Eingaben.|Ohne Begleittext fragen, ob eine echte Drohne oder Bilderkennung erwartet wird.
+4|SEITE|Der Fall ist vom Eingang mit einem Klick erreichbar; bei 320 × 667 Pixeln liegt der Direktlink im ersten Bildschirm. Die zwei Erzählwege sind freiwillig.|Zeit und Fehlklicks bis zum Fall mit unvorbereiteten Personen messen.
+5|TEILWEISE|Die neue Betroffenenperspektive erklärt möglichen Schaden und einen Korrekturweg als Entwicklungsauftrag.|Einen synthetischen Einwand bis zur Rückmeldung durchspielen, bevor ein Pilot startet.
+6|TEILWEISE|Der Einstieg erklärt ausdrücklich, dass CHILDDROHNE keine Kinderüberwachung bezeichnet.|Eltern ohne Vorwissen den Namen und Zweck getrennt erklären lassen.
+7|SEITE|„Den Fall direkt prüfen“ ist sofort sichtbar; Code, Fragen und Gespräch haben eigene Wege.|Erste sinnvolle Aktion in einem unmoderierten Fünf-Minuten-Test beobachten.
+8|TEILWEISE|Drei Texte durchlaufen Herkunft, Zeit und offenes Ergebnis; menschliche Prüfung ist als nächster Schritt benannt.|Ein echtes menschliches Prüfprotokoll ist noch nicht implementiert.
+9|SEITE|app.js berechnet fünf Varianten aus festen Meldungen; case-fixtures.json bindet Eingaben und Sollzustände.|Eine zweite Person soll den lokalen Browserfall aus den Dateien reproduzieren.
+10|SEITE|Die Objektwahl erfolgt per Klick; die Szene enthält keinen Bildklassifikator und keine Entscheidungsfunktion.|Ein künftiger Bildadapter muss Beobachtung, Deutung und Entscheidung getrennt ausgeben.
+11|OFFEN|Die Browserseite verarbeitet keine Bilder. Der verlinkte Node-Versuch maskiert im vorgesehenen Speicherpfad; Nebenpfade sind nicht inventarisiert.|Synthetischen Canary durch Vorschau, temporäre Dateien, Logs, Fehlerpfade und Backups prüfen.
+12|OFFEN|Der Browserfall prüft nur deklarierte copiedFrom- und origin-Felder; eine gefälschte Kennung kann er nicht authentisieren.|Gefälschte, fehlende und widersprüchliche Kennungen mit einem getrennten Herkunftsbeleg vergleichen.
+13|OFFEN|Der Kinderwagen zeigt die Grenze eines groben Labels: Über den Inhalt ist nichts beobachtet.|Zwei plausibel deutbare Testformen mit Kontextverlust und offenem Ergebnis in einer Fixture prüfen.
+14|TEILWEISE|Alte, fehlende und widersprüchliche Zeit werden als offen behandelt; Eingangszeit und Ereigniszeit sind noch nicht getrennt.|Verspätete Zustellung bei identischer Ereigniszeit als eigenen Test hinzufügen.
+15|SEITE|Die Forschungskarten nennen synthetische Codetests ohne Feldfehlerrate; 13/13 vorhandene Node-Tests wurden lokal bei gebundenem Commit bestanden.|Testmenge, Fehlerzählung und Vergleichsmaßstab für eine spätere Wirksamkeitsstudie vorab binden.
+16|TEILWEISE|Browserquelle und Fixture sind lokal lesbar; Node-Version, Commit, drei Testdateien und ein 13/13-Lauf sind dokumentiert.|Eine unabhängige Person soll beide Pakete ohne mündliche Hilfe starten und Abweichungen melden.
+17|SEITE|Ein versperrter Hilfsweg nach Unwetter ist der einzelne nicht gewaltsame Prüffall.|Nur synthetische Fälle in den ersten Vergleich aufnehmen.
+18|SEITE|Die Auswertung markiert offene Lage und verweist auf eine zuständige Person; sie gibt keinen Aktionsbefehl aus.|Ein späteres Schema braucht getrennte Felder für Beobachtung, Deutung und menschliche Entscheidung.
+19|TEILWEISE|Die Variante „C trifft nicht ein“ zeigt eine mögliche übersehene hilfesuchende Person als synthetischen Fehlfall.|Auch eine ausdrücklich falsche Meldung mit vorher festgelegter Fehlfolge testen.
+20|SEITE|A und B sind als Weitergabe desselben deklarierten Ursprungs gebunden.|Eine gemeinsame, aber falsch deklarierte Quelle mit externem Beleg gezielt unterscheiden.
+21|SEITE|Das Zeitexperiment trennt alte Meldung und spätere unbekannte Lage.|Für reale Ortsdaten Ereigniszeit, Eingangszeit und Gültigkeitsfenster getrennt erfassen.
+22|SEITE|Offene Variable ist die aktuelle Weglage; das Ergebnis nennt frische unabhängige Information als nächsten Schritt.|In einem strukturierten Ergebnisfeld statt nur im Fließtext speichern.
+23|TEILWEISE|Bei ausbleibender Meldung oder menschlicher Prüfung bleibt die Browserausgabe auf HOLD/ungeklärt.|Quelle offline und technische Verbindungsausfälle als zusätzliche synthetische Varianten prüfen.
+24|SEITE|Heute vorführbar ist ein lokaler Textversuch und Forschungsquellcode; kein Fluggerät.|Für ein Fachgespräch das gepinnte Offline-Paket mit Startanleitung bereitstellen.
+25|TEILWEISE|Das Angebot nennt Messgrößen gegen eine manuelle Checkliste; sechs Monate Wirkung wurden nicht gemessen.|Vor Beginn Testmenge, Baseline, Fehlerzählung und Zielschwelle vereinbaren.
+26|OFFEN|Ein Vergleich gegen ein vorhandenes Verfahren wird vorgeschlagen, aber ist nicht gelaufen.|Gleiche synthetische Fälle mit gleicher Zeitvorgabe unabhängig gegen die Checkliste testen.
+27|TEILWEISE|Code, Fixtures, Sollausgaben, Anleitung und reproduzierbare Abnahmefrage sind benannt.|Manifest, exakte Version und vorab vereinbarte Passschwelle in einem Auftrag fixieren.
+28|TEILWEISE|Der kleinste Paketplan hat Klärung, Offline-Demo und unabhängige Prüfung; Preise sind noch nicht kalkuliert.|Aufwand und Rechte pro Paket mit Auftraggeber eingrenzen und erst dann ein Angebot beziffern.
+29|TEILWEISE|Die lokale Rechte- und Datenseite trennt Code, Bild, Testdaten, Forschungszweig und künftige Ergebnisse; einzelne Nutzungsrechte sind noch ungeklärt.|Rechteinhaber und Nutzungsrechte pro Artefakt vor Versand oder Wiederverwendung klären.
+30|TEILWEISE|Der öffentliche Forschungszweig hat eigene Lizenzangaben; die lokale Präsentation besitzt derzeit keine pauschale Open-Source-Freigabe.|Für jeden lokalen Bestandteil Lizenz und für neue bezahlte Ergebnisse eine Rechtevereinbarung festlegen.
+31|OFFEN|Der Browser wurde bisher vom Erstellerteam geprüft; eine unabhängige Reproduktion ist nicht dokumentiert.|Unvorbereitete Fachperson führt Fixture und Sollvergleich offline durch.
+32|TEILWEISE|Das Angebot nennt Datenabfluss, Außenwirkung und fehlenden Zusatznutzen als Anhaltepunkte.|Konkrete quantitative Stoppschwelle vor Studienbeginn schriftlich fixieren.
+33|TEILWEISE|Der Einstieg verneint Kinderüberwachung; eine Schutzgarantie für Kinder wird nicht gegeben.|Mit Eltern prüfen, ob trotzdem eine Schutzwirkung erwartet wird.
+34|SEITE|Die Kinderwagenkarte sagt ausdrücklich, dass über eine Person darin nichts beobachtet ist.|Bei späterem Bildadapter eine verdeckte-Inhalte-Fixture hinzufügen.
+35|OFFEN|Zur Namenswirkung liegen keine unvorbereiteten Elternantworten vor.|Vor der Erklärung offen fragen, was der Name erwarten lässt, und Antworten protokollieren.
+36|TEILWEISE|Ein einfacher Satz erklärt: erfundene Meldungen und Zeichnungen; diese Seite macht kein Foto.|Kinder oder Jugendliche den Satz in eigenen Worten wiedergeben lassen, freiwillig und zweckgebunden.
+37|OFFEN|Es gibt keinen realen Alarmkanal; ein Freigabe- und Korrekturworkflow ist nicht gebaut.|Synthetischen Fehlalarm mit HOLD, Ablehnung, Dokumentation und Rückmeldung durchspielen.
+38|OFFEN|Vier feste Testobjekte liefern keine Gruppen- oder Fairnessmessung.|Gepaarte synthetische Sichtbarkeits-, Licht- und Hilfsmittelfälle mit Fehlerzählung anlegen.
+39|SEITE|Die Objektwahl ändert nur Browsertext; vor einer Korrektur entsteht keine Außenwirkung dieser Seite.|Beim späteren Exportpfad eine ausdrückliche Freigabesperre instrumentiert testen.
+40|OFFEN|Namenswahl, Beispiel und Alarmregeln wurden nicht mit Betroffenen mitgestaltet.|Freiwillige Rückmeldungen sammeln und Änderungen samt Ablehnung begründet protokollieren.
+41|TEILWEISE|Diese Seite nutzt erfundene Texte und Zeichnungen; ein Plan für reale Erhebung fehlt.|Vor einem Piloten Zweck, Befugnis, Zugriff und Löschfrist je Datenklasse binden.
+42|OFFEN|Die lokale Seite hat keinen Erfassungsort; für einen späteren Piloten ist Vor-Ort-Information ungeklärt.|Vor jeder Erfassung prüfen, ob Hinweis und Wahlmöglichkeit am Ort rechtzeitig erreichbar sind.
+43|OFFEN|Für den Node-Versuch sind Vorschau, Cache, Crashbericht und Backup nicht vollständig geprüft.|Synthetisches Testmuster durch alle deklarierten Nebenpfade führen und Artefakte untersuchen.
+44|OFFEN|Keine getrennten Aufbewahrungsregeln für Rohbild, Metadaten und Prüfprotokoll existieren.|Retention, Löschung und Nachweis je Datenklasse festlegen und lokal erproben.
+45|TEILWEISE|Ein Audit mit synthetischen Daten ist hier möglich; ein minimierter Beleg für reale Bildfehler fehlt.|Version, Fehlerklasse, redigierte Reproduktion und Entscheidung ohne privates Original sichern.
+46|OFFEN|Die Kontaktadresse ist kein Fall- oder Korrekturprozess.|Eingang, Zuständigkeit, Korrektur, Weitergabe und Abschluss an einem Testfall journalisieren.
+47|TEILWEISE|Die aktuelle Seite besitzt weder Sensor noch Export-API; ein künftiger Zweckwechsel bleibt offen.|Erlaubte Eingaben und Exporte technisch begrenzen und Zweckänderungen gesondert prüfen.
+48|OFFEN|Eine unabhängige Prüfung der Datenschutzversprechen ist nicht dokumentiert.|Einer zweiten Stelle eine eingefrorene Version und den synthetischen No-Raw-Export-Test geben.
+49|TEILWEISE|Bedienelemente haben sichtbaren Text; dynamische Ergebnisse besitzen aria-live.|Mit echtem Screenreader die Reihenfolge von Einstieg, Fall und Objektblatt beobachten.
+50|TEILWEISE|Der neue Leseraum führt Problem, fünf Fallvarianten, vier Objektdeutungen, Betroffenenperspektive, Quellen und Angebot als eigene statische Textseite.|Mit Screenreader Inhalt und Entscheidungen gegen die visuelle Seite auf Gleichwertigkeit vergleichen.
+51|TEILWEISE|Nach der Routenwahl setzt der Browser den Fokus auf den neu eingeblendeten Text; dynamische Fallausgabe hat role=status.|Mit einem echten Screenreader Ansage, Fokusfolge und Rücksprung prüfen.
+52|SEITE|Die Garage hat einen Text-/Alternativhinweis; Kernproblem und Fall stehen im HTML.|Ohne Bilder/CSS prüfen, ob alle entscheidenden Informationen erhalten bleiben.
+53|SEITE|Reduzierte Bewegung stoppt Falteranimation; der statische Text erklärt die Szene.|Mit prefers-reduced-motion jede Objektwahl und Statusmeldung lesen.
+54|TEILWEISE|320- und 375-Pixel-Breiten sind ohne Gesamtüberlauf geprüft; echte Browser-Vergrößerung bei 200–400 % bleibt offen.|Bei 200 und 400 % Browserzoom abgeschnittene Labels und Fokusziele systematisch erfassen.
+55|SEITE|„Dem Ruf folgen“ ist ein sichtbarer Button mit Text; die Seite hat keinen Ton.|Falls Ton ergänzt wird, wortgleiche Transkription und Untertitel mitprüfen.
+56|TEILWEISE|Das Nachbarbeispiel erklärt Quellenabhängigkeit in Alltagssprache; Fachwörter bleiben im Archiv.|Unvorbereitete Personen „Herkunftscluster“ und „synthetisch“ erklären lassen.
+57|SEITE|Der erste Bildschirm nennt drei Meldungen und die Entscheidungsfrage vor der Szene.|Nach dem Besuch ohne Hinweise die erinnerte Forschungsfrage erheben.
+58|TEILWEISE|Die Person am Rand wird nun als mitarbeitender Erfinder mit eigener fachlicher Handlung gezeigt; Armut wird nicht als Aufhänger genutzt.|Mit Betroffenen prüfen, ob Darstellung und Bild trotzdem stereotyp wirken.
+59|SEITE|Vor der Wahl steht jetzt ausdrücklich: zwei Erzählwege, derselbe Forschungsraum; die Wahl ändert nur die Szene.|Ohne Erklärung nach dem erwarteten Effekt der beiden Knöpfe fragen.
+60|TEILWEISE|Die Seite begrenzt Browserfall, Node-Code, Falter und Drohnenkonzept; einzelne Sicherheitsformulierungen brauchen Quellenprüfung.|Jede starke Aussage gegen konkrete Codezeile, Fixture oder Quelle halten und enger fassen.
+61|SEITE|Die Archivnotiz trennt lokale Präsentationshistorie von vier Commits im öffentlichen Forschungszweig.|Linkziele und Commit-Stand vor externer Nutzung frisch prüfen.
+62|TEILWEISE|Direktlinks zu Browserlogik und einem Node-Modul vorhanden; nicht jede Frage hat einen Direktbeleg.|Für jede technische Aussage eine konkrete Datei, Zeile oder Testfixture ergänzen.
+63|SEITE|Drei Eingabemeldungen und ein auswertbares Ergebnis sind direkt im Falllabor sichtbar.|Fachpersonen nach fünf Minuten den reproduzierbaren Gegenstand benennen lassen.
+64|TEILWEISE|Das Angebot nennt Lieferobjekt und Abnahmefrage; Aufwand, Preis und Rechte sind noch zu verhandeln.|Scope, Rechte, Messschwelle und Bezahlung als erste Vertragsfragen festlegen.
+65|SEITE|Alle sechs Navigationslinks sind bei 320, 375 und 720 Pixeln sichtbar; Browserprüfung ohne horizontalen Überlauf ist erfolgt.|Touch und Screenreader-Reihenfolge zusätzlich mit echten Eingabegeräten prüfen.
+66|TEILWEISE|Abschnittsnummern, feste Navigation und Sprunglinks geben Orientierung.|Nach Routenwahl und langem Scrollen den aktuellen Abschnitt mit Nutzern testen.
+67|TEILWEISE|Der Titel bleibt bei 320 Pixeln innerhalb des Viewports; echte 200/400-%-Browserzoomprüfung fehlt.|Ersten Überlauf bei starkem Zoom dokumentieren und CSS gezielt korrigieren.
+68|SEITE|Problem und Direktlink stehen vor der Wahl; bei 320 × 667 Pixeln ist der Falllink ohne Scrollen sichtbar.|Mit unvorbereiteten Besuchenden Zeit bis zum Kernfall messen.
+69|OFFEN|Rote und türkise Labels sind angehoben, aber kein vollständiger Kontrastbericht für alle Kombinationen liegt vor.|Berechnete Kontrastwerte und tatsächliches Rendering für Textgrößen und Zustände prüfen.
+70|TEILWEISE|Falllabor zeigt Eingabe, Prüfung, offenes Ergebnis und menschlichen nächsten Schritt.|Den Datenfluss mit Testpersonen nachzeichnen lassen; unklare Übergänge markieren.
+71|SEITE|Die Falter sind dekorativ; die demonstrierte Quellenlogik liegt im Textfall und der Quellenprobe.|Ohne Falter prüfen, ob niemand eine reale Schwarmfunktion behauptet.
+72|TEILWEISE|Ohne JavaScript bleiben HTML, Navigation, der vollständige Leseraum, fünf Fallvarianten, vier Objektdeutungen und 72 Auditantworten lesbar; GitHub-Belege sind extern.|GitHub-Ausfall getrennt simulieren und prüfen, ob jede lokale Kernaussage verständlich bleibt.

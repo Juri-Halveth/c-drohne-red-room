@@ -1,0 +1,14 @@
+{
+  "name": "c-drohne-red-room",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static C-DROHNE research presentation and synthetic test suite",
+  "scripts": {
+    "test": "node --test critical-questions.test.mjs measurement-test.mjs dist/privacy-state.test.mjs",
+    "verify:manifest": "node manifest.cjs verify",
+    "qa:offline": "node offline-qa.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

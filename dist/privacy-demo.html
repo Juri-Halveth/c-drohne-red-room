@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C-DROHNE · Fehlalarm und Korrektur</title>
+  <style>
+    :root{color-scheme:dark;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#080a12;color:#f3f5fb}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 77% 8%,#5d193b75,transparent 32rem),radial-gradient(circle at 0 90%,#06596860,transparent 30rem),#080a12}
+    main{max-width:1000px;margin:auto;padding:clamp(1rem,4vw,3rem)}a{color:#76e6ed}.skip{position:absolute;top:-100px;left:1rem;background:#fff;color:#090a12;padding:.7rem}.skip:focus{top:1rem}.back{display:inline-block;margin-bottom:1.5rem;font-weight:700}.eyebrow{font-size:.76rem;letter-spacing:.19em;color:#ff648c;font-weight:750}h1{font-size:clamp(2.1rem,6vw,4.6rem);letter-spacing:-.055em;line-height:1.02;margin:.4rem 0 1rem}h1 em{color:#76e6ed;font-style:normal}.lead{max-width:65ch;color:#ccd2df;line-height:1.62;font-size:1.08rem}.scope{border-left:3px solid #76e6ed;padding:.5rem 1rem;color:#c8cfdd;margin:1.5rem 0}
+    .lab{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}.panel{background:#101420e8;border:1px solid #ffffff25;border-radius:22px;padding:clamp(1rem,3vw,1.6rem);box-shadow:0 20px 60px #0004}.panel h2{font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase;color:#76e6ed;margin:.2rem 0 1.2rem}.field{display:block;font-size:.88rem;font-weight:700;margin-bottom:.45rem}select{width:100%;padding:.85rem;background:#1d2433;color:white;border:1px solid #8394ab;border-radius:12px;font:inherit}.drawn{min-height:160px;margin:1rem 0;border:1px solid #ffffff26;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,#1a2830,#1d1224)}.drawn span{font-size:5rem;line-height:1}.drawn small{display:block;color:#c8cfdd;text-transform:uppercase;letter-spacing:.13em;font-weight:700;font-size:.7rem}.ambiguity-visual{padding:12px;width:100%;text-align:center}.ambiguity-visual .crop{border:1px solid #76e6ed;padding:8px}.ambiguity-visual .full{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.ambiguity-visual .full div{border:1px solid #769ba8;padding:6px;font-size:.75rem}.ambiguity-visual svg{display:block;margin:auto;max-width:100%;height:54px;fill:none;stroke:#76e6ed;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.ambiguity-visual .full svg{height:62px}.fact{display:grid;grid-template-columns:8.5rem 1fr;gap:.4rem;border-top:1px solid #ffffff1a;padding:.7rem 0;font-size:.91rem}.fact b{color:#aab7c9}.fact span{overflow-wrap:anywhere}.state{display:inline-block;padding:.35rem .65rem;border-radius:100px;border:1px solid #ff648c;color:#ffb0c4;font-size:.78rem;font-weight:800;letter-spacing:.07em}.state.done{border-color:#76e6ed;color:#a2f5f5}.actions{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.1rem 0}button{cursor:pointer;padding:.7rem .95rem;border-radius:10px;border:1px solid #ffffff55;background:#222838;color:#fff;font:inherit;font-weight:700}button:hover,button:focus-visible{outline:2px solid #76e6ed;outline-offset:2px}button:disabled{opacity:.4;cursor:not-allowed;outline:none}.reject{border-color:#ff648c}.correct{border-color:#76e6ed}.approve{border-color:#f3d884}.reset{background:transparent}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#090c14;border:1px solid #ffffff22;padding:1rem;border-radius:12px;font-size:.75rem;line-height:1.55;max-height:18rem;overflow:auto}.note{font-size:.85rem;color:#bbc5d6;line-height:1.5}.result{min-height:4.3rem;line-height:1.5;color:#f3d884}.canary{font-size:.82rem;color:#a2f5f5}
+    a:focus-visible,select:focus-visible{outline:3px solid #76e6ed;outline-offset:3px}.skip:focus-visible{outline-color:#090a12;outline-offset:0}
+    @media(max-width:760px){.lab{grid-template-columns:1fr}.fact{grid-template-columns:7rem 1fr}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+  <script src="privacy-state.js" defer></script>
+  <script src="privacy-demo.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#privacy-main">Zum Fall springen</a>
+<main id="privacy-main">
+  <a class="back" href="index.html#korrektur">← Zur C-DROHNE-Hauptseite</a>
+  <p class="eyebrow">C-DROHNE / SYNTHETISCHES KORREKTURLABOR</p>
+  <h1>Ein Fehlalarm.<br><em>Eine Bremse.</em></h1>
+  <p class="lead">Eine gezeichnete Kinderwagenform beweist nicht, dass ein Kind darin sitzt. Ein abgeschnittener Bogen könnte Bumerang oder Griff sein. Beides bleibt zunächst <strong>HOLD</strong>. Eine Person kann die ungestützte Deutung verwerfen oder ein offenes Ergebnis festhalten. Nur die begrenzte Blütenform lässt sich in diesem internen Beispiel bestätigen.</p>
+  <p class="scope">Zweck: einen Fehlalarm und seine Korrektur an festen, erfundenen Formen zeigen. Keine Kamera, keine echten Personen, keine Flugsteuerung, keine Übertragung. Diese Demo erteilt keine Einwilligung oder Befugnis für reale Erfassung. Ein Klick demonstriert eine deklarierte menschliche Prüfentscheidung; er authentisiert keine prüfende Person.</p>
+  <noscript><style>.lab{display:none}</style><p class="scope">Ohne JavaScript: Eine Kinderwagenzeichnung zeigt nur eine Form; ein Kind darin wurde nicht beobachtet. Ein abgeschnittener Bogen lässt Bumerang und Griff offen. Beide Hypothesen bleiben HOLD, bis sie verworfen oder auf die belegte Form beziehungsweise UNKNOWN korrigiert werden. Die interaktive Zustandsprüfung benötigt JavaScript.</p></noscript>
+  <div class="lab">
+    <section class="panel" aria-labelledby="input-title">
+      <h2 id="input-title">01 / Beobachtung</h2>
+      <label class="field" for="fixture">Synthetischen Fall wählen</label>
+      <select id="fixture"><option value="stroller-false-alert">Fehlalarm: gezeichneter Kinderwagen</option><option value="flower-description">Formbeschreibung: gezeichnete Blume</option><option value="cropped-ambiguous-shape">Kontextverlust: abgeschnittener Bogen</option></select>
+      <div class="drawn" role="img" aria-label="Abstrakte, gezeichnete Testform"><div id="simple-drawing"><span id="drawing" aria-hidden="true">◕</span><small>gezeichnete Form</small></div><div class="ambiguity-visual" id="ambiguity-demo" hidden><div class="crop"><small>GEMEINSAMER AUSSCHNITT</small><svg viewBox="0 0 100 52" aria-hidden="true"><path d="M14 40 Q50 4 86 40"/></svg></div><div class="full"><div><small>MÖGLICHE FORM A</small><svg viewBox="0 0 100 83" aria-hidden="true"><path d="M14 40 Q50 4 86 40 L61 64 L50 53 L39 64 Z"/></svg>Bumerang</div><div><small>MÖGLICHE FORM B</small><svg viewBox="0 0 100 83" aria-hidden="true"><path d="M14 40 Q50 4 86 40 M12 40 V75 H88 V40"/></svg>Griff</div></div></div></div>
+      <div class="fact"><b>Gesehen</b><span id="observed"></span></div>
+      <div class="fact"><b>Hypothese</b><span id="hypothesis"></span></div>
+      <div class="fact"><b>Beleglücke</b><span id="gap"></span></div>
+      <div class="fact"><b>Zweck</b><span id="purpose"></span></div>
+      <p class="note">Die Hypothese ist ein Vorschlag über eine feste Testzeichnung. Sie wird nie als Beobachtung oder Außenhandlung ausgegeben.</p>
+    </section>
+    <section class="panel" aria-labelledby="review-title">
+      <h2 id="review-title">02 / Prüfen und korrigieren</h2>
+      <span class="state" id="state">HOLD</span>
+      <p class="result" id="result" role="status" aria-live="polite"></p>
+      <div class="actions" aria-label="Simulierte Prüfentscheidungen">
+        <button class="reject" id="reject" type="button">Verwerfen</button>
+        <button class="correct" id="correct" type="button">Auf Objektform korrigieren</button>
+        <button class="approve" id="approve" type="button">Beschreibung bestätigen</button>
+        <button class="reset" id="reset" type="button">Fall neu starten</button>
+      </div>
+      <p class="note" id="approval-note"></p>
+      <h2>03 / Minimierter Beleg</h2>
+      <pre id="receipt" aria-label="Minimierter synthetischer Beleg"></pre>
+      <p class="canary" id="canary-check"></p>
+      <p class="note">Der Beleg entsteht nur im Arbeitsspeicher dieser Seite. Der eingebaute synthetische Canary prüft diesen JSON-Exportpfad, keine realen Bild-, Vorschau-, Log- oder Backup-Pfade.</p>
+    </section>
+  </div>
+</main>
+</body>
+</html>

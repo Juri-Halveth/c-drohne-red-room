@@ -1,0 +1,615 @@
+{
+  "contract": "C_DROHNE_SYNTHETIC_MEASUREMENT_V1",
+  "referenceTime": "2026-10-19T10:05:00+02:00",
+  "freshnessMinutes": 60,
+  "rows": [
+    {
+      "id": "base",
+      "title": "Kopie und alte Gegenmeldung",
+      "kind": "SYNTHETIC",
+      "pair": null,
+      "variant": null,
+      "visualDescriptor": null,
+      "expected": {
+        "valid": true,
+        "origins": 2,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false,
+        "reports": 3
+      },
+      "candidate": {
+        "reports": 3,
+        "origins": 2,
+        "freshOrigins": 1,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false
+      },
+      "baseline": {
+        "reports": 3,
+        "origins": 2,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "missing_time",
+      "title": "Erfassungszeit fehlt",
+      "kind": "SYNTHETIC",
+      "pair": null,
+      "variant": null,
+      "visualDescriptor": null,
+      "expected": {
+        "valid": true,
+        "origins": 2,
+        "stale": [],
+        "missingTime": [
+          "C"
+        ],
+        "conflict": false,
+        "reports": 3
+      },
+      "candidate": {
+        "reports": 3,
+        "origins": 2,
+        "freshOrigins": 1,
+        "stale": [],
+        "missingTime": [
+          "C"
+        ],
+        "conflict": false
+      },
+      "baseline": {
+        "reports": 3,
+        "origins": 2,
+        "stale": [],
+        "missingTime": [
+          "C"
+        ],
+        "conflict": false
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "current_conflict",
+      "title": "Aktueller Widerspruch",
+      "kind": "SYNTHETIC",
+      "pair": null,
+      "variant": null,
+      "visualDescriptor": null,
+      "expected": {
+        "valid": true,
+        "origins": 2,
+        "stale": [],
+        "missingTime": [],
+        "conflict": true,
+        "reports": 3
+      },
+      "candidate": {
+        "reports": 3,
+        "origins": 2,
+        "freshOrigins": 2,
+        "stale": [],
+        "missingTime": [],
+        "conflict": true
+      },
+      "baseline": {
+        "reports": 3,
+        "origins": 2,
+        "stale": [],
+        "missingTime": [],
+        "conflict": true
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "duplicate_id",
+      "title": "Doppelte Meldungskennung",
+      "kind": "SYNTHETIC",
+      "pair": null,
+      "variant": null,
+      "visualDescriptor": null,
+      "expected": {
+        "valid": false,
+        "reason": "DUPLICATE_ID",
+        "reports": 3
+      },
+      "candidate": {
+        "error": "Eine Meldungs-ID kommt mehrfach vor.",
+        "errorCode": "DUPLICATE_ID"
+      },
+      "baseline": {
+        "error": "DUPLICATE_OR_EMPTY_ID"
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "missing_parent",
+      "title": "Fehlende Kopiervorstufe",
+      "kind": "SYNTHETIC",
+      "pair": null,
+      "variant": null,
+      "visualDescriptor": null,
+      "expected": {
+        "valid": false,
+        "reason": "MISSING_PARENT",
+        "reports": 3
+      },
+      "candidate": {
+        "error": "Eine deklarierte Vorstufe fehlt.",
+        "errorCode": "MISSING_PARENT"
+      },
+      "baseline": {
+        "error": "MISSING_PARENT"
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "origin_mismatch",
+      "title": "Kopie mit anderer Ursprungskennung",
+      "kind": "SYNTHETIC",
+      "pair": null,
+      "variant": null,
+      "visualDescriptor": null,
+      "expected": {
+        "valid": false,
+        "reason": "ORIGIN_MISMATCH",
+        "reports": 3
+      },
+      "candidate": {
+        "error": "Die deklarierte Weitergabe widerspricht der Ursprungskennung.",
+        "errorCode": "ORIGIN_MISMATCH"
+      },
+      "baseline": {
+        "error": "ORIGIN_MISMATCH"
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "copy_changes_claim",
+      "title": "Behauptete Kopie verändert die Aussage",
+      "kind": "SYNTHETIC",
+      "pair": null,
+      "variant": null,
+      "visualDescriptor": null,
+      "expected": {
+        "valid": false,
+        "reason": "COPY_CONTENT_CHANGED",
+        "reports": 3
+      },
+      "candidate": {
+        "error": "Eine Weitergabe ändert die Aussage ihrer Vorstufe.",
+        "errorCode": "COPY_CONTENT_CHANGED"
+      },
+      "baseline": {
+        "reports": 3,
+        "origins": 2,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": true
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": false,
+        "failure": "INVALID_ACCEPTED:COPY_CONTENT_CHANGED"
+      },
+      "disagreement": true,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "future_time",
+      "title": "Erfassungszeit in der Zukunft",
+      "kind": "SYNTHETIC",
+      "pair": null,
+      "variant": null,
+      "visualDescriptor": null,
+      "expected": {
+        "valid": false,
+        "reason": "FUTURE_TIME",
+        "reports": 3
+      },
+      "candidate": {
+        "error": "Eine Erfassungszeit liegt nach der Referenzzeit.",
+        "errorCode": "FUTURE_TIME"
+      },
+      "baseline": {
+        "error": "FUTURE_TIME"
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "unknown_claim",
+      "title": "Nicht vereinbarter Claimwert",
+      "kind": "SYNTHETIC",
+      "pair": null,
+      "variant": null,
+      "visualDescriptor": null,
+      "expected": {
+        "valid": false,
+        "reason": "UNKNOWN_CLAIM",
+        "reports": 3
+      },
+      "candidate": {
+        "error": "Ein nicht vereinbarter Aussagewert ist ungültig.",
+        "errorCode": "UNKNOWN_CLAIM"
+      },
+      "baseline": {
+        "error": "UNKNOWN_CLAIM"
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "copy_cycle",
+      "title": "Zyklische Kopierangabe",
+      "kind": "SYNTHETIC",
+      "pair": null,
+      "variant": null,
+      "visualDescriptor": null,
+      "expected": {
+        "valid": false,
+        "reason": "COPY_CYCLE",
+        "reports": 3
+      },
+      "candidate": {
+        "error": "Die Weitergabekette enthält einen Kreis.",
+        "errorCode": "COPY_CYCLE"
+      },
+      "baseline": {
+        "error": "COPY_CYCLE"
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "pair_bright",
+      "title": "Paar A: gut erkennbare Illustration",
+      "kind": "SYNTHETIC",
+      "pair": "visibility",
+      "variant": "bright",
+      "visualDescriptor": "helle synthetische Zeichnung",
+      "expected": {
+        "valid": true,
+        "origins": 2,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false,
+        "reports": 3
+      },
+      "candidate": {
+        "reports": 3,
+        "origins": 2,
+        "freshOrigins": 1,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false
+      },
+      "baseline": {
+        "reports": 3,
+        "origins": 2,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "pair_dim",
+      "title": "Paar A: schlecht erkennbare Illustration",
+      "kind": "SYNTHETIC",
+      "pair": "visibility",
+      "variant": "dim",
+      "visualDescriptor": "dunkle synthetische Zeichnung",
+      "expected": {
+        "valid": true,
+        "origins": 2,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false,
+        "reports": 3
+      },
+      "candidate": {
+        "reports": 3,
+        "origins": 2,
+        "freshOrigins": 1,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false
+      },
+      "baseline": {
+        "reports": 3,
+        "origins": 2,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "pair_standard",
+      "title": "Paar B: Gegenstand ohne Zusatz",
+      "kind": "SYNTHETIC",
+      "pair": "assistive_context",
+      "variant": "standard",
+      "visualDescriptor": "erfundene Standardszene",
+      "expected": {
+        "valid": true,
+        "origins": 2,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false,
+        "reports": 3
+      },
+      "candidate": {
+        "reports": 3,
+        "origins": 2,
+        "freshOrigins": 1,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false
+      },
+      "baseline": {
+        "reports": 3,
+        "origins": 2,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    },
+    {
+      "id": "pair_assistive",
+      "title": "Paar B: Mobilitätshilfe im Hintergrund",
+      "kind": "SYNTHETIC",
+      "pair": "assistive_context",
+      "variant": "assistive",
+      "visualDescriptor": "erfundene Szene mit Mobilitätshilfe",
+      "expected": {
+        "valid": true,
+        "origins": 2,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false,
+        "reports": 3
+      },
+      "candidate": {
+        "reports": 3,
+        "origins": 2,
+        "freshOrigins": 1,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false
+      },
+      "baseline": {
+        "reports": 3,
+        "origins": 2,
+        "stale": [
+          "C"
+        ],
+        "missingTime": [],
+        "conflict": false
+      },
+      "candidateCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "baselineCheck": {
+        "pass": true,
+        "failure": null
+      },
+      "disagreement": false,
+      "unsupportedWorldClaim": null,
+      "interpretation": "CURRENT_REAL_WORLD_STATE_UNKNOWN"
+    }
+  ],
+  "pairs": [
+    {
+      "name": "visibility",
+      "ids": [
+        "pair_bright",
+        "pair_dim"
+      ],
+      "candidateMetadataInvariant": true,
+      "scope": "ONLY_IDENTICAL_MESSAGE_METADATA; NO_IMAGE_MODEL_OR_POPULATION_TEST"
+    },
+    {
+      "name": "assistive_context",
+      "ids": [
+        "pair_standard",
+        "pair_assistive"
+      ],
+      "candidateMetadataInvariant": true,
+      "scope": "ONLY_IDENTICAL_MESSAGE_METADATA; NO_IMAGE_MODEL_OR_POPULATION_TEST"
+    }
+  ],
+  "metrics": {
+    "syntheticCases": 14,
+    "candidateMatchesExpected": 14,
+    "checklistMatchesExpected": 13,
+    "candidateInvalidAccepted": 0,
+    "candidateChecklistDisagreements": 1,
+    "candidateGainOnFixedSuite": 1,
+    "failureTypes": {},
+    "unsupportedWorldClaims": 0,
+    "unknownRetainedByHarness": 14,
+    "syntheticPairsInvariant": 2,
+    "syntheticPairCount": 2,
+    "humanTaskTime": null,
+    "fieldSafety": null,
+    "populationFairness": null
+  },
+  "gates": {
+    "prototype": "REVISE_IF_ANY_EXPECTED_CASE_FAILS",
+    "action": "STOP_IF_UNEXPECTED_EXTERNAL_ACTION_OR_DATA_DISCLOSURE",
+    "benefit": "NO_ADDED_VALUE_CLAIM_WITHOUT_HELD_OUT_INDEPENDENT_COMPARISON",
+    "benefitOnFixedSuite": "GAIN_ON_FIXED_SUITE_ONLY",
+    "currentVerdict": "LOCAL_FIXTURE_PASS_ONLY",
+    "externalActionTested": false,
+    "independentHumanReproduction": false
+  },
+  "claimCeiling": "FIXED_SYNTHETIC_CASES_ONLY",
+  "provenance": {
+    "candidateFile": "app.js",
+    "candidateSha256": "ee9504b0e50fd90688f6062626e45a946805b4d1e3dfc3fdec22b58ede3d7f93",
+    "coreFile": "measurement-core.mjs",
+    "coreSha256": "d06b62301317fe4268d520673cf24d31197fe95582a4f2a8433ceefd10653eaf",
+    "runner": "measurement-runner.mjs",
+    "generatedAt": "2026-10-19T00:13:39.841Z",
+    "runtime": "Node VM with inert DOM stubs; no browser UI, network, sensor or external actor"
+  }
+}

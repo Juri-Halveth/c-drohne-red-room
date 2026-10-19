@@ -1,0 +1,24 @@
+# Quellen- und Claim-Karte für die Präsentation
+
+Stand 19.10.2026. Gelesener lokaler Quellstand `open-research-branches-childdrone-20261018` bei Commit `0beafbde658ebee69ba7569f89d6967526a0a2a7`. Die Git-Blob-Inventur wurde lokal über `node scripts/build-ai-bootstrap-index.mjs --ref HEAD` angestoßen. Sie erfasst Bytes, nicht die Bedeutung ungelesener Dateien. `C-DROHNE // C-DRONE` ist der Präsentationsname dieser Seite; `CHILDDROHNE` bleibt der Name des verlinkten Git-Forschungszweigs.
+
+| Auf der Seite | Quelle / tatsächlich gelesener Umfang | Status und Grenze |
+| --- | --- | --- |
+| Vier Git-Commits | öffentlicher Draft-PR #35, Commit-Liste mit `7039af1`, `3f061a0`, `c5b63d9`, `0beafbd`, am 19.10.2026 auf GitHub eingesehen | Öffentliche Git-Spur des Forschungszweigs; getrennt von der lokalen Historie dieser Präsentationsseite. |
+| Objekt-offene Beobachtung, flüchtige Verarbeitung und Testmaskierung | `branches/childdrone-relevance-review/README.md` vollständig; `AUDIT_2026-10-18.md` und `TECHNOLOGY_PREP.md` vollständig | Synthetischer lokaler Softwarestand. Kein realer Sensor oder Flugversuch. |
+| Drei Weitergaben, ein deklarierter Ursprung | dieselben Dateien, besonders Abschnitt „Fürsorge“ und das Forschungs-Audit; Browserprobe der neuen Website | Der Klick ist eine Illustration des deklarierten Ursprungs, kein unabhängiger Zeugennachweis. |
+| Ausführbarer Unwetter-Testfall auf dieser Seite | `dist/app.js`, `dist/index.html` und `dist/case-fixtures.json` dieser lokalen Website; drei festgelegte Textmeldungen, Referenzzeit 19.10.2026 10:05 MESZ, Zeitfenster 60 Minuten; fünf Varianten einschließlich ausbleibender Meldung und ausgefallener menschlicher Prüfung | Browserseitige Auswertung deklarierter Daten. Die Testdaten belegen weder eine reale Weglage noch die Echtheit eines Ursprungs. Der verwandte öffentliche Node-Forschungsprototyp `observer-care.mjs` liegt getrennt in Draft-PR #35 bei `0beafbde6`. |
+| 72 kritische Gegenproben und aktueller Seitenstand | `FRAGENRAUM_KRITISCHE_GEGENPROBEN_2026-10-19.md` unverändert; `audit72.tsv` mit 72 einzelnen Befunden; `build_audit.py` erzeugt `dist/audit-72.html` und `AUDIT_72_2026-10-19.md` | Vollständige Nummern-Coverage dieses endlichen Fragenraums, keine Vollständigkeit aller denkbaren Fragen oder Nachweis für Feld- und Gerätetauglichkeit. |
+| Statische Textfassung | `dist/leseraum.html` bindet die Fallvarianten und Objekttexte aus `dist/index.html`/`dist/app.js` redaktionell als lesbaren Pfad | Gleichwertigkeit der wichtigen Entscheidungen ist auf der Seite angelegt; ein echter Screenreader-Test steht aus. |
+| Synthetischer Node-Teststand | `TEST_RECEIPT_2026-10-19.md`, drei Testdateien des gebundenen Git-Commits `0beafbde6`, lokaler Lauf mit Node v24.19.0 | 13/13 bestandene Eigenreproduktion der kodierten Invarianten; keine Erkennungs- oder Feldfehlerrate. |
+| Rechte- und Datenstand | `dist/rechte.html` inventarisiert die lokalen Bestandteile und offene Nutzungsfragen | Register und Gesprächsgrundlage, keine pauschale Lizenzfreigabe oder Rechtsprüfung. |
+| Direkte Code- und Hypothesenlinks | `review.mjs` und `hypotheses.json` in Draft-PR #35 bei Commit `0beafbde658ebee69ba7569f89d6967526a0a2a7` | Die Links zeigen einen separaten, noch offenen Forschungszweig. Die Browserseite führt diese Node-Dateien nicht aus; Hypothesen sind keine bestätigten Außenbefunde. |
+| GUARDIAN als Vorarbeit | `branches/guardian-safety-concept/README.md` vollständig, `slides.json` Anfang und Verzeichnisinventar | 24 Konzeptfolien, gebundene Pilotgrenzen. Kein operativer Drohnennachweis. |
+| Raketen-/Silo-Zeitdruckfrage | vom Nutzer in dieser Unterhaltung formulierte Gedankenbeispiele; kein technischer Quellbeleg im gelesenen CHILDDROHNE-Audit | Konzeptfrage. Es werden keine realen Orte, Personen, Angriffswege oder automatischen Folgen behauptet. |
+| Rechercheweg und „White-Hat“-Stil | `AGENTS.md`, `START_HERE_AI.md`, `PUBLICATION_POLICY.md` und die genannten Audits | Darstellung der Methode, keine Behauptung über eine externe Autorisierung oder bestandene Sicherheitsprüfung. |
+| Person und Beruf | Selbstauskunft des Projektinitiators: „Arbeitgeber-Service“ | Keine spezifische Behörde, Besoldung, Ausbildung oder Sicherheitsfreigabe behauptet. |
+| Vergütete Machbarkeitsstudie | vom Nutzer gewünschte mögliche Zusammenarbeit; lokale Anfragefassung V3 | Angebot zur Verhandlung. Kein Auftrag, Betrag oder Ergebnis zugesagt. |
+
+## Ausgelassener Rest
+
+Nicht vollständig gelesen oder in diese Seite übernommen wurden alle früheren Chatarchive, die vollständigen 24 GUARDIAN-Folientexte, die vollständigen 14 Primärquellen hinter `sources.json`, weitere HALVETH-Repositories und mögliche private Projektdateien. Die Seite ist eine kuratierte Einstiegsebene. Für einen späteren Anspruch auf Vollständigkeit müssten diese Quellen einzeln inventarisiert, gelesen und rechtlich für die Veröffentlichung freigegeben werden.

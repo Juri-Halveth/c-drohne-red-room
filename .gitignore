@@ -1,0 +1,5 @@
+node_modules/
+previews/current-*.png
+previews/inspect-*.png
+previews/ambiguous-correction-*.png
+tmp-*.cjs

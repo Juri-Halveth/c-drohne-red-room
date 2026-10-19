@@ -1,0 +1,23 @@
+{
+  "schema": "c-drohne-browser-fixture-1",
+  "version": "2026-10-19",
+  "scope": "Fixed synthetic browser text case; declared provenance only; no source authentication or field observation",
+  "referenceTime": "2026-10-19T10:05:00+02:00",
+  "freshnessWindowMinutes": 60,
+  "baseMessages": [
+    {"id": "A", "origin": "A", "copiedFrom": null, "time": "2026-10-19T10:02:00+02:00", "claim": "possibly_blocked"},
+    {"id": "B", "origin": "A", "copiedFrom": "A", "time": "2026-10-19T10:04:00+02:00", "claim": "possibly_blocked"},
+    {"id": "C", "origin": "C", "copiedFrom": null, "time": "2026-10-18T10:00:00+02:00", "claim": "free"}
+  ],
+  "variants": [
+    {"id": "stale", "change": "none", "expected": {"reports": 3, "declaredOrigins": 2, "stale": ["C"], "missingTime": [], "conflict": false, "routeState": "UNKNOWN"}},
+    {"id": "missing", "change": "C.time = null", "expected": {"reports": 3, "declaredOrigins": 2, "stale": [], "missingTime": ["C"], "conflict": false, "routeState": "UNKNOWN"}},
+    {"id": "conflict", "change": "C.time = 2026-10-19T10:03:00+02:00", "expected": {"reports": 3, "declaredOrigins": 2, "stale": [], "missingTime": [], "conflict": true, "routeState": "UNKNOWN"}},
+    {"id": "absent", "change": "remove C", "expected": {"reports": 2, "declaredOrigins": 1, "stale": [], "missingTime": [], "conflict": false, "routeState": "UNKNOWN"}},
+    {"id": "reviewer", "change": "human review unavailable; base messages unchanged", "expected": {"reports": 3, "declaredOrigins": 2, "stale": ["C"], "missingTime": [], "conflict": false, "routeState": "HOLD"}},
+    {"id": "inconsistent", "change": "B.origin = B although B.copiedFrom = A", "expected": {"error": "Die deklarierte Weitergabe widerspricht der Ursprungskennung.", "routeState": "HOLD"}},
+    {"id": "late", "change": "C.time = 2026-10-19T09:00:00+02:00; C.receivedAt = 2026-10-19T10:04:00+02:00", "expected": {"reports": 3, "declaredOrigins": 2, "stale": ["C"], "missingTime": [], "conflict": false, "routeState": "UNKNOWN"}},
+    {"id": "copy-change", "change": "B.claim = free while B.copiedFrom = A", "expected": {"error": "Eine Weitergabe ändert die Aussage ihrer Vorstufe.", "routeState": "HOLD"}},
+    {"id": "root-undated", "change": "A.time = null while B remains a fresh copy of A", "expected": {"reports": 3, "declaredOrigins": 2, "freshIndependentOrigins": 0, "stale": ["C"], "missingTime": ["A"], "conflict": false, "routeState": "UNKNOWN"}}
+  ]
+}
