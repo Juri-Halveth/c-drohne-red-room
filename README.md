@@ -1,4 +1,9 @@
-# C-DROHNE // C-DRONE / RED ROOM – öffentlicher Präsentationsprototyp
+# C-Drohne – visuelles Konzept für Beobachtung und Zusammenarbeit
+
+Ein Präsentationsprototyp mit kurzen Konzeptfilmen und Forschungsdokumentation. Die Darstellung ist von einem real eingesetzten Drohnensystem zu unterscheiden.
+
+[**Projekt öffnen →**](https://juri-halveth.github.io/c-drohne-red-room/) · [Arbeitsproben](https://juri-halveth.github.io/koennen/) · [Portfolio](https://juri-halveth.github.io/)
+
 
 Stand: 19.10.2026. Die Website liegt vollständig in `dist/`. Sie ist eine öffentlich einsehbare, lokal prüfbare Präsentation für ein fachliches Erstgespräch. Der Git-Forschungszweig heißt weiterhin `CHILDDROHNE`; die Seite zeigt diesen Namen klein als Herkunftsspur. Eine Kontaktaufnahme ist damit nicht erfolgt.
 
