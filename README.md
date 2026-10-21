@@ -33,7 +33,7 @@ Für die Browserprüfungen: `npm install`, `npx playwright install chromium` und
 - Der [Leseraum](dist/leseraum.html) bietet den Kerninhalt ohne Bewegung oder JavaScript: Problem, alle neun Fallvarianten, Objektdeutungen, Betroffenenperspektive, Quellen und Arbeitsangebot.
 - Der [lokale Testbeleg](TEST_RECEIPT_2026-10-19.md) bindet 13 bestandene synthetische Node-Tests des getrennten Forschungszweigs an Commit und Laufumgebung.
 - Klickbares Zeitdruck-Gedankenexperiment: eine alte Meldung und ein späterer, offener Kontext bleiben getrennt.
-- Erklärte Git- und Forschungsstrecke mit vier öffentlichen CHILDDROHNE-Commits aus Draft-PR #35, Links zum Audit, zur Quellenliste, zu GUARDIAN und zum öffentlichen Forschungsarchiv. Die Website selbst hat eine getrennte lokale Git-Historie.
+- Öffentliche Git- und Forschungsstrecke dieser Website: Browserlogik, synthetische Testdaten, 72 Gegenfragen, Messlabor, Quellenkarte und Versionshistorie sind direkt erreichbar. Die ältere CHILDDROHNE-Vorarbeit liegt in einem getrennten privaten Forschungsrepo; dessen Commit-Links werden Besuchern nicht mehr als öffentliche Nachweise angeboten.
 - Ein Vorschlag für eine vergütete Machbarkeitsstudie mit benanntem Lieferobjekt und einer reproduzierbaren Abnahmefrage.
 
 ## Gestaltungsasset
