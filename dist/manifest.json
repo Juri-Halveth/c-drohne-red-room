@@ -1,6 +1,6 @@
 {
   "schema": "C_DROHNE_STATIC_PACKAGE_V1",
-  "generatedAt": "2026-10-19T14:30:42.022Z",
+  "generatedAt": "2026-10-21T23:49:10.205Z",
   "scope": "Bytes of this local static package only; no authorship, deployment or field-effect claim",
   "files": [
     {
@@ -70,13 +70,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 34881,
-      "sha256": "3eca1db95b4b00e808138e0a873be52f94e5dd1027a3aee6cb5505eb829acda4"
+      "bytes": 32269,
+      "sha256": "9dc07215eab0dc873328e9ced87207770dcf45f05763c0814aee821dddcc4168"
     },
     {
       "path": "leseraum.html",
-      "bytes": 9916,
-      "sha256": "a766f8a6dbb1a8f98259d610867a0c3fd1b687c3821d892e71482cc1656b21d6"
+      "bytes": 10034,
+      "sha256": "9b2c86212606a557f26d8202c4394379531079088de8098a915ec104a1e1ff27"
     },
     {
       "path": "measurement-core.mjs",
