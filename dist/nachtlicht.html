@@ -4,22 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080b13">
-  <meta name="description" content="C-DROHNE NACHTLICHT: zweite visuelle Systemszene mit Suchlicht, offener Geräuscheinordnung und menschlicher Klärung.">
+  <meta name="description" content="Nachtlicht: eine echte 3D-Animation mit modellierter Beobachterdrohne, bewegter Kamera und räumlicher Beleuchtung.">
   <title>C-DROHNE · Nachtlicht · Juri / HALVETH</title>
   <link rel="stylesheet" href="vision.css">
-  <script src="night-film.js" defer></script>
+  <link rel="stylesheet" href="nightlight-3d.css?v=20261027">
+  <script src="nightlight-3d.js?v=20261027" defer></script>
 </head>
-<body>
+<body class="night-3d">
   <a class="skip" href="#film">Zum Film springen</a>
-  <header class="bar"><a class="brand" href="index.html#top"><span>◇</span> HALVETH / C-DROHNE</a><a class="back" href="vision.html">Erste Szene ↗</a></header>
+  <header class="bar"><a class="brand" href="index.html#top"><span>◇</span> HALVETH / C-DROHNE</a><a class="back" href="index.html">Zum Projekt ↗</a></header>
   <main>
-    <div class="intro"><p class="eyebrow">C-DROHNE / SZENE 02</p><h1>Nacht<em>licht.</em></h1><p>Ein Hinweis. Ein offenes Geräusch. Ein Lichtpunkt. Eine menschliche Klärung.</p></div>
+    <div class="intro"><div><p class="eyebrow">C-DROHNE / 3D-KONZEPTANIMATION</p><h1>Nacht<em>licht.</em></h1></div><p>Die Drohne bewegt sich durch eine räumliche Szene.<br>Kamera, Rotoren und Licht ändern sich mit ihr.</p></div>
     <section class="player" id="film" aria-label="C-DROHNE Nachtlicht Konzeptfilm">
-      <video id="night-video" src="assets/c-drohne-nightlight-film.mp4" poster="assets/c-drohne-nightlight-poster.png" controls autoplay muted playsinline loop preload="metadata" aria-label="Animierte Nachtszene: Beobachterdrohne leuchtet einen Bereich mit Suchlicht aus, eine Person wird sichtbar und Einsatzkräfte treffen ein"></video>
-      <canvas id="night-canvas" width="1280" height="720" role="img" aria-label="Synthetische Nachtszene: Glas am Boden, ein unklarer Knall, Drohne mit Lichtkegel, Person im Gebüsch und ankommende Polizei"></canvas>
+      <video id="night-video" src="assets/c-drohne-nightlight-3d-20261027.mp4" poster="assets/nightlight-3d-poster-20261027.png" width="1920" height="1080" controls muted playsinline preload="metadata" aria-label="20 Sekunden gerenderte 3D-Animation: modellierte Drohne mit rotierenden Propellern und schwenkbarem Bodenlicht in einer räumlichen Straße mit einer bekleideten Figur"></video>
+      <img id="night-fallback" src="assets/nightlight-3d-poster-20261027.png" width="1920" height="1080" alt="Einzelbild aus der 3D-Szene: modellierte Drohne über beleuchtetem Pflaster, eine bekleidete Figur im Hintergrund" hidden>
     </section>
-    <div class="below"><div><p class="eyebrow">WAS DIE SZENE ZEIGT</p><h2>Licht macht sichtbar.<br><em>Deutung bleibt prüfbar.</em></h2></div><div class="steps"><p><b>01 / HINWEIS</b> Glas am Boden und ein kurzer Knall fallen auf. Die Ursache des Geräuschs bleibt offen: Böller, Schuss oder etwas anderes.</p><p><b>02 / LICHT</b> Eine Beobachterdrohne trifft in der Szene ein. Ihr Suchlicht und eine grüne Fokuslinie machen einen Bereich am Gebüsch sichtbar.</p><p><b>03 / KLÄRUNG</b> Eine Person wird sichtbar, die Polizei kommt an und übernimmt die Einordnung. Der kleine komische Moment ist Teil der Erzählung.</p><p class="scope">Visuelle Systemszene mit erfundenem Ort und Figuren. Die Lichtfunktion, Geräuscheinordnung, Verfolgung und der Einsatzablauf sind hier animiert; die aktuelle ausführbare Software-Arbeitsprobe prüft synthetische Meldungen im Browser.</p></div></div>
-    <div class="actions"><a href="vision.html">Erste Systemszene ansehen ↗</a><a href="index.html#falllabor">Software-Arbeitsprobe öffnen ↗</a></div>
+    <p id="night-status" hidden>Der Film konnte nicht geladen werden. Das gerenderte Szenenbild bleibt sichtbar.</p>
+    <div class="film-meta"><span>20 Sekunden · 3D-Animation · 1920 × 1080 / 30 fps · ohne Ton</span><a href="https://github.com/Juri-Halveth/c-drohne-red-room/blob/main/NIGHTLIGHT_3D.md" target="_blank" rel="noopener noreferrer">Szenenaufbau und Quellen ↗</a></div>
+    <div class="below"><div><p class="eyebrow">WAS SICH HIER BEWEGT</p><h2>Ein räumlicher<br><em>Blickwechsel.</em></h2></div><div class="steps"><p><b>01 / DROHNE</b> Gehäuse, Rotoren, Schutzringe, Landebeine und Kameragelenk sind modellierte Körper. Die Drohne ändert Position und Ausrichtung im Raum.</p><p><b>02 / LICHT UND KAMERA</b> Der Scheinwerfer schwenkt mit dem Gelenk. Beleuchtung, Verdeckung und Perspektive werden aus der 3D-Szene berechnet.</p><p><b>03 / FIGUR UND UMGEBUNG</b> Straße, Fassaden und eine bekleidete Figur besitzen räumliche Geometrie. Die Figur bekommt eine kleine modellierte Kopfbewegung.</p><p class="scope">Gerenderte Konzeptanimation einer erfundenen Szene. Flugbahn und Kopfbewegung sind vorgegeben. Reale Flugphysik, Sensorerkennung und selbstständige Entscheidungen werden dadurch nicht nachgewiesen. Die ausführbare Software-Arbeitsprobe prüft getrennt davon synthetische Meldungen im Browser.</p></div></div>
+    <div class="actions"><a href="index.html#falllabor">Software-Arbeitsprobe öffnen ↗</a><a href="vision.html">Ältere Konzeptskizze ansehen ↗</a></div>
   </main>
   <footer>Juri Janovski / HALVETH · C-DROHNE Nachtlicht · Konzeptvisualisierung 2026</footer>
 </body>

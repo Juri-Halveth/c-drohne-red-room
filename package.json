@@ -4,7 +4,7 @@
   "private": true,
   "description": "Static C-DROHNE research presentation and synthetic test suite",
   "scripts": {
-    "test": "node --test critical-questions.test.mjs measurement-test.mjs dist/privacy-state.test.mjs",
+    "test": "node --test critical-questions.test.mjs measurement-test.mjs dist/privacy-state.test.mjs nightlight-player.test.cjs",
     "verify:manifest": "node manifest.cjs verify",
     "qa:offline": "node offline-qa.cjs"
   },

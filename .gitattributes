@@ -1,1 +1,3 @@
 dist/** -text
+tools/nightlight3d/*.py text eol=lf
+tools/nightlight3d/*.json text eol=lf

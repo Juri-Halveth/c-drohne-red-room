@@ -13,7 +13,8 @@ concurrency:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
     permissions:
       contents: read
     steps:
@@ -25,8 +26,16 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci --ignore-scripts
-      - run: npx playwright install --with-deps chromium
+      - name: Use the runner's installed Google Chrome
+        shell: bash
+        run: |
+          chrome_path="$(command -v google-chrome)"
+          test -x "$chrome_path"
+          "$chrome_path" --version
+          echo "CHROME_PATH=$chrome_path" >> "$GITHUB_ENV"
       - run: npm test
+      - name: Check the render export contract
+        run: python3 -m unittest discover -s tools/nightlight3d -p "test_*.py"
       - run: npm run qa:offline
       - run: npm run verify:manifest
       - name: Capture the verified website
