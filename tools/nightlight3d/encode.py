@@ -22,6 +22,8 @@ WIDTH, HEIGHT, FPS, FRAME_COUNT = 1920, 1080, 30, 600
 VIDEO_NAME = 'c-drohne-nightlight-3d-20261027.mp4'
 POSTER_NAME = 'nightlight-3d-poster-20261027.png'
 RECEIPT_NAME = 'NIGHTLIGHT_3D_RENDER.json'
+CRF, MAXRATE, BUFSIZE = 22, '2500k', '5000k'
+MAX_VIDEO_BYTES = 10 * 1024 * 1024
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 
@@ -30,7 +32,7 @@ def sha256(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def load_render_receipt(render_root):
+def load_render_receipt(render_root, expected_engine='BLENDER_EEVEE'):
     receipt = json.loads((render_root / 'RENDER_RECEIPT.json').read_text(encoding='utf-8'))
     if not isinstance(receipt, dict):
         raise ValueError('Render receipt must be a JSON object')
@@ -41,21 +43,21 @@ def load_render_receipt(render_root):
     if (not isinstance(frames, list) or len(frames) != 2
             or any(type(value) is not int for value in frames) or frames != [1, FRAME_COUNT]):
         raise ValueError('Render must cover frames 1..600 (not a benchmark)')
-    if receipt.get('engine') != 'BLENDER_EEVEE':
-        raise ValueError('Render engine must be BLENDER_EEVEE')
+    if expected_engine not in {'BLENDER_EEVEE', 'CYCLES'} or receipt.get('engine') != expected_engine:
+        raise ValueError('Render engine must be ' + expected_engine)
     version = receipt.get('blenderVersion')
     if not isinstance(version, str) or not version.strip():
         raise ValueError('Render receipt needs its actual Blender version')
     hashes = receipt.get('sourceFilesSha256')
     if not isinstance(hashes, dict) or set(hashes) != set(SOURCE_NAMES):
-        raise ValueError('Render receipt must bind all three render source files')
+        raise ValueError('Render receipt must bind all required render source files')
     for name in SOURCE_NAMES:
         if not isinstance(hashes[name], str) or not re.fullmatch(r'[0-9a-f]{64}', hashes[name]):
             raise ValueError('Invalid render source digest: ' + name)
     return receipt
 
 
-def bind_sources(receipt, source_root, repo, commit=None):
+def bind_sources(receipt, source_root, repo, commit=None, source_git_prefix='tools/nightlight3d/'):
     if commit is not None:
         if not re.fullmatch(r'[0-9a-fA-F]{40}', commit):
             raise ValueError('--render-source-commit must be exactly 40 hexadecimal characters')
@@ -67,7 +69,7 @@ def bind_sources(receipt, source_root, repo, commit=None):
         else:
             data = subprocess.check_output([
                 'git', '--no-optional-locks', '-C', str(repo), 'show',
-                commit + ':tools/nightlight3d/' + name,
+                commit + ':' + source_git_prefix + name,
             ])
         hashes[name] = sha256(data)
         if hashes[name] != receipt['sourceFilesSha256'][name]:
@@ -153,6 +155,25 @@ def validate_frames(render_root):
     return files, digests
 
 
+def bind_render_attempt(render_root, receipt, digests):
+    """V2 only: a prior completion cannot certify a different/partial attempt."""
+    if (receipt.get('schema') != 'NIGHTLIGHT_3D_RENDER_ATTEMPT_V1'
+            or receipt.get('status') != 'COMPLETED' or receipt.get('mode') != 'final'):
+        raise ValueError('A completed final render attempt is required')
+    attempt = receipt.get('attemptId')
+    if (not isinstance(attempt, str) or not re.fullmatch(r'final-[0-9a-f]{32}', attempt)
+            or render_root.resolve().name != attempt):
+        raise ValueError('Render receipt belongs to a different attempt folder')
+    scene_digest = receipt.get('sceneSha256')
+    if not isinstance(scene_digest, str) or not re.fullmatch(r'[0-9a-f]{64}', scene_digest):
+        raise ValueError('Render attempt needs its verified saved scene digest')
+    expected = [f'frame-{i:04d}.png' for i in range(1, FRAME_COUNT + 1)]
+    if sorted(path.name for path in (render_root / 'frames-final').iterdir()) != expected:
+        raise ValueError('Attempt contains an unexpected frame sequence')
+    if receipt.get('orderedFrameSha256') != digests:
+        raise ValueError('Completed attempt frame hashes do not match the ordered PNG bytes')
+
+
 def encode_video(files, digests, destination):
     # Feed exactly the validated bytes, avoiding a second path-based FFmpeg read
     # that could silently consume changed files after preflight.
@@ -160,7 +181,7 @@ def encode_video(files, digests, destination):
         'ffmpeg', '-hide_banner', '-loglevel', 'error', '-y',
         '-f', 'image2pipe', '-framerate', str(FPS), '-vcodec', 'png', '-i', 'pipe:0',
         '-frames:v', str(FRAME_COUNT), '-an', '-c:v', 'libx264', '-preset', 'medium',
-        '-crf', '22', '-maxrate', '2500k', '-bufsize', '5000k', '-pix_fmt', 'yuv420p',
+        '-crf', str(CRF), '-maxrate', MAXRATE, '-bufsize', BUFSIZE, '-pix_fmt', 'yuv420p',
         '-movflags', '+faststart', str(destination),
     ]
     process = subprocess.Popen(command, stdin=subprocess.PIPE)
@@ -201,7 +222,7 @@ def probe_video(video):
     if any(stream.get(key) != value for key, value in expected.items()):
         raise ValueError('Encoded video profile mismatch')
     duration = float(info['format']['duration'])
-    if not abs(duration - FRAME_COUNT / FPS) < .05 or not 0 < video.stat().st_size < 10 * 1024 * 1024:
+    if not abs(duration - FRAME_COUNT / FPS) < .05 or not 0 < video.stat().st_size < MAX_VIDEO_BYTES:
         raise ValueError('Encoded video duration or size mismatch')
     return info
 
@@ -247,12 +268,24 @@ def cleanup_staging(staging, repo):
     shutil.rmtree(resolved)
 
 
-def encode(render_root, render_source_commit=None, *, repo=REPO, source_root=HERE):
+def encode(render_root, render_source_commit=None, *, repo=REPO, source_root=HERE,
+           expected_engine='BLENDER_EEVEE', source_git_prefix='tools/nightlight3d/',
+           require_attempt=False):
     render_root, repo, source_root = Path(render_root), Path(repo), Path(source_root)
     # No staging or destination mutation until metadata, sources and ALL frames pass.
-    render = load_render_receipt(render_root)
-    binding = bind_sources(render, source_root, repo, render_source_commit)
+    render = load_render_receipt(render_root, expected_engine)
+    if require_attempt:
+        # An explicit historical override must agree with this attempt's freeze.
+        commit = render.get('sourceCommit')
+        if not isinstance(commit, str) or not re.fullmatch(r'[0-9a-f]{40}', commit):
+            raise ValueError('Render attempt needs its frozen source commit')
+        if render_source_commit is not None and render_source_commit.lower() != commit:
+            raise ValueError('Source commit differs from the render attempt freeze')
+        render_source_commit = commit
+    binding = bind_sources(render, source_root, repo, render_source_commit, source_git_prefix)
     files, digests = validate_frames(render_root)
+    if require_attempt:
+        bind_render_attempt(render_root, render, digests)
     assets = repo / 'dist' / 'assets'
     if not assets.is_dir():
         raise ValueError('Missing output assets directory: ' + str(assets))
@@ -270,9 +303,10 @@ def encode(render_root, render_source_commit=None, *, repo=REPO, source_root=HER
         poster.write_bytes(poster_data)
         receipt = {
             'schema': 'NIGHTLIGHT_3D_MEDIA_V1',
-            'engine': 'Blender ' + render['blenderVersion'] + ' EEVEE',
+            'engine': 'Blender ' + render['blenderVersion'] + (' Cycles' if render['engine'] == 'CYCLES' else ' EEVEE'),
             'geometry': 'Authored3D mesh scene; moving drone, camera, gimbal light, rotor meshes and small head-bone animation.',
-            'source': 'tools/nightlight3d/', 'render': render, 'renderSourceBinding': binding,
+            'source': source_git_prefix, 'render': render, 'renderSourceBinding': binding,
+            'encoding': {'codec': 'h264', 'crf': CRF, 'maxrate': MAXRATE, 'buffer': BUFSIZE},
             'frames': {'count': FRAME_COUNT, 'orderedSha256ListDigest': sha256('\n'.join(digests).encode('ascii'))},
             'video': {'path': VIDEO_NAME, 'sha256': sha256(video.read_bytes()), 'probe': info},
             'poster': {'path': POSTER_NAME, 'sha256': digests[269]},

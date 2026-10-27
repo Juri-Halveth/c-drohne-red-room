@@ -15,3 +15,16 @@ tools/nightlight3d/SCENE_RECEIPT.json
 tools/nightlight3d/SCENE_CHECK.json
 
 tools/nightlight3d/__pycache__/
+
+tools/nightlight3d_v2/sources/
+tools/nightlight3d_v2/*.blend*
+tools/nightlight3d_v2/*PREVIEW*.png
+tools/nightlight3d_v2/frames-final/
+tools/nightlight3d_v2/render/
+tools/nightlight3d_v2/RENDER_RECEIPT.json
+tools/nightlight3d_v2/SCENE_RECEIPT.json
+tools/nightlight3d_v2/BUILD_RECEIPT.json
+tools/nightlight3d_v2/__pycache__/
+
+tools/nightlight3d_v2/pilot-frames/
+tools/nightlight3d_v2/PILOT_RECEIPT.json

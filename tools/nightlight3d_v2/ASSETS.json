@@ -1,0 +1,418 @@
+[
+  {
+    "path": "cobblestone_floor_08_Diffuse.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/cobblestone_floor_08/cobblestone_floor_08_diff_1k.jpg",
+    "sha256": "ec131f7a99a1e7f9df25d4725609c55a6dad1df487630685e9a66ecbf41ec33a",
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license",
+    "bytes": 585727
+  },
+  {
+    "path": "cobblestone_floor_08_nor_gl.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/cobblestone_floor_08/cobblestone_floor_08_nor_gl_1k.jpg",
+    "sha256": "26bfff70b266a4e86983814c7e56a9b48daf93cd34dcdc16a5db13e4fabcfbb6",
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license",
+    "bytes": 1002410
+  },
+  {
+    "path": "cobblestone_floor_08_Rough.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/cobblestone_floor_08/cobblestone_floor_08_rough_1k.jpg",
+    "sha256": "f92bcaf897cd98bc3cf11e6409b3e42145e7d0f659eaaad8807dfb0c5d16afc6",
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license",
+    "bytes": 408718
+  },
+  {
+    "path": "brick_wall_001_Diffuse.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_001/brick_wall_001_diffuse_1k.jpg",
+    "sha256": "6a1233ec0186703de830354d89f122991e61e67fb67e0846c7eaf6c5aefea902",
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license",
+    "bytes": 574381
+  },
+  {
+    "path": "brick_wall_001_nor_gl.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_001/brick_wall_001_nor_gl_1k.jpg",
+    "sha256": "8afbe3919308b168a6b7235fe7b930f670cfffa1a34de39ee790d55c9d7bda09",
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license",
+    "bytes": 295279
+  },
+  {
+    "path": "brick_wall_001_Rough.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_001/brick_wall_001_rough_1k.jpg",
+    "sha256": "a23342b02e6c5af106aaece16130aa9153a801cb1a84d5f3e0d06ce248677f38",
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license",
+    "bytes": 211093
+  },
+  {
+    "path": "standing-one-hand-hip.glb",
+    "source": "https://www.innerscene.com/api/library/one-hand-on-hip-3d-person-standing-7d13068a/download",
+    "sha256": "273ab5bf4a1175fc243c6a9d4dc13812b69e0885ee85f51d572fb731fc2b1597",
+    "license": "CC0",
+    "licenseSource": "https://www.innerscene.com/tools/library/3d-parts/one-hand-on-hip-3d-person-standing-7d13068a",
+    "bytes": 24522584
+  },
+  {
+    "path": "brick_wall_001_diffuse_4k.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/brick_wall_001/brick_wall_001_diffuse_4k.jpg",
+    "sha256": "e74729d301e014cd0a499245a61648566675febecd22189c261e2a4d847cdbd5",
+    "bytes": 6544897,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "brick_wall_001_rough_4k.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/brick_wall_001/brick_wall_001_rough_4k.jpg",
+    "sha256": "82ede1859774f807cecadaf80593c2c719a8bf0bdd5aee708ef53c1a06aa861f",
+    "bytes": 2849392,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "brick_wall_001_nor_gl_4k.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/brick_wall_001/brick_wall_001_nor_gl_4k.jpg",
+    "sha256": "ccc44dda6a51e997082b6309b5135b3748409f65eea40c53b93d428965388d9a",
+    "bytes": 4489686,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "brick_wall_001_displacement_4k.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/brick_wall_001/brick_wall_001_displacement_4k.jpg",
+    "sha256": "4a8eb14e9d3f772660b356c0b06f8be8433fc35fa6ff10ad83b1a7c993348bdf",
+    "bytes": 1375034,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "cobblestone_floor_08_diff_4k.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/cobblestone_floor_08/cobblestone_floor_08_diff_4k.jpg",
+    "sha256": "52f4ea8972e3737c18796a35800e09c0f7586a15bfafec06a1aab1802bb3cdf9",
+    "bytes": 7857231,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "cobblestone_floor_08_rough_4k.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/cobblestone_floor_08/cobblestone_floor_08_rough_4k.jpg",
+    "sha256": "554b1c4b033892c9d6e41d4f6718eaaaab2de24fb6303d8840ed163d28135206",
+    "bytes": 6066604,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "cobblestone_floor_08_nor_gl_4k.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/cobblestone_floor_08/cobblestone_floor_08_nor_gl_4k.jpg",
+    "sha256": "f3ff2bbf2549de302a64f423d62aea7024553e0f3508aecbeef5015c0d8bb8db",
+    "bytes": 14731782,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "cobblestone_floor_08_disp_4k.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/cobblestone_floor_08/cobblestone_floor_08_disp_4k.jpg",
+    "sha256": "cb43d2905fce22170b99d822cc4db2966eb8a25debaa740f6ca5d557a636c555",
+    "bytes": 1544916,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_brick_arm_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_brick_arm_2k.png",
+    "sha256": "11d36fbc295b82ebe756637c102775e8cd55eb948011cbcb70df08ac05b613bb",
+    "bytes": 16069710,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_brick_diff_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_brick_diff_2k.png",
+    "sha256": "0b13e3f7c5abc614d64dbb51bb9df5a7d3b99996a4038bc8d15d1c908123dda2",
+    "bytes": 8843825,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_brick_nor_gl_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_brick_nor_gl_2k.png",
+    "sha256": "ea66f43ba5eb840b3cf35eea04a95f5f4b2de34b5bdf9513ede08301ddbfda16",
+    "bytes": 21548678,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_brick_rough_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_brick_rough_2k.png",
+    "sha256": "e268bb7dd86d307eb59947509447e4738cda093055a1053d92f5f2044ba058bc",
+    "bytes": 9422725,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_doors_arm_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_doors_arm_2k.png",
+    "sha256": "18a7b8025d002370f56cb3dc74febab02b60e10df263bc73b8b4914e37ee1b79",
+    "bytes": 13738951,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_doors_diff_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_doors_diff_2k.png",
+    "sha256": "5707d503fbf795b0b913a61bb2aabdb158aba72c161e55b3cf1af51afed85607",
+    "bytes": 20333005,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_doors_metal_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_doors_metal_2k.png",
+    "sha256": "c7e4f07e96f49ae72efefa203e4bd286177fe53875c0093c928d3cf248a5a324",
+    "bytes": 1151821,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_doors_nor_gl_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_doors_nor_gl_2k.png",
+    "sha256": "06e4c702b2917aa28179725a059e83476725633e8bded600c8660f0ced87ada4",
+    "bytes": 17055029,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_doors_rough_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_doors_rough_2k.png",
+    "sha256": "2b801f04f2146313fec0b62c2422faae06562bb485c181832c5ce5cc47b608e0",
+    "bytes": 5687930,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_garage_arm_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_garage_arm_2k.png",
+    "sha256": "54cfe6bb359697521441fbe989f86c2c33ee63b0cbeb6d4219c25d3ad9e4443c",
+    "bytes": 10673280,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_garage_diff_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_garage_diff_2k.png",
+    "sha256": "01dfbf807981c02e8f2079792557cbf98f11875fe18ff815ced4506011977861",
+    "bytes": 20424488,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_garage_metal_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_garage_metal_2k.png",
+    "sha256": "969d60a9fa5fa6dada20a2a8880d12307148d23feb450d23dd2ebf33ba355c8f",
+    "bytes": 247243,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_garage_nor_gl_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_garage_nor_gl_2k.png",
+    "sha256": "320bcd56c10f0cdabd727fa872238506c960d9c215499f3bfd4083d75affaaf4",
+    "bytes": 18209119,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_garage_rough_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_garage_rough_2k.png",
+    "sha256": "ce0104793e2e34ede789649b026991e6b52d6a6de92a50f07ad54a0828fb127c",
+    "bytes": 5818679,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_trim_01_arm_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_trim_01_arm_2k.png",
+    "sha256": "339bdba09b5a140bd3f7739b1745de2b7e7e2372b0add88df54bcee17d684f9f",
+    "bytes": 9601069,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_trim_01_diff_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_trim_01_diff_2k.png",
+    "sha256": "2df9ea84749ee88a4d2f2ecb2013c91a3db45cec5da61f2df11820f4a6e9fa6b",
+    "bytes": 24220907,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_trim_01_nor_gl_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_trim_01_nor_gl_2k.png",
+    "sha256": "4aee23b656e2f3b07c062be7ec4a4765f9ee399ba29a1814d33db3298723c94c",
+    "bytes": 22225169,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_trim_01_rough_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_trim_01_rough_2k.png",
+    "sha256": "51ca8ed08e115127a0ac7cbc5ea1951f6d334b45adf672dc4e4837dfc7a50c91",
+    "bytes": 7306847,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_windows_alpha_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_windows_alpha_2k.png",
+    "sha256": "60ca7612ca3d3ae2c27b0590a900124af01945303816a40f01bbf961ac52f6c0",
+    "bytes": 3251560,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_windows_arm_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_windows_arm_2k.png",
+    "sha256": "e6f25b567ba07733e623df5e0014c4d76409752aa2eddf61ef5c1a957abc660c",
+    "bytes": 12021731,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_windows_diff_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_windows_diff_2k.png",
+    "sha256": "e1298cc2635bffea1f6ef749692ba7760bc061f115b10e4229cff0565901a6d7",
+    "bytes": 22431211,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_windows_nor_gl_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_windows_nor_gl_2k.png",
+    "sha256": "ee0ac855947f8e123a4b56918c1e091e8cb38bbfb54d25cea1e8d19803c38dbb",
+    "bytes": 18850638,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_windows_rough_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_windows_rough_2k.png",
+    "sha256": "55595a3f6eeb83ef7e31546e98eb686d10a6020fdc01a59a3b92fdd3889f9591",
+    "bytes": 6317273,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/tree_small_02_branch_diff_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_small_02/tree_small_02_branch_diff_2k.png",
+    "sha256": "553d0cdbc12b63be3bd85756713f95bec5cdf8cc57dae74d3f19d8df13ac126c",
+    "bytes": 2714537,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/tree_small_02_branch_nor_gl_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_small_02/tree_small_02_branch_nor_gl_2k.png",
+    "sha256": "a8aa5f945a5977d82111f1f397a525acb8103d108d86bf09087be4d7d1f976d6",
+    "bytes": 15596069,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/tree_small_02_branch_rough_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_small_02/tree_small_02_branch_rough_2k.png",
+    "sha256": "2acfc7ebd7269e65917d0535c463bcf4adf44627b3c34f528e2b1623cb2a5b9c",
+    "bytes": 835917,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/tree_small_02_diff_2k.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_small_02/tree_small_02_diff_2k.jpg",
+    "sha256": "4ab3210b6ec6bb1181145500bca71d1c1f81ead6baaa8600f5979c2cec50c6a4",
+    "bytes": 3170612,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/tree_small_02_leaves_alpha_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_small_02/tree_small_02_leaves_alpha_2k.png",
+    "sha256": "566484c7047ce67af5a4435c1e4da2b773578d73f83ae45dfad0fd442df7b9d5",
+    "bytes": 636661,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/tree_small_02_leaves_diff_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_small_02/tree_small_02_leaves_diff_2k.png",
+    "sha256": "da46f05805bbc3b608051b66ee9e2b3705108de3c897ea998ab98e0360dc2b72",
+    "bytes": 7729923,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/tree_small_02_leaves_nor_gl_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_small_02/tree_small_02_leaves_nor_gl_2k.png",
+    "sha256": "01c79158aa9287cc5db2d1c660a578de9d0a1a522877f9ca40c5be6b36bdc7bf",
+    "bytes": 18978122,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/tree_small_02_leaves_rough_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_small_02/tree_small_02_leaves_rough_2k.png",
+    "sha256": "5e7fee2eb56afa1265178bb2bf9267dba12c95149d9e2068adfc1ebf2d44d082",
+    "bytes": 2953248,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/tree_small_02_nor_gl_2k.exr",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_small_02/tree_small_02_nor_gl_2k.exr",
+    "sha256": "2cba0db5ecc512414822d21f508a7d9df05716e28cec3e185c694ff6e36fd6ce",
+    "bytes": 9058409,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/tree_small_02_rough_2k.exr",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_small_02/tree_small_02_rough_2k.exr",
+    "sha256": "486cda88e05f1fa0d63a49122b016287d61683921cf60fa465dd0bd53114b092",
+    "bytes": 3573742,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "factory_2k.blend",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/modular_factory_facade/modular_factory_facade_2k.blend",
+    "sha256": "e3914d0ddb70f526b4c4ec84df63bcca7351a7a2761a384d938643ef9f0b7afc",
+    "bytes": 2456277,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "tree_small_02_2k.blend",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/tree_small_02/tree_small_02_2k.blend",
+    "sha256": "3c28e4ebded582d6539afeac7e5ccce6cb950830a94f1fe38135a45264145de5",
+    "bytes": 63805237,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "modern_evening_street_4k.hdr",
+    "source": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/4k/modern_evening_street_4k.hdr",
+    "sha256": "66125a0b167129ee7e07c2fb9d210948fe310eda58923c58e3056cc32418d72a",
+    "bytes": 24985447,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "textures/modular_factory_facade_brick_disp_2k.png",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_brick_disp_2k.png",
+    "sha256": "c225fef287072b113ecd821c44ced04a38039f85105fe076aa200a8c9ca6722a",
+    "bytes": 7394788,
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  }
+]
