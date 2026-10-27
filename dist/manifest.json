@@ -1,6 +1,6 @@
 {
   "schema": "C_DROHNE_STATIC_PACKAGE_V1",
-  "generatedAt": "2026-10-27T11:45:59.133Z",
+  "generatedAt": "2026-10-27T12:03:22.660Z",
   "scope": "Bytes of this local static package only; no authorship, deployment or field-effect claim",
   "files": [
     {
@@ -105,8 +105,8 @@
     },
     {
       "path": "nachtlicht.html",
-      "bytes": 3398,
-      "sha256": "0368b08fe130e4b63d2a4564e5c98e9c2cc3297979c2a3f32e47ad06862d9ec1"
+      "bytes": 3401,
+      "sha256": "0fbccb2b8a4891777fcd27b3ab7ed5d812d4faf8a85bfa8ade1849a8991fcf2b"
     },
     {
       "path": "night-film.js",
@@ -120,8 +120,8 @@
     },
     {
       "path": "nightlight-3d.js",
-      "bytes": 710,
-      "sha256": "854d7046c73c093a7aa44faff78eb864be5020f514e8bc436d3e21a66c5e8d05"
+      "bytes": 794,
+      "sha256": "911689b084b7618b8f6f6f075e2ded1ab9a16caa3d2abeb023007d27f2a1f105"
     },
     {
       "path": "privacy-demo.html",
@@ -170,8 +170,8 @@
     },
     {
       "path": "vision.html",
-      "bytes": 2896,
-      "sha256": "b049a08c7c12631c9777d3ed0ba5cea70d25f71289f7393bc17b997c424bbc0a"
+      "bytes": 2961,
+      "sha256": "0b5558abd347fb78f477df57bdd3156eabea9f7cfd8ce7d580d627d8f0a1eae7"
     }
   ]
 }

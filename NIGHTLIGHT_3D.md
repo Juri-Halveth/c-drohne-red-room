@@ -20,9 +20,9 @@ Die sieben externen Model-/Texturdateien sind mit Downloadquelle, Lizenzquelle u
 Benötigt: Python 3, Blender 5.2 mit EEVEE, FFmpeg/ffprobe. Die GPU und aktuelle Treiber beeinflussen Renderzeit und Pixel; bitgleiche Render sind nicht garantiert.
 
 1. `python tools/nightlight3d/acquire.py` lädt nur die sieben deklarierten Datenassets und prüft jeden Hash vor dem Speichern.
-2. `blender -b --disable-autoexec --python tools/nightlight3d/build_scene.py -- preview` baut die Szene und schreibt eine lokale `.blend`-Datei.
-3. `blender -b --disable-autoexec tools/nightlight3d/NACHTLICHT_3D.blend --python tools/nightlight3d/scene_check.py` prüft sieben deklarierte Zeitpunkte auf Bewegungs-/Projektionskonsistenz.
-4. `blender -b --disable-autoexec tools/nightlight3d/NACHTLICHT_3D.blend --python tools/nightlight3d/render_animation.py -- animation` rendert 600 echte 3D-Frames.
+2. `blender -b --disable-autoexec --python-exit-code 1 --python tools/nightlight3d/build_scene.py -- preview` baut die Szene und schreibt eine lokale `.blend`-Datei.
+3. `blender -b --disable-autoexec --python-exit-code 1 tools/nightlight3d/NACHTLICHT_3D.blend --python tools/nightlight3d/scene_check.py` prüft sieben deklarierte Zeitpunkte auf Bewegungs-/Projektionskonsistenz.
+4. `blender -b --disable-autoexec --python-exit-code 1 tools/nightlight3d/NACHTLICHT_3D.blend --python tools/nightlight3d/render_animation.py -- animation` rendert 600 echte 3D-Frames.
 5. `python tools/nightlight3d/encode.py` prüft die Framefolge und erzeugt Film, Poster und `NIGHTLIGHT_3D_RENDER.json`. Danach `node manifest.cjs build` und `npm run verify:manifest`.
 
 ## Aussagegrenze

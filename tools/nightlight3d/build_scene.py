@@ -186,12 +186,19 @@ figure=bpy.data.objects.new('PERSON | static CC0 clothed mesh',None);scene.colle
 for o in figure_objects:
     if o.parent not in figure_objects:o.parent=figure
 figure.location=(1.25,10,.13);figure.rotation_euler[2]=math.radians(105)
+scene.view_layers[0].update()
+mesh_parts=[o for o in figure_objects if o.type=='MESH']
+foot_min=min((o.matrix_world@Vector(c)).z for o in mesh_parts for c in o.bound_box)
+road=bpy.data.objects['ROAD | physical surface']
+road_top=max((road.matrix_world@Vector(c)).z for c in road.bound_box)
+figure.location.z+=road_top+.002-foot_min
 # Minimal local head rig: actual mesh deformation, not rotating a flat portrait.
 bpy.context.view_layer.update()
 arm=bpy.data.armatures.new('Head turn rig');rig=bpy.data.objects.new('FIGURE_HEAD_RIG',arm);scene.collection.objects.link(rig);rig.parent=figure
 bpy.context.view_layer.objects.active=rig;rig.select_set(True);bpy.ops.object.mode_set(mode='EDIT')
 bone=arm.edit_bones.new('HEAD');bone.head=(0,0,1.44);bone.tail=(0,0,1.7)
 bpy.ops.object.mode_set(mode='OBJECT')
+rig.pose.bones['HEAD'].rotation_mode='XYZ'
 for ob in figure_objects:
     if ob.type!='MESH':continue
     group=ob.vertex_groups.new(name='HEAD');to_figure=figure.matrix_world.inverted()@ob.matrix_world
