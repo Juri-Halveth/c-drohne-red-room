@@ -13,6 +13,8 @@ checked.SOURCE_NAMES = ('base_scene.py', 'upgrade_scene.py', 'professional_archi
 checked.VIDEO_NAME = 'c-drohne-nightlight-3d-v2-20261027.mp4'
 checked.POSTER_NAME = 'nightlight-3d-v2-poster-20261027.png'
 checked.RECEIPT_NAME = 'NIGHTLIGHT_3D_RENDER_V2.json'
+checked.CRF, checked.MAXRATE, checked.BUFSIZE = 18, '10M', '20M'
+checked.MAX_VIDEO_BYTES = 40 * 1024 * 1024
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--render-root', type=Path, default=ROOT)
 parser.add_argument('--render-source-commit')

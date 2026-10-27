@@ -22,6 +22,8 @@ WIDTH, HEIGHT, FPS, FRAME_COUNT = 1920, 1080, 30, 600
 VIDEO_NAME = 'c-drohne-nightlight-3d-20261027.mp4'
 POSTER_NAME = 'nightlight-3d-poster-20261027.png'
 RECEIPT_NAME = 'NIGHTLIGHT_3D_RENDER.json'
+CRF, MAXRATE, BUFSIZE = 22, '2500k', '5000k'
+MAX_VIDEO_BYTES = 10 * 1024 * 1024
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 
@@ -160,7 +162,7 @@ def encode_video(files, digests, destination):
         'ffmpeg', '-hide_banner', '-loglevel', 'error', '-y',
         '-f', 'image2pipe', '-framerate', str(FPS), '-vcodec', 'png', '-i', 'pipe:0',
         '-frames:v', str(FRAME_COUNT), '-an', '-c:v', 'libx264', '-preset', 'medium',
-        '-crf', '22', '-maxrate', '2500k', '-bufsize', '5000k', '-pix_fmt', 'yuv420p',
+        '-crf', str(CRF), '-maxrate', MAXRATE, '-bufsize', BUFSIZE, '-pix_fmt', 'yuv420p',
         '-movflags', '+faststart', str(destination),
     ]
     process = subprocess.Popen(command, stdin=subprocess.PIPE)
@@ -201,7 +203,7 @@ def probe_video(video):
     if any(stream.get(key) != value for key, value in expected.items()):
         raise ValueError('Encoded video profile mismatch')
     duration = float(info['format']['duration'])
-    if not abs(duration - FRAME_COUNT / FPS) < .05 or not 0 < video.stat().st_size < 10 * 1024 * 1024:
+    if not abs(duration - FRAME_COUNT / FPS) < .05 or not 0 < video.stat().st_size < MAX_VIDEO_BYTES:
         raise ValueError('Encoded video duration or size mismatch')
     return info
 
@@ -273,7 +275,8 @@ def encode(render_root, render_source_commit=None, *, repo=REPO, source_root=HER
             'schema': 'NIGHTLIGHT_3D_MEDIA_V1',
             'engine': 'Blender ' + render['blenderVersion'] + (' Cycles' if render['engine'] == 'CYCLES' else ' EEVEE'),
             'geometry': 'Authored3D mesh scene; moving drone, camera, gimbal light, rotor meshes and small head-bone animation.',
-            'source': 'tools/nightlight3d/', 'render': render, 'renderSourceBinding': binding,
+            'source': source_git_prefix, 'render': render, 'renderSourceBinding': binding,
+            'encoding': {'codec': 'h264', 'crf': CRF, 'maxrate': MAXRATE, 'buffer': BUFSIZE},
             'frames': {'count': FRAME_COUNT, 'orderedSha256ListDigest': sha256('\n'.join(digests).encode('ascii'))},
             'video': {'path': VIDEO_NAME, 'sha256': sha256(video.read_bytes()), 'probe': info},
             'poster': {'path': POSTER_NAME, 'sha256': digests[269]},
