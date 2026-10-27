@@ -310,6 +310,25 @@ class EncodeTests(unittest.TestCase):
             process.stdin.write.assert_not_called()
             process.kill.assert_called_once()
 
+    def test_cycles_requires_explicit_matching_engine_contract(self):
+        receipt = render_receipt()
+        receipt['engine'] = 'CYCLES'
+        self.write_receipt(receipt)
+        with self.assertRaisesRegex(ValueError, 'engine'):
+            encode.load_render_receipt(self.root)
+        self.assertEqual(encode.load_render_receipt(self.root, 'CYCLES')['engine'], 'CYCLES')
+        with self.assertRaisesRegex(ValueError, 'engine'):
+            encode.load_render_receipt(self.root, 'UNKNOWN')
+
+    def test_source_git_prefix_binds_the_explicit_visual_revision(self):
+        receipt = render_receipt()
+        def output(command):
+            self.assertTrue(command[-1].startswith(COMMIT + ':tools/nightlight3d_v2/'))
+            return SOURCES[command[-1].rsplit('/', 1)[1]]
+        with mock.patch.object(encode.subprocess, 'check_output', side_effect=output):
+            result = encode.bind_sources(receipt, self.source, self.repo, COMMIT, 'tools/nightlight3d_v2/')
+        self.assertEqual(result['commit'], COMMIT)
+
     def test_cli_forwards_source_commit(self):
         with mock.patch.object(encode, 'encode', return_value={'video': {'path': 'test.mp4'}}) as worker, \
                 mock.patch('sys.stdout', new_callable=io.StringIO):

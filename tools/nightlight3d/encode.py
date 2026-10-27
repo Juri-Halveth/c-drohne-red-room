@@ -30,7 +30,7 @@ def sha256(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def load_render_receipt(render_root):
+def load_render_receipt(render_root, expected_engine='BLENDER_EEVEE'):
     receipt = json.loads((render_root / 'RENDER_RECEIPT.json').read_text(encoding='utf-8'))
     if not isinstance(receipt, dict):
         raise ValueError('Render receipt must be a JSON object')
@@ -41,8 +41,8 @@ def load_render_receipt(render_root):
     if (not isinstance(frames, list) or len(frames) != 2
             or any(type(value) is not int for value in frames) or frames != [1, FRAME_COUNT]):
         raise ValueError('Render must cover frames 1..600 (not a benchmark)')
-    if receipt.get('engine') != 'BLENDER_EEVEE':
-        raise ValueError('Render engine must be BLENDER_EEVEE')
+    if expected_engine not in {'BLENDER_EEVEE', 'CYCLES'} or receipt.get('engine') != expected_engine:
+        raise ValueError('Render engine must be ' + expected_engine)
     version = receipt.get('blenderVersion')
     if not isinstance(version, str) or not version.strip():
         raise ValueError('Render receipt needs its actual Blender version')
@@ -55,7 +55,7 @@ def load_render_receipt(render_root):
     return receipt
 
 
-def bind_sources(receipt, source_root, repo, commit=None):
+def bind_sources(receipt, source_root, repo, commit=None, source_git_prefix='tools/nightlight3d/'):
     if commit is not None:
         if not re.fullmatch(r'[0-9a-fA-F]{40}', commit):
             raise ValueError('--render-source-commit must be exactly 40 hexadecimal characters')
@@ -67,7 +67,7 @@ def bind_sources(receipt, source_root, repo, commit=None):
         else:
             data = subprocess.check_output([
                 'git', '--no-optional-locks', '-C', str(repo), 'show',
-                commit + ':tools/nightlight3d/' + name,
+                commit + ':' + source_git_prefix + name,
             ])
         hashes[name] = sha256(data)
         if hashes[name] != receipt['sourceFilesSha256'][name]:
@@ -247,11 +247,12 @@ def cleanup_staging(staging, repo):
     shutil.rmtree(resolved)
 
 
-def encode(render_root, render_source_commit=None, *, repo=REPO, source_root=HERE):
+def encode(render_root, render_source_commit=None, *, repo=REPO, source_root=HERE,
+           expected_engine='BLENDER_EEVEE', source_git_prefix='tools/nightlight3d/'):
     render_root, repo, source_root = Path(render_root), Path(repo), Path(source_root)
     # No staging or destination mutation until metadata, sources and ALL frames pass.
-    render = load_render_receipt(render_root)
-    binding = bind_sources(render, source_root, repo, render_source_commit)
+    render = load_render_receipt(render_root, expected_engine)
+    binding = bind_sources(render, source_root, repo, render_source_commit, source_git_prefix)
     files, digests = validate_frames(render_root)
     assets = repo / 'dist' / 'assets'
     if not assets.is_dir():
@@ -270,7 +271,7 @@ def encode(render_root, render_source_commit=None, *, repo=REPO, source_root=HER
         poster.write_bytes(poster_data)
         receipt = {
             'schema': 'NIGHTLIGHT_3D_MEDIA_V1',
-            'engine': 'Blender ' + render['blenderVersion'] + ' EEVEE',
+            'engine': 'Blender ' + render['blenderVersion'] + (' Cycles' if render['engine'] == 'CYCLES' else ' EEVEE'),
             'geometry': 'Authored3D mesh scene; moving drone, camera, gimbal light, rotor meshes and small head-bone animation.',
             'source': 'tools/nightlight3d/', 'render': render, 'renderSourceBinding': binding,
             'frames': {'count': FRAME_COUNT, 'orderedSha256ListDigest': sha256('\n'.join(digests).encode('ascii'))},
