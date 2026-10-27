@@ -29,27 +29,23 @@ jobs:
       - run: npm test
       - run: npm run qa:offline
       - run: npm run verify:manifest
+      - name: Capture the verified website
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: dist
 
   publish:
-    if: github.event_name != 'pull_request'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: [verify]
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-        with:
-          fetch-depth: 0
-      - name: Publish the verified dist tree to the configured Pages branch
-        shell: bash
-        run: |
-          git worktree add --detach "$RUNNER_TEMP/c-drohne-pages" origin/gh-pages
-          rsync -a --delete --exclude='.git' dist/ "$RUNNER_TEMP/c-drohne-pages/"
-          cd "$RUNNER_TEMP/c-drohne-pages"
-          git add -A
-          if git diff --cached --quiet; then
-            echo 'Pages already matches dist.'
-            exit 0
-          fi
-          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Publish verified C-DROHNE site'
-          git push origin HEAD:gh-pages
+      - name: Deploy the verified website
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
