@@ -13,3 +13,5 @@ tools/nightlight3d/PREVIEW*.png
 tools/nightlight3d/RENDER_RECEIPT.json
 tools/nightlight3d/SCENE_RECEIPT.json
 tools/nightlight3d/SCENE_CHECK.json
+
+tools/nightlight3d/__pycache__/

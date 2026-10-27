@@ -8,11 +8,11 @@ Ein Präsentationsprototyp mit kurzen Konzeptfilmen und Forschungsdokumentation.
 
 ![Einzelbild der neuen 3D-Animation: Drohnenkörper mit Rotoren und Scheinwerfer in einer räumlichen Straße](dist/assets/nightlight-3d-poster-20261027.png)
 
-Stand: 19.10.2026. Die Website liegt vollständig in `dist/`. Sie ist eine öffentlich einsehbare, lokal prüfbare Präsentation für ein fachliches Erstgespräch. Der Git-Forschungszweig heißt weiterhin `CHILDDROHNE`; die Seite zeigt diesen Namen klein als Herkunftsspur. Eine Kontaktaufnahme ist damit nicht erfolgt.
+Präsentationsbasis: 19.10.2026; Nachtlicht-3D-Fassung: 27.10.2026. Die Website liegt vollständig in `dist/`. Sie ist eine öffentlich einsehbare, lokal prüfbare Präsentation für ein fachliches Erstgespräch. Der Git-Forschungszweig heißt weiterhin `CHILDDROHNE`; die Seite zeigt diesen Namen klein als Herkunftsspur. Eine Kontaktaufnahme ist damit nicht erfolgt.
 
 ## Öffnen
 
-`dist/index.html` im Browser öffnen. Die ältere [24-Sekunden-Konzeptskizze](dist/vision.html) zeigt den beabsichtigten Ablauf mit grafischen Markierungen. Der neue Film [Nachtlicht](dist/nachtlicht.html) zeigt in 20 Sekunden eine modellierte 3D-Drohne mit bewegten Rotoren, schwenkbarem Licht und räumlicher Kamera in einer3D-Straße. Die bekleidete 3D-Figur erhält eine kleine Kopfbewegung. [Herstellung, Quellen und Grenzen](NIGHTLIGHT_3D.md) sind dokumentiert. Der öffentliche Player verwendet keine externen Skripte, Schriften, Kameras, Konten, Analysewerkzeuge oder APIs. Die externen Forschungslinks öffnen erst auf Klick.
+`dist/index.html` im Browser öffnen. Die ältere [24-Sekunden-Konzeptskizze](dist/vision.html) zeigt den beabsichtigten Ablauf mit grafischen Markierungen. Der neue Film [Nachtlicht](dist/nachtlicht.html) zeigt in 20 Sekunden eine modellierte 3D-Drohne mit bewegten Rotoren, schwenkbarem Licht und räumlicher Kamera in einer 3D-Straße. Die bekleidete 3D-Figur erhält eine kleine Kopfbewegung. [Herstellung, Quellen und Grenzen](NIGHTLIGHT_3D.md) sind dokumentiert. Der öffentliche Player verwendet keine externen Skripte, Schriften, Kameras, Konten, Analysewerkzeuge oder APIs. Die externen Forschungslinks öffnen erst auf Klick.
 
 Für die Browserprüfungen: `npm install`, `npx playwright install chromium` und `npm test`. Bei einem bereits installierten Chromium kann `CHROME_PATH` auf dessen ausführbare Datei zeigen. Die statische Seite selbst benötigt weder npm noch einen Server.
 

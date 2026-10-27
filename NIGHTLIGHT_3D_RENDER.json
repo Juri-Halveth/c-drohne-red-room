@@ -1,6 +1,6 @@
 {
   "schema": "NIGHTLIGHT_3D_MEDIA_V1",
-  "engine": "Blender5.2.3 EEVEE",
+  "engine": "Blender 5.2.3 LTS EEVEE",
   "geometry": "Authored3D mesh scene; moving drone, camera, gimbal light, rotor meshes and small head-bone animation.",
   "source": "tools/nightlight3d/",
   "render": {
@@ -16,15 +16,29 @@
     "motionBlur": true,
     "method": "Rendered 3D mesh animation. No AI still-image frames used.",
     "blenderVersion": "5.2.3 LTS",
-    "sceneSha256": "a88b4c976279a6cf37cfb713658e4a255c00512450760a42b463f856b2c16d4f"
+    "sourceFilesSha256": {
+      "build_scene.py": "cec9f86c0d922cdf540d57e6393cf81b84e620938e01e27d0223ca8782b3db0a",
+      "render_animation.py": "7c585ca759d3e83b14856af0546118f86699ce222b51793bac624fd4fc974aca",
+      "scene_check.py": "4075ca1e84d8b9762737ea770b620b0855737064e885b2b6cfcda141270573ad"
+    },
+    "sceneSha256": "6332a97383e2527f48a1408a048c20ea55a4c08254d1b58e9701824336cd41fe"
+  },
+  "renderSourceBinding": {
+    "mode": "git-commit",
+    "commit": "746c962c94fcef57e70880cc7318ad513ae19e02",
+    "sourceFilesSha256": {
+      "build_scene.py": "cec9f86c0d922cdf540d57e6393cf81b84e620938e01e27d0223ca8782b3db0a",
+      "render_animation.py": "7c585ca759d3e83b14856af0546118f86699ce222b51793bac624fd4fc974aca",
+      "scene_check.py": "4075ca1e84d8b9762737ea770b620b0855737064e885b2b6cfcda141270573ad"
+    }
   },
   "frames": {
     "count": 600,
-    "orderedSha256ListDigest": "8e18b75cc181ac8b4df33964b64eb620165b541e5c774652ee29a02aff2a7558"
+    "orderedSha256ListDigest": "8b2e2912fec4dfba520e863a3d4c37364a2a52122469699ad1d3df7c5a83d7cd"
   },
   "video": {
     "path": "c-drohne-nightlight-3d-20261027.mp4",
-    "sha256": "4921d1f9f071eb2fc8e0c6d15d87dc066c9b467e9cf4c23572420efa73e9ff18",
+    "sha256": "7610f966227be288242f8d2a733b468857f8bc20e8d72953e8305e1f55a599da",
     "probe": {
       "programs": [],
       "stream_groups": [],
@@ -34,15 +48,20 @@
           "codec_type": "video",
           "width": 1920,
           "height": 1080,
+          "pix_fmt": "yuv420p",
           "r_frame_rate": "30/1",
           "nb_read_frames": "600"
         }
       ],
       "format": {
         "duration": "20.000000",
-        "size": "5050304"
+        "size": "5057128"
       }
     }
+  },
+  "poster": {
+    "path": "nightlight-3d-poster-20261027.png",
+    "sha256": "101c0c70d01a1eb4222dadeaaf1f02a9de24c14ca0e187117c98bac8a4e5eb69"
   },
   "claimCeiling": "Rendered concept animation; not real flight, sensor recognition, autonomous decisions or accepted film-quality proof."
 }

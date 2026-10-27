@@ -244,7 +244,10 @@ bpy.ops.wm.save_as_mainfile(filepath=str(R/'NACHTLICHT_3D.blend'),compress=True)
 receipt={'scene':'NACHTLICHT_3D_V1','blender':bpy.app.version_string,'meshObjects':sum(o.type=='MESH' for o in scene.objects),'sceneObjects':len(scene.objects),'animatedSpatialObjects':['DRONE_ROOT','GIMBAL','CINEMA_CAMERA','CAMERA_LOOK','four rotor objects','HEAD bone'],'person':'CC0 clothed mesh with a small authored head turn; no walking, speech or autonomous behavior.','projection':'Perspective camera; metre-scaled synthetic authored scene. No flight physics or sensor/recognition validation.'}
 (R/'SCENE_RECEIPT.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf-8')
 args=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
-if args and args[0]=='animation':scene.render.filepath=str(O/'frame-');bpy.ops.render.render(animation=True)
+if args and args[0]=='animation':
+    # Use the same checked final profile, output directory and receipt as step 4.
+    import runpy
+    runpy.run_path(str(R/'render_animation.py'),run_name='__main__')
 else:
     scene.render.resolution_percentage=67
     scene.render.filepath=str(R/'PREVIEW_3D.png');bpy.ops.render.render(write_still=True)

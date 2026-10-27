@@ -1,6 +1,6 @@
 {
   "schema": "C_DROHNE_STATIC_PACKAGE_V1",
-  "generatedAt": "2026-10-27T12:03:22.660Z",
+  "generatedAt": "2026-10-27T12:10:57.103Z",
   "scope": "Bytes of this local static package only; no authorship, deployment or field-effect claim",
   "files": [
     {
@@ -20,8 +20,8 @@
     },
     {
       "path": "assets/c-drohne-nightlight-3d-20261027.mp4",
-      "bytes": 5050304,
-      "sha256": "4921d1f9f071eb2fc8e0c6d15d87dc066c9b467e9cf4c23572420efa73e9ff18"
+      "bytes": 5057128,
+      "sha256": "7610f966227be288242f8d2a733b468857f8bc20e8d72953e8305e1f55a599da"
     },
     {
       "path": "assets/c-drohne-nightlight-film.mp4",
@@ -45,8 +45,8 @@
     },
     {
       "path": "assets/nightlight-3d-poster-20261027.png",
-      "bytes": 2265384,
-      "sha256": "27fa45b6ecc997577f094e170a33f670bed779101bfd07af55edd3586aaa99a1"
+      "bytes": 2265247,
+      "sha256": "101c0c70d01a1eb4222dadeaaf1f02a9de24c14ca0e187117c98bac8a4e5eb69"
     },
     {
       "path": "assets/observer-valley-20261019.png",

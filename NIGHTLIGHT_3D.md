@@ -25,6 +25,14 @@ Benötigt: Python 3, Blender 5.2 mit EEVEE, FFmpeg/ffprobe. Die GPU und aktuelle
 4. `blender -b --disable-autoexec --python-exit-code 1 tools/nightlight3d/NACHTLICHT_3D.blend --python tools/nightlight3d/render_animation.py -- animation` rendert 600 echte 3D-Frames.
 5. `python tools/nightlight3d/encode.py` prüft die Framefolge und erzeugt Film, Poster und `NIGHTLIGHT_3D_RENDER.json`. Danach `node manifest.cjs build` und `npm run verify:manifest`.
 
+## Gebundener Render und Exportprüfung
+
+Der Medienbeleg führt die tatsächlich gerenderten Quellbytes und den zugehörigen Git-Commit getrennt vom späteren Stand des Exportwerkzeugs. Für die hier veröffentlichte Framefolge ist der Renderquellstand `746c962c94fcef57e70880cc7318ad513ae19e02` gebunden. Die spätere Korrektur des direkten `build_scene.py -- animation`-Aufrufs vereinheitlicht lediglich den Einstieg: Er verwendet jetzt denselben geprüften Renderpfad wie Schritt 4. Eine lokale Blender-Gegenprüfung hat diesen Aufruf bis zur Übergabe an den Finalrenderer ausgeführt.
+
+Wer eine bereits gerenderte lokale Framefolge exportiert, kann den nachweislich passenden Renderquellstand mit `--render-source-commit <40-stelliger-Commit>` angeben. Der Encoder vergleicht alle drei Quellhashes mit diesen Git-Blobs. Ohne diese Option vergleicht er die aktuellen Dateien. Ein Benchmark mit vier Frames, eine fehlende oder unpassende Renderquittung und eine unvollständige Framefolge werden vor dem Ersetzen veröffentlichter Medien zurückgewiesen. Der Encoder bereitet das neue Medienpaket zuerst separat vor und prüft die dekodierte Länge und Auflösung.
+
+Die Modellprüfung erfasst sieben Zeitpunkte sowie die tatsächliche Verschiebung eines ausgewerteten Kopf-Mesh-Punktes und den Abstand der Füße zur Straße. Diese Stichproben sind keine lückenlose Kollisionsprüfung. Die Export-Gegenproben lassen sich mit `python -m unittest discover -s tools/nightlight3d -p "test_*.py"` ausführen; sie laufen auch in der GitHub-Prüfung.
+
 ## Aussagegrenze
 
 Dies ist eine vorgegebene 3D-Konzeptanimation. Kollisionsfreie Stichproben im gebundenen Szenenmodell sind keine reale Flugfreigabe oder validierte Flugphysik. Kopfbewegung ist keine eigenständige Figur, Blickentscheidung oder Erkennungsleistung. Technische Render-/Buildprüfungen ersetzen keine gestalterische Abnahme. Das getrennte Falllabor bleibt die ausführbare Software-Arbeitsprobe für synthetische Meldungen und Quellen.
