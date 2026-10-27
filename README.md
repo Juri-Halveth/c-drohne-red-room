@@ -4,6 +4,9 @@ Ein Präsentationsprototyp mit kurzen Konzeptfilmen und Forschungsdokumentation.
 
 [**Projekt öffnen →**](https://juri-halveth.github.io/c-drohne-red-room/) · [Arbeitsproben](https://juri-halveth.github.io/koennen/) · [Portfolio](https://juri-halveth.github.io/)
 
+**Nachtlicht: die neue 3D-Fassung.** Modellierte Drohne, bewegte Kamera, Rotoren und Bodenlicht. [20-Sekunden-Animation öffnen →](https://juri-halveth.github.io/c-drohne-red-room/nachtlicht.html)
+
+![Einzelbild der neuen 3D-Animation: Drohnenkörper mit Rotoren und Scheinwerfer in einer räumlichen Straße](dist/assets/nightlight-3d-poster-20261027.png)
 
 Stand: 19.10.2026. Die Website liegt vollständig in `dist/`. Sie ist eine öffentlich einsehbare, lokal prüfbare Präsentation für ein fachliches Erstgespräch. Der Git-Forschungszweig heißt weiterhin `CHILDDROHNE`; die Seite zeigt diesen Namen klein als Herkunftsspur. Eine Kontaktaufnahme ist damit nicht erfolgt.
 
