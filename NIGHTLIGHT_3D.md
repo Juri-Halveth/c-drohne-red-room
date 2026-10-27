@@ -1,5 +1,11 @@
 # Nachtlicht: räumlicher Neuaufbau
 
+## Visuelle Überarbeitung
+
+Die erste räumliche Fassung wurde wegen ihrer zu einfachen Geometrie und Lichtgestaltung gestalterisch zurückgewiesen. Der neue Cycles-Aufbau mit detaillierter Fassade, Bäumen, räumlichem Pflaster und überarbeiteter Kamera ist in [NIGHTLIGHT_VISUAL_V2.md](NIGHTLIGHT_VISUAL_V2.md) beschrieben. Die dort gebundenen Renderquellen und Medienbelege werden getrennt vom folgenden historischen EEVEE-Herstellungspfad geführt.
+
+## Erste 3D-Fassung
+
 Die Nachtlicht-Seite verwendet eine neue 20-Sekunden-Animation aus einer modellierten 3D-Szene. Die bisherige Canvas-Fassung mit gezeichneten Figuren, Drohnensymbol und Dreieckslichtkegel ist nicht mehr der aktive Player oder dessen Fehlerfallback. Historische Dateien bleiben als ältere Quellen erhalten.
 
 Die Drohne besitzt Gehäuse, Arme, Motoren, vier Schutzringe und Rotoren, Landebeine, Kameragelenk und Lichtquelle. Die Umgebung besteht aus 3D-Oberflächen und Körpern. Flugbahn, Kamera, Gelenk und Rotoren werden im Raum animiert. Eine bekleidete Figuren-Mesh erhält eine kleine Kopfbewegung über ein zusätzliches Bone; sie läuft und spricht nicht. Die vorbereiteten KI-Bilder wurden als Look-Referenzen betrachtet, aber nicht als Filmframes oder Hintergrund-Billboards eingebaut.

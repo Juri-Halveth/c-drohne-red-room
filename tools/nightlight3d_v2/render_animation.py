@@ -1,11 +1,16 @@
 """Render the actual visual scene. A pilot is isolated from the final frame set."""
-import bpy, hashlib, json, subprocess, sys, time
+import bpy, argparse, json, sys, time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-SOURCES = ('base_scene.py', 'upgrade_scene.py', 'professional_architecture.py',
-           'art_direction.py', 'cinematic_lighting.py', 'foliage_details.py',
-           'prepare_scene.py', 'render_animation.py', 'ASSETS.json')
+sys.path.insert(0, str(ROOT))
+from render_contract import verify_build, start_attempt, complete_attempt
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('mode', choices=('pilot', 'final'), nargs='?', default='pilot')
+parser.add_argument('--source-commit', required=True, help='Same frozen full commit used for build')
+args = parser.parse_args(sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else [])
+binding = verify_build(ROOT, bpy.data.filepath, args.source_commit)
 scene = bpy.context.scene
 prefs = bpy.context.preferences.addons['cycles'].preferences
 prefs.compute_device_type = 'OPTIX'
@@ -25,31 +30,23 @@ scene.render.resolution_percentage = 100
 scene.render.fps = 30
 scene.render.image_settings.file_format = 'PNG'
 scene.render.image_settings.color_mode = 'RGB'
-args = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
-mode = args[0] if args else 'pilot'
-if mode not in {'pilot', 'final'}:
-    raise ValueError('Choose pilot or final')
-scene.frame_start, scene.frame_end = (300, 303) if mode == 'pilot' else (1, 600)
-folder = ROOT / ('pilot-frames' if mode == 'pilot' else 'frames-final')
-folder.mkdir(exist_ok=True)
-scene.render.filepath = str(folder / 'frame-')
-hashes = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in SOURCES}
-repo = ROOT.parents[1]
-commit = subprocess.check_output(['git', '-C', str(repo), 'rev-parse', 'HEAD'], text=True).strip()
-for name, digest in hashes.items():
-    raw = subprocess.check_output(['git', '-C', str(repo), 'show', commit + ':tools/nightlight3d_v2/' + name])
-    if hashlib.sha256(raw).hexdigest() != digest:
-        raise ValueError('Render source is not frozen in the source commit: ' + name)
+scene.frame_start, scene.frame_end = (300, 303) if args.mode == 'pilot' else (1, 600)
+scene.frame_step = 1
+folder, attempt = start_attempt(ROOT, args.mode, binding)
+scene.render.filepath = str(folder / 'frames-final' / 'frame-')
+scene.render.use_file_extension = True
+scene.render.use_overwrite = False
+print('VISUAL_V2_ATTEMPT', str(folder), flush=True)
 started = time.monotonic()
 bpy.ops.render.render(animation=True)
-receipt = {'engine': scene.render.engine, 'samples': scene.cycles.samples,
+if verify_build(ROOT, bpy.data.filepath, args.source_commit) != binding:
+    raise ValueError('Build binding changed during rendering')
+receipt = {**attempt, 'engine': scene.render.engine, 'samples': scene.cycles.samples,
            'width': 1920, 'height': 1080, 'fps': 30,
            'frames': [scene.frame_start, scene.frame_end],
            'motionBlur': scene.render.use_motion_blur,
-           'blenderVersion': bpy.app.version_string, 'sourceFilesSha256': hashes,
-           'sourceCommit': commit, 'renderSeconds': time.monotonic() - started,
-           'sceneSha256': hashlib.sha256((ROOT / 'NACHTLICHT_FINAL.blend').read_bytes()).hexdigest(),
+           'blenderVersion': bpy.app.version_string,
+           'renderSeconds': time.monotonic() - started,
            'method': 'Actual mesh-scene camera frames, Cycles/OptiX; no imagegen film frames.'}
-(ROOT / ('PILOT_RECEIPT.json' if mode == 'pilot' else 'RENDER_RECEIPT.json')).write_text(
-    json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
+receipt = complete_attempt(folder, receipt)
 print('VISUAL_V2_RENDER_DONE', json.dumps(receipt))

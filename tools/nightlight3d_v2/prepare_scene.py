@@ -1,19 +1,19 @@
 """Build the visual revision from verified CC0 data, without intermediate films."""
-import bpy, hashlib, json, runpy, sys
+import bpy, argparse, json, runpy, sys
 from pathlib import Path
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT))
+from render_contract import BUILD_SCHEMA, frozen_inputs, scene_binding, write_receipt
+
 STAGES = ('base_scene.py', 'upgrade_scene.py', 'professional_architecture.py',
           'art_direction.py', 'cinematic_lighting.py')
 
-for asset in json.loads((ROOT / 'ASSETS.json').read_text(encoding='utf-8')):
-    path = (ROOT / 'sources' / asset['path']).resolve()
-    if not path.is_relative_to((ROOT / 'sources').resolve()):
-        raise ValueError('Asset path outside sources')
-    data = path.read_bytes()
-    if len(data) != asset['bytes'] or hashlib.sha256(data).hexdigest() != asset['sha256']:
-        raise ValueError('Asset changed: ' + asset['path'])
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--source-commit', required=True, help='Full Git commit frozen before build')
+args = parser.parse_args(sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else [])
+binding = frozen_inputs(ROOT, args.source_commit)
 
 sys.argv = ['blender', '--', '--build-only']
 for stage in STAGES:
@@ -41,10 +41,13 @@ bpy.context.view_layer.update()
 bottom = min((o.matrix_world @ Vector(c)).z for o in parts for c in o.bound_box)
 assert abs(bottom - .034) < .001
 bpy.ops.wm.save_as_mainfile(filepath=str(ROOT / 'NACHTLICHT_FINAL.blend'), compress=True)
-receipt = {'schema': 'NIGHTLIGHT_3D_VISUAL_BUILD_V2', 'engine': scene.render.engine,
+saved_scene = scene_binding(ROOT, bpy.data.filepath)
+if frozen_inputs(ROOT, args.source_commit) != binding:
+    raise ValueError('Build inputs changed during preparation')
+receipt = {**binding, **saved_scene, 'schema': BUILD_SCHEMA, 'engine': scene.render.engine,
            'blenderVersion': bpy.app.version_string, 'floorContactMinimumZ': bottom,
-           'groundStoneTopRange': [.023, .031], 'assetCount': 52,
+           'groundStoneTopRange': [.023, .031], 'assetCount': len(binding['assetFilesSha256']),
            'sceneObjects': len(scene.objects),
            'scope': 'Authored mesh animation; CC0 artist architecture and trees, HDR lighting, procedural road/foliage. No generated-image film frames.'}
-(ROOT / 'BUILD_RECEIPT.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
+write_receipt(ROOT / 'BUILD_RECEIPT.json', receipt)
 print('VISUAL_V2_BUILD_PASS', json.dumps(receipt))

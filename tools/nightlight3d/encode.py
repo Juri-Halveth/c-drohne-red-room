@@ -50,7 +50,7 @@ def load_render_receipt(render_root, expected_engine='BLENDER_EEVEE'):
         raise ValueError('Render receipt needs its actual Blender version')
     hashes = receipt.get('sourceFilesSha256')
     if not isinstance(hashes, dict) or set(hashes) != set(SOURCE_NAMES):
-        raise ValueError('Render receipt must bind all three render source files')
+        raise ValueError('Render receipt must bind all required render source files')
     for name in SOURCE_NAMES:
         if not isinstance(hashes[name], str) or not re.fullmatch(r'[0-9a-f]{64}', hashes[name]):
             raise ValueError('Invalid render source digest: ' + name)
@@ -155,6 +155,25 @@ def validate_frames(render_root):
     return files, digests
 
 
+def bind_render_attempt(render_root, receipt, digests):
+    """V2 only: a prior completion cannot certify a different/partial attempt."""
+    if (receipt.get('schema') != 'NIGHTLIGHT_3D_RENDER_ATTEMPT_V1'
+            or receipt.get('status') != 'COMPLETED' or receipt.get('mode') != 'final'):
+        raise ValueError('A completed final render attempt is required')
+    attempt = receipt.get('attemptId')
+    if (not isinstance(attempt, str) or not re.fullmatch(r'final-[0-9a-f]{32}', attempt)
+            or render_root.resolve().name != attempt):
+        raise ValueError('Render receipt belongs to a different attempt folder')
+    scene_digest = receipt.get('sceneSha256')
+    if not isinstance(scene_digest, str) or not re.fullmatch(r'[0-9a-f]{64}', scene_digest):
+        raise ValueError('Render attempt needs its verified saved scene digest')
+    expected = [f'frame-{i:04d}.png' for i in range(1, FRAME_COUNT + 1)]
+    if sorted(path.name for path in (render_root / 'frames-final').iterdir()) != expected:
+        raise ValueError('Attempt contains an unexpected frame sequence')
+    if receipt.get('orderedFrameSha256') != digests:
+        raise ValueError('Completed attempt frame hashes do not match the ordered PNG bytes')
+
+
 def encode_video(files, digests, destination):
     # Feed exactly the validated bytes, avoiding a second path-based FFmpeg read
     # that could silently consume changed files after preflight.
@@ -250,12 +269,23 @@ def cleanup_staging(staging, repo):
 
 
 def encode(render_root, render_source_commit=None, *, repo=REPO, source_root=HERE,
-           expected_engine='BLENDER_EEVEE', source_git_prefix='tools/nightlight3d/'):
+           expected_engine='BLENDER_EEVEE', source_git_prefix='tools/nightlight3d/',
+           require_attempt=False):
     render_root, repo, source_root = Path(render_root), Path(repo), Path(source_root)
     # No staging or destination mutation until metadata, sources and ALL frames pass.
     render = load_render_receipt(render_root, expected_engine)
+    if require_attempt:
+        # An explicit historical override must agree with this attempt's freeze.
+        commit = render.get('sourceCommit')
+        if not isinstance(commit, str) or not re.fullmatch(r'[0-9a-f]{40}', commit):
+            raise ValueError('Render attempt needs its frozen source commit')
+        if render_source_commit is not None and render_source_commit.lower() != commit:
+            raise ValueError('Source commit differs from the render attempt freeze')
+        render_source_commit = commit
     binding = bind_sources(render, source_root, repo, render_source_commit, source_git_prefix)
     files, digests = validate_frames(render_root)
+    if require_attempt:
+        bind_render_attempt(render_root, render, digests)
     assets = repo / 'dist' / 'assets'
     if not assets.is_dir():
         raise ValueError('Missing output assets directory: ' + str(assets))
