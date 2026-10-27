@@ -13,13 +13,28 @@ Stand: 19.10.2026. Die Website liegt vollständig in `dist/`. Sie ist eine öffe
 
 Für die Browserprüfungen: `npm install`, `npx playwright install chromium` und `npm test`. Bei einem bereits installierten Chromium kann `CHROME_PATH` auf dessen ausführbare Datei zeigen. Die statische Seite selbst benötigt weder npm noch einen Server.
 
-## Vorschau
+## Vorschau – am Desktop und unterwegs
 
-![C-DROHNE Eingang mit direktem Weg zum Fall](previews/c-drohne-hero-1440-20261019.png)
+[**▶ Systemdemo · 24 Sekunden**](https://juri-halveth.github.io/c-drohne-red-room/vision.html) · [**Nachtlicht · 30 Sekunden**](https://juri-halveth.github.io/c-drohne-red-room/nachtlicht.html) · [**Falllabor ausprobieren →**](https://juri-halveth.github.io/c-drohne-red-room/#falllabor)
 
-![Synthetischer Fall auf schmalem Bildschirm](previews/c-drohne-case-375-20261019.png)
+**Der Eingang am Desktop.** Die Filme, der ausführbare Fall und die Textfassung sind direkt erreichbar. Die folgende Aufnahme zeigt die veröffentlichte Seite bei 1440 Pixeln Breite.
 
-![72 kritische Gegenproben auf schmalem Bildschirm](previews/c-drohne-audit72-375-20261019.png)
+![C-DROHNE am Desktop: breiter Eingang mit direktem Zugang zu Filmen und Falllabor](previews/c-drohne-desktop-1440-20261027.webp)
+
+**Das Falllabor am Desktop.** Links stehen die drei erfundenen Meldungen; rechts liegen die Gegenprobe, das berechnete Ergebnis und die getrennten Prüffelder. So lassen sich Eingabe und Auswertung nebeneinander lesen.
+
+![Desktop-Falllabor in zwei Spalten: drei Meldungen links, Herkunfts- und Zeitprüfung rechts](previews/c-drohne-case-desktop-20261027.webp)
+
+<details>
+<summary><strong>Mobilansicht vergleichen · 375 Pixel</strong></summary>
+
+Auf dem Smartphone stehen dieselben Eingaben und Ergebnisse untereinander. Die schmale Ansicht bleibt hier eingeklappt, damit sie den Einstieg am Desktop nicht zu einer langen Bildsäule macht.
+
+<img src="previews/c-drohne-case-mobile-20261027.webp" width="320" alt="Mobiles Falllabor: dieselben drei Meldungen und dieselbe Auswertung in einer Spalte">
+
+</details>
+
+Aufnahmen vom 27.10.2026 aus der veröffentlichten Seitenfassung `63d49bb`. Die Bilder zeigen die Oberfläche und eine synthetische Fallauswertung. Die [72 Ausgangsfragen](https://juri-halveth.github.io/c-drohne-red-room/audit-72.html) und der [Leseraum](https://juri-halveth.github.io/c-drohne-red-room/leseraum.html) bleiben separat erreichbar.
 
 ## Was die Seite demonstriert
 
