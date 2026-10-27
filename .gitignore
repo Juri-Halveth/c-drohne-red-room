@@ -4,3 +4,12 @@ previews/inspect-*.png
 previews/ambiguous-correction-*.png
 tmp-*.cjs
 tmp/
+tools/nightlight3d/sources/
+tools/nightlight3d/frames-final/
+tools/nightlight3d/eevee-benchmark/
+tools/nightlight3d/render/
+tools/nightlight3d/*.blend*
+tools/nightlight3d/PREVIEW*.png
+tools/nightlight3d/RENDER_RECEIPT.json
+tools/nightlight3d/SCENE_RECEIPT.json
+tools/nightlight3d/SCENE_CHECK.json

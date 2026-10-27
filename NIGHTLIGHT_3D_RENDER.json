@@ -1,0 +1,48 @@
+{
+  "schema": "NIGHTLIGHT_3D_MEDIA_V1",
+  "engine": "Blender5.2.3 EEVEE",
+  "geometry": "Authored3D mesh scene; moving drone, camera, gimbal light, rotor meshes and small head-bone animation.",
+  "source": "tools/nightlight3d/",
+  "render": {
+    "engine": "BLENDER_EEVEE",
+    "samples": 32,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": [
+      1,
+      600
+    ],
+    "motionBlur": true,
+    "method": "Rendered 3D mesh animation. No AI still-image frames used.",
+    "blenderVersion": "5.2.3 LTS",
+    "sceneSha256": "a88b4c976279a6cf37cfb713658e4a255c00512450760a42b463f856b2c16d4f"
+  },
+  "frames": {
+    "count": 600,
+    "orderedSha256ListDigest": "8e18b75cc181ac8b4df33964b64eb620165b541e5c774652ee29a02aff2a7558"
+  },
+  "video": {
+    "path": "c-drohne-nightlight-3d-20261027.mp4",
+    "sha256": "4921d1f9f071eb2fc8e0c6d15d87dc066c9b467e9cf4c23572420efa73e9ff18",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "600"
+        }
+      ],
+      "format": {
+        "duration": "20.000000",
+        "size": "5050304"
+      }
+    }
+  },
+  "claimCeiling": "Rendered concept animation; not real flight, sensor recognition, autonomous decisions or accepted film-quality proof."
+}

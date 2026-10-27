@@ -1,0 +1,51 @@
+[
+  {
+    "path": "cobblestone_floor_08_Diffuse.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/cobblestone_floor_08/cobblestone_floor_08_diff_1k.jpg",
+    "sha256": "ec131f7a99a1e7f9df25d4725609c55a6dad1df487630685e9a66ecbf41ec33a",
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "cobblestone_floor_08_nor_gl.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/cobblestone_floor_08/cobblestone_floor_08_nor_gl_1k.jpg",
+    "sha256": "26bfff70b266a4e86983814c7e56a9b48daf93cd34dcdc16a5db13e4fabcfbb6",
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "cobblestone_floor_08_Rough.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/cobblestone_floor_08/cobblestone_floor_08_rough_1k.jpg",
+    "sha256": "f92bcaf897cd98bc3cf11e6409b3e42145e7d0f659eaaad8807dfb0c5d16afc6",
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "brick_wall_001_Diffuse.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_001/brick_wall_001_diffuse_1k.jpg",
+    "sha256": "6a1233ec0186703de830354d89f122991e61e67fb67e0846c7eaf6c5aefea902",
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "brick_wall_001_nor_gl.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_001/brick_wall_001_nor_gl_1k.jpg",
+    "sha256": "8afbe3919308b168a6b7235fe7b930f670cfffa1a34de39ee790d55c9d7bda09",
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "brick_wall_001_Rough.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_001/brick_wall_001_rough_1k.jpg",
+    "sha256": "a23342b02e6c5af106aaece16130aa9153a801cb1a84d5f3e0d06ce248677f38",
+    "license": "CC0",
+    "licenseSource": "https://polyhaven.com/license"
+  },
+  {
+    "path": "standing-one-hand-hip.glb",
+    "source": "https://www.innerscene.com/api/library/one-hand-on-hip-3d-person-standing-7d13068a/download",
+    "sha256": "273ab5bf4a1175fc243c6a9d4dc13812b69e0885ee85f51d572fb731fc2b1597",
+    "license": "CC0",
+    "licenseSource": "https://www.innerscene.com/tools/library/3d-parts/one-hand-on-hip-3d-person-standing-7d13068a"
+  }
+]

@@ -9,13 +9,13 @@ Stand: 19.10.2026. Die Website liegt vollständig in `dist/`. Sie ist eine öffe
 
 ## Öffnen
 
-`dist/index.html` im Browser öffnen. Die [24-Sekunden-Systemdemo](dist/vision.html) zeigt den beabsichtigten Ablauf als eigenständigen Konzeptfilm: Anflug, Beobachtung einer Person und eines Hindernisses, Austausch im Schwarm und eine begründete Lagefrage. Die zweite Szene [Nachtlicht](dist/nachtlicht.html) zeigt in 30 Sekunden einen fiktiven Hinweis am Fenster, einen offenen Geräuschbefund, die anfliegende Drohne mit grünem Lichtpunkt am Boden und die menschliche Klärung. Es werden keine externen Skripte, Schriften, Kameras, Konten, Analysewerkzeuge oder APIs verwendet. Die externen Links im Forschungsarchiv öffnen erst auf Klick.
+`dist/index.html` im Browser öffnen. Die ältere [24-Sekunden-Konzeptskizze](dist/vision.html) zeigt den beabsichtigten Ablauf mit grafischen Markierungen. Der neue Film [Nachtlicht](dist/nachtlicht.html) zeigt in 20 Sekunden eine modellierte 3D-Drohne mit bewegten Rotoren, schwenkbarem Licht und räumlicher Kamera in einer3D-Straße. Die bekleidete 3D-Figur erhält eine kleine Kopfbewegung. [Herstellung, Quellen und Grenzen](NIGHTLIGHT_3D.md) sind dokumentiert. Der öffentliche Player verwendet keine externen Skripte, Schriften, Kameras, Konten, Analysewerkzeuge oder APIs. Die externen Forschungslinks öffnen erst auf Klick.
 
 Für die Browserprüfungen: `npm install`, `npx playwright install chromium` und `npm test`. Bei einem bereits installierten Chromium kann `CHROME_PATH` auf dessen ausführbare Datei zeigen. Die statische Seite selbst benötigt weder npm noch einen Server.
 
 ## Vorschau – am Desktop und unterwegs
 
-[**▶ Systemdemo · 24 Sekunden**](https://juri-halveth.github.io/c-drohne-red-room/vision.html) · [**Nachtlicht · 30 Sekunden**](https://juri-halveth.github.io/c-drohne-red-room/nachtlicht.html) · [**Falllabor ausprobieren →**](https://juri-halveth.github.io/c-drohne-red-room/#falllabor)
+[**▶ Nachtlicht · neue 3D-Animation · 20 Sekunden**](https://juri-halveth.github.io/c-drohne-red-room/nachtlicht.html) · [Ältere Konzeptskizze · 24 Sekunden](https://juri-halveth.github.io/c-drohne-red-room/vision.html) · [**Falllabor ausprobieren →**](https://juri-halveth.github.io/c-drohne-red-room/#falllabor)
 
 **Der Eingang am Desktop.** Die Filme, der ausführbare Fall und die Textfassung sind direkt erreichbar. Die folgende Aufnahme zeigt die veröffentlichte Seite bei 1440 Pixeln Breite.
 
@@ -57,7 +57,7 @@ Aufnahmen vom 27.10.2026 aus der veröffentlichten Seitenfassung `63d49bb`. Die 
 
 `dist/assets/observer-valley-20261019.png` ist eine ebenfalls eigens generierte synthetische Landschaft. Der Film `dist/assets/c-drohne-observer-film.mp4` wurde mit `dist/vision-film.js` als 24-Sekunden-Animation dieser Szene gerendert. Er ist eine Visualisierung der Produktidee, keine Aufnahme eines Flugversuchs. Die ausführbare Arbeitsprobe besteht weiterhin aus den lokal prüfbaren Browserfällen.
 
-`dist/assets/night-street-20261019.png` ist eine eigens generierte synthetische Nachtstraße. `dist/night-film.js` rendert daraus `dist/assets/c-drohne-nightlight-film.mp4` mit Suchlicht, grüner Fokuslinie, fiktiver Person und ankommenden Einsatzkräften. Das Hintergrundbild wurde mit dem eingebauten Bildgenerator erstellt; Prompt: „Original cinematic 16:9 nighttime European small-town side street after rain, cracked shop window and reflective glass fragments on the left, dark shrub on the right, open wet pavement center, blue-black ambient light, warm street lamps, no people, police, vehicles, drones, lasers, text, logos, weapons or gore.“ Die Figuren und Lichtspuren sind Canvas-Animationen.
+Die aktive Nachtlicht-Fassung `dist/assets/c-drohne-nightlight-3d-20261027.mp4` stammt aus 600 einzeln gerenderten 3D-Frames. [Quellen, CC0-Modelle und Reproduktion](NIGHTLIGHT_3D.md) sowie der [Medienbeleg](NIGHTLIGHT_3D_RENDER.json) stehen separat bereit. Die abgelöste Datei `dist/night-film.js` und ihre älteren Bilder/MP4 bleiben historische Quellen; die Nachtlicht-Seite lädt diesen Canvas-Renderer auch bei einem Medienfehler nicht mehr.
 
 ## Quellen und Status
 
