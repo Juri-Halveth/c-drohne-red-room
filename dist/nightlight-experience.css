@@ -1,0 +1,110 @@
+.night-experience{
+  --bg:#07151e;--panel:#0d2632;--line:#3e7180;--text:#f4fbfc;--muted:#b5ced4;--cyan:#73e5e8;--amber:#ffbf7c;--rose:#ff7890;
+  background:radial-gradient(ellipse at 62% -8%,#1a4859 0,#091b27 42%,#07151e 78%);
+  color:var(--text);
+}
+.night-experience *, .night-experience *::before, .night-experience *::after{box-sizing:border-box}
+.night-experience .bar{background:#07151edb;border-bottom:1px solid #80cad136}
+.night-experience .bar .brand span{color:var(--rose)}
+.night-experience main{padding-bottom:30px}
+.night-experience .hero{width:min(1620px,92vw);margin:0 auto;padding:70px 0 50px;display:grid;grid-template-columns:1.05fr .95fr;align-items:end;gap:7vw}
+.night-experience .hero h1{font-size:clamp(58px,6.5vw,116px);line-height:.91;letter-spacing:-.075em;margin:15px 0 0}
+.night-experience .hero h1 em,.night-experience .explain h2 em{font-style:normal;color:var(--cyan)}
+.night-experience .hero>p{font-size:clamp(18px,1.55vw,24px);line-height:1.52;max-width:610px;color:#d6e7e9;margin:0 0 5px}
+.night-experience .hero strong{color:#fff}
+.night-experience .eyebrow{color:var(--cyan)}
+.night-experience .experience{width:min(1720px,96vw);margin:0 auto;display:grid;grid-template-columns:minmax(0,1.8fr) minmax(330px,.82fr);border:1px solid #78b4c363;background:#0c202a;box-shadow:0 40px 110px #0009,0 0 100px #56d5da1c}
+.night-experience .scene-stage{position:relative;min-width:0;min-height:650px;overflow:hidden;background:#0a1e2a}
+.night-experience #scene-canvas{display:block;width:100%;height:100%}
+.night-experience #scene-canvas[hidden],.night-experience #scene-fallback[hidden],.night-experience .scene-label[hidden]{display:none}
+.night-experience .scene-veil{position:absolute;inset:0;background:linear-gradient(180deg,#07151e8c 0,transparent 20%,transparent 68%,#07151ebf 100%);pointer-events:none}
+.night-experience .view-reticle{display:none;position:absolute;inset:0;z-index:1;pointer-events:none}
+.night-experience .scene-stage[data-view="blick"] .view-reticle{display:block}
+.night-experience .view-reticle span{position:absolute;left:28px;top:61px;font:700 11px Consolas,monospace;color:#ddfbfc;letter-spacing:.12em}
+.night-experience .view-reticle i{position:absolute;left:50%;top:50%;width:110px;height:110px;transform:translate(-50%,-50%);border:1px solid #b4f3f9ad;border-radius:50%;box-shadow:0 0 35px #5ce1e238,inset 0 0 35px #5ce1e222}
+.night-experience .view-reticle i::before,.night-experience .view-reticle i::after{content:"";position:absolute;background:#d2ffffa8}
+.night-experience .view-reticle i::before{height:1px;width:34px;left:38px;top:54px}
+.night-experience .view-reticle i::after{width:1px;height:34px;left:54px;top:38px}
+.night-experience .scene-top,.night-experience .scene-bottom{position:absolute;left:28px;right:28px;z-index:3;display:flex;justify-content:space-between;gap:14px;align-items:center;font:700 12px Consolas,monospace;letter-spacing:.11em}
+.night-experience .scene-top{top:25px;color:#d6fbfc}
+.night-experience .scene-top>span:last-child{color:#b9d4d9}
+.night-experience .scene-kicker i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 13px var(--cyan);margin-right:7px}
+.night-experience .scene-bottom{bottom:24px;border-top:1px solid #c7f7f966;padding-top:16px;color:#b9e2e5}
+.night-experience #view-status{color:#09222a;background:var(--cyan);padding:8px 11px;letter-spacing:.1em}
+.night-experience .scene-label{position:absolute;z-index:2;display:flex;flex-direction:column;gap:3px;min-width:88px;max-width:170px;padding:8px 10px;transform:translate(-50%,-50%);background:#081a25e8;border:1px solid #8aeaf09e;box-shadow:0 3px 18px #0008;color:#e6fbfc;font:700 12px Consolas,monospace;line-height:1.15;pointer-events:none;white-space:nowrap}
+.night-experience .scene-label small{font-size:10px;font-weight:400;color:#b6d7dc;white-space:normal}
+.night-experience .scene-label.focused{background:#dcfaff;color:#0a2933;border-color:#fff;box-shadow:0 0 26px #72e4e6bb}
+.night-experience .scene-label.focused small{color:#31565d}
+.night-experience .scene-label[data-anchor="question"]{border-color:#ffc588;color:#ffd19f;font-size:22px;padding:4px 10px}
+.night-experience .scene-label[data-anchor="reportB"]{border-color:#ffc588}
+.night-experience .scene-label[data-anchor="reportC"]{border-color:#aeb6ec}
+.night-experience .scene-label[data-anchor="review"]{border-color:#ff8aa4}
+.night-experience .scene-fallback{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 54px,#64c9d00d 54px 55px),repeating-linear-gradient(90deg,transparent 0 54px,#64c9d00d 54px 55px),radial-gradient(circle at 52% 49%,#235262 0,#0d2a38 50%,#091b27 100%);overflow:hidden}
+.night-experience .fallback-road{position:absolute;left:38%;top:-8%;width:24%;height:116%;transform:rotate(18deg);border-left:5px solid #84e0e8;border-right:5px solid #84e0e8;background:linear-gradient(90deg,#1f4654,#244a56 50%,#1f4654);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:22px;font:700 16px Consolas,monospace;letter-spacing:.17em;color:#baf2f3}
+.night-experience .fallback-road i{display:grid;place-items:center;width:90px;height:90px;border:2px solid #ffbd78;border-radius:50%;background:#ffbd7833;color:#ffce9c;font-size:50px;font-style:normal}
+.night-experience .fallback-node{position:absolute;border:1px solid #8aeaf0;background:#0a2836;padding:13px 15px;font:700 13px Consolas,monospace;color:#e8ffff}
+.night-experience .node-a{left:7%;top:38%}.night-experience .node-b{right:5%;top:28%;border-color:#ffbb78}.night-experience .node-c{right:7%;bottom:24%;border-color:#aeb6ec}
+.night-experience .fallback-note{position:absolute;left:28px;bottom:80px;color:#c7e8e9;font:700 11px Consolas,monospace;letter-spacing:.08em}
+.night-experience .view-controls{padding:29px 28px 26px;border-left:1px solid #8ac4cf50;background:linear-gradient(160deg,#102f3d,#0b202a 58%,#081a23)}
+.night-experience .controls-label{font:700 12px Consolas,monospace;letter-spacing:.13em;color:#82dfe5;margin:2px 0 18px}
+.night-experience .view-buttons{display:grid;gap:8px}
+.night-experience .view-buttons button{appearance:none;width:100%;display:flex;align-items:center;text-align:left;gap:17px;padding:16px 15px;border:1px solid #6b9ca754;background:#14323e;color:#f0fbfb;cursor:pointer;font:700 15px Segoe UI,Arial,sans-serif;transition:background .2s,border-color .2s,transform .2s}
+.night-experience .view-buttons button:hover{background:#1e4552;transform:translateX(-3px)}
+.night-experience .view-buttons button.selected{border-color:var(--cyan);background:#d7f9f8;color:#0b2833}
+.night-experience .view-buttons button>b{font:700 24px Consolas,monospace;color:var(--cyan)}
+.night-experience .view-buttons button.selected>b{color:#0c6472}
+.night-experience .view-buttons button span{display:block;line-height:1.15}
+.night-experience .view-buttons button small{display:block;margin-top:5px;font-size:11px;font-weight:500;color:#b5d5d9}
+.night-experience .view-buttons button.selected small{color:#426c72}
+.night-experience .view-story{margin-top:27px;border-top:1px solid #8ac4cf56;padding-top:23px}
+.night-experience #view-counter{font:700 12px Consolas,monospace;letter-spacing:.15em;color:var(--amber)}
+.night-experience .view-story h2{font-size:clamp(26px,2vw,36px);line-height:1.08;letter-spacing:-.04em;margin:10px 0 14px}
+.night-experience .view-story p{color:#c8dee0;font-size:16px;line-height:1.54;min-height:115px;margin:0}
+.night-experience .story-nav{display:flex;justify-content:flex-end;gap:8px;margin-top:19px}
+.night-experience .story-nav button{background:#193b48;border:1px solid #78b4bd8c;color:#e5f7f8;font:700 14px Segoe UI,Arial,sans-serif;padding:10px 12px;cursor:pointer}
+.night-experience .story-nav button:hover{background:#2b5967}
+.night-experience button:focus-visible,.night-experience a:focus-visible{outline:3px solid #fff39b;outline-offset:3px}
+.night-experience .explain{width:min(1530px,92vw);margin:120px auto 50px;display:grid;grid-template-columns:.9fr 1.1fr;gap:9vw}
+.night-experience .explain h2{font-size:clamp(45px,4.7vw,78px);line-height:.98;letter-spacing:-.06em;margin:12px 0}
+.night-experience .explain-items article{border-top:1px solid #77aeb978;padding:20px 0}
+.night-experience .explain-items b{font:700 12px Consolas,monospace;color:var(--cyan);letter-spacing:.1em}
+.night-experience .explain-items p{font-size:18px;line-height:1.55;color:#d1e2e4;margin:10px 0 0}
+.night-experience .scope,.night-experience .no-script{width:min(1530px,92vw);margin:35px auto;color:#c4d9dd;font-size:14px;line-height:1.65;padding:19px 22px;border-left:3px solid #75c6cf;background:#12303a}
+.night-experience .scope a{color:#bff5f5}
+.night-experience .actions{width:min(1530px,92vw);margin:30px auto 95px}
+.night-experience .actions a{background:var(--cyan);color:#0a2631}.night-experience .actions a+a{background:#143540;color:#c9f5f4}
+.night-experience footer{border-color:#91d1d940}
+@media(max-width:1170px){
+  .night-experience .experience{grid-template-columns:1fr}
+  .night-experience .scene-stage{min-height:600px}
+  .night-experience .view-controls{border-left:0;border-top:1px solid #8ac4cf50;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .night-experience .controls-label{grid-column:1/-1;margin-bottom:-14px}
+  .night-experience .view-story{margin-top:0;border-top:0;padding-top:0}
+}
+@media(max-width:750px){
+  .night-experience .hero{grid-template-columns:1fr;padding:45px 0 30px;gap:18px}
+  .night-experience .hero h1{font-size:clamp(48px,11vw,76px)}
+  .night-experience .hero>p{font-size:17px}
+  .night-experience .experience{width:100%;border-left:0;border-right:0}
+  .night-experience .scene-stage{min-height:0;height:60vh;max-height:610px}
+  .night-experience .scene-top,.night-experience .scene-bottom{left:13px;right:13px;font-size:9px}
+  .night-experience .scene-top{top:13px}.night-experience .scene-bottom{bottom:12px}
+  .night-experience .view-reticle span{left:13px;top:45px;font-size:9px}
+  .night-experience .view-reticle i{width:72px;height:72px}
+  .night-experience .view-reticle i::before{width:22px;left:25px;top:35px}
+  .night-experience .view-reticle i::after{height:22px;left:35px;top:25px}
+  .night-experience .scene-top>span:last-child{max-width:100px;text-align:right}
+  .night-experience .scene-label{font-size:10px;max-width:110px;padding:5px}
+  .night-experience .scene-label small{font-size:8px}
+  .night-experience .view-controls{display:block;padding:23px 16px}
+  .night-experience .controls-label{margin-bottom:14px}
+  .night-experience .view-buttons{grid-template-columns:1fr 1fr}
+  .night-experience .view-buttons button{gap:9px;padding:11px 8px;font-size:12px;min-height:66px}
+  .night-experience .view-buttons button>b{font-size:19px}
+  .night-experience .view-buttons button small{font-size:10px}
+  .night-experience .view-story{border-top:1px solid #8ac4cf56;padding-top:22px;margin-top:25px}
+  .night-experience .view-story p{min-height:0}
+  .night-experience .explain{grid-template-columns:1fr;gap:8px;margin-top:72px}
+  .night-experience .explain-items p{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){.night-experience .view-buttons button{transition:none}}

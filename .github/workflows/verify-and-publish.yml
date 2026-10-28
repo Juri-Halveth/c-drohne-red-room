@@ -34,6 +34,10 @@ jobs:
           "$chrome_path" --version
           echo "CHROME_PATH=$chrome_path" >> "$GITHUB_ENV"
       - run: npm test
+      - name: Check that the browser bundle matches its source
+        run: |
+          npm run build:nightlight
+          git diff --exit-code -- dist/nightlight-experience.js
       - name: Check the render export contract
         run: python3 -m unittest discover -s tools/nightlight3d -p "test_*.py"
       - run: npm run qa:offline

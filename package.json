@@ -4,11 +4,14 @@
   "private": true,
   "description": "Static C-DROHNE research presentation and synthetic test suite",
   "scripts": {
-    "test": "node --test critical-questions.test.mjs measurement-test.mjs dist/privacy-state.test.mjs nightlight-player.test.cjs",
+    "build:nightlight": "esbuild src/nightlight-experience.js --bundle --minify --format=iife --target=es2020 --outfile=dist/nightlight-experience.js --legal-comments=inline",
+    "test": "node --test critical-questions.test.mjs measurement-test.mjs dist/privacy-state.test.mjs nightlight-corridor.test.mjs nightlight-experience.test.cjs",
     "verify:manifest": "node manifest.cjs verify",
     "qa:offline": "node offline-qa.cjs"
   },
   "devDependencies": {
-    "playwright": "1.62.1"
+    "esbuild": "0.28.2",
+    "playwright": "1.62.1",
+    "three": "0.186.1"
   }
 }
