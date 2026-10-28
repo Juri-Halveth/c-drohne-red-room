@@ -3,27 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080b13">
-  <meta name="description" content="Nachtlicht: eine echte 3D-Animation mit modellierter Beobachterdrohne, bewegter Kamera und räumlicher Beleuchtung.">
-  <title>C-DROHNE · Nachtlicht · Juri / HALVETH</title>
+  <meta name="theme-color" content="#0a1e2a">
+  <meta name="description" content="C-DROHNE: ein interaktiver 3D-Perspektivwechsel zeigt, wie ein möglicher Vorfall, kopierte Meldungen und eine menschliche Prüfung auseinanderzuhalten sind.">
+  <title>C-DROHNE · Vier Perspektiven · Juri / HALVETH</title>
   <link rel="stylesheet" href="vision.css">
-  <link rel="stylesheet" href="nightlight-3d.css?v=20261027">
-  <script src="nightlight-3d.js?v=20261027" defer></script>
+  <link rel="stylesheet" href="nightlight-experience.css?v=20261028">
+  <script src="nightlight-experience.js?v=20261028" defer></script>
 </head>
-<body class="night-3d">
-  <a class="skip" href="#film">Zum Film springen</a>
+<body class="night-experience">
+  <a class="skip" href="#perspektiven">Zu den Perspektiven springen</a>
   <header class="bar"><a class="brand" href="index.html#top"><span>◇</span> HALVETH / C-DROHNE</a><a class="back" href="index.html">Zum Projekt ↗</a></header>
   <main>
-    <div class="intro"><div><p class="eyebrow">C-DROHNE / 3D-KONZEPTANIMATION</p><h1>Nacht<em>licht.</em></h1></div><p>Die Drohne bewegt sich durch eine räumliche Szene.<br>Kamera, Rotoren und Licht ändern sich mit ihr.</p></div>
-    <section class="player" id="film" aria-label="C-DROHNE Nachtlicht Konzeptfilm">
-      <video id="night-video" src="assets/c-drohne-nightlight-3d-20261027.mp4" poster="assets/nightlight-3d-poster-20261027.png" width="1920" height="1080" controls muted playsinline preload="metadata" aria-label="20 Sekunden gerenderte 3D-Animation: modellierte Drohne mit rotierenden Propellern und schwenkbarem Bodenlicht in einer räumlichen Straße mit einer bekleideten Figur"></video>
-      <img id="night-fallback" src="assets/nightlight-3d-poster-20261027.png" width="1920" height="1080" alt="Einzelbild aus der 3D-Szene: modellierte Drohne über beleuchtetem Pflaster, eine bekleidete Figur im Hintergrund" hidden>
+    <header class="hero">
+      <div><p class="eyebrow">C-DROHNE / INTERAKTIVES SZENENMODELL</p><h1>Vier Blicke.<br><em>Eine offene Lage.</em></h1></div>
+      <p>Nach einem Unwetter melden drei Stellen einen möglicherweise versperrten Hilfsweg. Wechsle die Perspektive: <strong>Ort, Drohnenblick, Herkunft und menschliche Prüfung.</strong> Die Szene zeigt, warum drei Meldungen keine drei aktuellen Beobachtungen sein müssen.</p>
+    </header>
+
+    <section class="experience" id="perspektiven" aria-label="Vier Perspektiven auf einen synthetischen Hilfswegfall">
+      <div class="scene-stage" id="scene-stage" data-view="ort">
+        <canvas id="scene-canvas" aria-hidden="true"></canvas>
+        <div class="scene-fallback" id="scene-fallback" role="img" aria-label="Schematischer Hilfsweg mit einer offenen Fragestelle, Meldung A, Weitergabe B, altem Hinweis C und menschlicher Prüfstelle">
+          <div class="fallback-road"><span>HILFSWEG</span><i>?</i></div>
+          <span class="fallback-node node-a">A · Ursprung</span><span class="fallback-node node-b">B · Kopie von A</span><span class="fallback-node node-c">C · Vortag</span>
+          <span class="fallback-note">Synthetischer Lageplan · aktuelle Lage offen</span>
+        </div>
+        <div class="scene-veil" aria-hidden="true"></div>
+        <div class="view-reticle" aria-hidden="true"><span>MODELLIERTER KAMERA-AUSSCHNITT</span><i></i></div>
+        <div class="scene-top"><span class="scene-kicker"><i></i> LIVE 3D · LOKAL IM BROWSER</span><span>MODELL / KEINE SENSORDATEN</span></div>
+        <span class="scene-label" data-anchor="drone" aria-hidden="true">C-DROHNE <small>modellierte Ansicht</small></span>
+        <span class="scene-label" data-anchor="question" aria-hidden="true">? <small>mögliche Stelle</small></span>
+        <span class="scene-label" data-anchor="reportA" aria-hidden="true">A <small>Ursprung · 10:02</small></span>
+        <span class="scene-label" data-anchor="reportB" aria-hidden="true">B <small>Weitergabe · 10:04</small></span>
+        <span class="scene-label" data-anchor="reportC" aria-hidden="true">C <small>„frei“ · Vortag</small></span>
+        <span class="scene-label" data-anchor="review" aria-hidden="true">MENSCH <small>neue Prüfung nötig</small></span>
+        <div class="scene-bottom"><span id="view-status">LAGE OFFEN</span><span>↳ Perspektive wechseln</span></div>
+      </div>
+
+      <div class="view-controls">
+        <p class="controls-label">EIN FALL · VIER KAMERAS</p>
+        <div class="view-buttons" role="group" aria-label="Perspektive wählen">
+          <button type="button" data-view="ort" aria-pressed="true"><b>01</b><span>Am Hilfsweg<small>Was ist die Lage?</small></span></button>
+          <button type="button" data-view="blick" aria-pressed="false"><b>02</b><span>Blick der Drohne<small>Ein Ausschnitt bleibt begrenzt</small></span></button>
+          <button type="button" data-view="herkunft" aria-pressed="false"><b>03</b><span>Herkunft der Meldungen<small>A → B ist eine Kopie</small></span></button>
+          <button type="button" data-view="entscheidung" aria-pressed="false"><b>04</b><span>Menschliche Prüfung<small>Aktuellen Stand neu prüfen</small></span></button>
+        </div>
+        <div class="view-story" aria-live="polite">
+          <span id="view-counter">01 / 04</span>
+          <h2 id="view-heading">Eine Meldung ist noch kein Lagebild.</h2>
+          <p id="view-description">Nach einem Unwetter heißt es, der Hilfsweg sei möglicherweise versperrt. Die markierte Stelle ist eine offene Frage in dieser erfundenen Szene – kein bestätigtes Hindernis.</p>
+          <div class="story-nav"><button id="view-prev" type="button" aria-label="Vorherige Perspektive">←</button><button id="view-next" type="button" aria-label="Nächste Perspektive">Nächste Perspektive →</button></div>
+        </div>
+      </div>
     </section>
-    <p id="night-status" hidden>Der Film konnte nicht geladen werden. Das gerenderte Szenenbild bleibt sichtbar.</p>
-    <div class="film-meta"><span>20 Sekunden · 3D-Animation · 1920 × 1080 / 30 fps · ohne Ton</span><a href="https://github.com/Juri-Halveth/c-drohne-red-room/blob/main/NIGHTLIGHT_3D.md" target="_blank" rel="noopener noreferrer">Szenenaufbau und Quellen ↗</a></div>
-    <div class="below"><div><p class="eyebrow">WAS SICH HIER BEWEGT</p><h2>Ein räumlicher<br><em>Blickwechsel.</em></h2></div><div class="steps"><p><b>01 / DROHNE</b> Gehäuse, Rotoren, Schutzringe, Landebeine und Kameragelenk sind modellierte Körper. Die Drohne ändert Position und Ausrichtung im Raum.</p><p><b>02 / LICHT UND KAMERA</b> Der Scheinwerfer schwenkt mit dem Gelenk. Beleuchtung, Verdeckung und Perspektive werden aus der 3D-Szene berechnet.</p><p><b>03 / FIGUR UND UMGEBUNG</b> Straße, Fassaden und eine bekleidete Figur besitzen räumliche Geometrie. Die Figur bekommt eine kleine modellierte Kopfbewegung.</p><p class="scope">Gerenderte Konzeptanimation einer erfundenen Szene. Flugbahn und Kopfbewegung sind vorgegeben. Reale Flugphysik, Sensorerkennung und selbstständige Entscheidungen werden dadurch nicht nachgewiesen. Die ausführbare Software-Arbeitsprobe prüft getrennt davon synthetische Meldungen im Browser.</p></div></div>
-    <div class="actions"><a href="index.html#falllabor">Software-Arbeitsprobe öffnen ↗</a><a href="vision.html">Ältere Konzeptskizze ansehen ↗</a></div>
+
+    <noscript><div class="no-script"><h2>Der Fall ohne 3D</h2><p>A meldet um 10:02 einen möglicherweise versperrten Weg. B leitet A um 10:04 weiter und ist keine neue Beobachtung. C beschreibt den Vortag. Die aktuelle Lage bleibt offen, bis eine zuständige Person frische unabhängige Informationen prüft.</p></div></noscript>
+
+    <section class="explain" aria-labelledby="explain-title">
+      <div><p class="eyebrow">WAS WIRKLICH LÄUFT</p><h2 id="explain-title">Perspektive ist eine<br><em>Prüffrage.</em></h2></div>
+      <div class="explain-items">
+        <article><b>01 / EIN RAUM</b><p>Die vier Ansichten zeigen denselben modellierten Hilfsweg. Ortsmarken behalten ihre Position und Identität, auch wenn die Kamera wechselt.</p></article>
+        <article><b>02 / GETRENNTE QUELLEN</b><p>Die Linie von A nach B ist als Weitergabe eingezeichnet. C hat einen anderen deklarierten Ursprung, aber einen älteren Zeitbezug. Keine dieser Angaben beweist einen aktuellen Straßenzustand.</p></article>
+        <article><b>03 / MENSCHLICHE ENTSCHEIDUNG</b><p>Die Anzeige endet bei „Lage offen“. Für eine Handlung braucht es eine frische Prüfung, Zuständigkeit und eine nachvollziehbare Entscheidung.</p></article>
+      </div>
+    </section>
+    <p class="scope">Dies ist ein synthetisches 3D-Szenenmodell mit festgelegten Orten, Kameras und Textfällen. Es verarbeitet keine Kamera-, Mikrofon- oder Standortdaten von Besuchern und steuert keine Drohne. Die ausführbare <a href="index.html#falllabor">Software-Arbeitsprobe</a> prüft getrennt davon feste Textmeldungen im Browser. Die räumliche Darstellung und ihr Perspektivtest belegen keine reale Sensorleistung, Flugfreigabe oder Feldwirkung.</p>
+    <div class="actions"><a href="index.html#falllabor">Falllabor selbst prüfen ↗</a><a href="https://github.com/Juri-Halveth/c-drohne-red-room" target="_blank" rel="noopener noreferrer">Quellcode und Testfälle ↗</a></div>
   </main>
-  <footer>Juri Janovski / HALVETH · C-DROHNE Nachtlicht · Konzeptvisualisierung 2026</footer>
+  <footer>Juri Janovski / HALVETH · C-DROHNE · synthetische Forschungsszene 2026 · <a href="third-party.html">Drittsoftware</a></footer>
 </body>
 </html>

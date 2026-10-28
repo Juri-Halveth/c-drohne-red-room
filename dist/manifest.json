@@ -1,6 +1,6 @@
 {
   "schema": "C_DROHNE_STATIC_PACKAGE_V1",
-  "generatedAt": "2026-10-27T12:10:57.103Z",
+  "generatedAt": "2026-10-28T22:58:05.812Z",
   "scope": "Bytes of this local static package only; no authorship, deployment or field-effect claim",
   "files": [
     {
@@ -17,11 +17,6 @@
       "path": "assets/c-drohne-film-poster.png",
       "bytes": 870536,
       "sha256": "4b4d6d4a4c00c03f0c97cdd4bfe9e3578e16121923d5940cbabde7907743e2fb"
-    },
-    {
-      "path": "assets/c-drohne-nightlight-3d-20261027.mp4",
-      "bytes": 5057128,
-      "sha256": "7610f966227be288242f8d2a733b468857f8bc20e8d72953e8305e1f55a599da"
     },
     {
       "path": "assets/c-drohne-nightlight-film.mp4",
@@ -42,11 +37,6 @@
       "path": "assets/night-street-20261019.png",
       "bytes": 2622139,
       "sha256": "c74aa1636b42b8376746d1d88f6a95ec7483616b63a2ce52f336c73011c574ae"
-    },
-    {
-      "path": "assets/nightlight-3d-poster-20261027.png",
-      "bytes": 2265247,
-      "sha256": "101c0c70d01a1eb4222dadeaaf1f02a9de24c14ca0e187117c98bac8a4e5eb69"
     },
     {
       "path": "assets/observer-valley-20261019.png",
@@ -80,8 +70,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 59118,
-      "sha256": "a0ab66fc21d5a3e3209e5174f275b38f33ee580a28ac0a93a001ecfcf963210b"
+      "bytes": 59157,
+      "sha256": "a5d350985df72be29569414afa0b385afee9931148e4aa30cc7f0432ae1a5c75"
     },
     {
       "path": "leseraum.html",
@@ -105,8 +95,8 @@
     },
     {
       "path": "nachtlicht.html",
-      "bytes": 3401,
-      "sha256": "0fbccb2b8a4891777fcd27b3ab7ed5d812d4faf8a85bfa8ade1849a8991fcf2b"
+      "bytes": 6945,
+      "sha256": "4771d873fe7d6d2576c945a31aa6657922631a593846a6f436a19b47996a289c"
     },
     {
       "path": "night-film.js",
@@ -114,14 +104,14 @@
       "sha256": "f5add05f3007425f3409f8620444db5d6055930f84d04f2453bc24ca31bf586b"
     },
     {
-      "path": "nightlight-3d.css",
-      "bytes": 1192,
-      "sha256": "af1ff408b1c18db0f12a0b8945d49ba716ac39ee74efb1259fc8b1760ae59f0e"
+      "path": "nightlight-experience.css",
+      "bytes": 11199,
+      "sha256": "fef846ee093851fd41c4804d4b57c234279543349881bb03fb448d704b80f373"
     },
     {
-      "path": "nightlight-3d.js",
-      "bytes": 794,
-      "sha256": "911689b084b7618b8f6f6f075e2ded1ab9a16caa3d2abeb023007d27f2a1f105"
+      "path": "nightlight-experience.js",
+      "bytes": 556608,
+      "sha256": "ce590f5ae137b1e71e00c13e51b1aa914b5f4a08227585adb038d0f2392d3269"
     },
     {
       "path": "privacy-demo.html",
@@ -159,6 +149,11 @@
       "sha256": "b983c72a9a57b7187fca1ee900367518087db7415b84584dba33c829aeb7749c"
     },
     {
+      "path": "third-party.html",
+      "bytes": 1926,
+      "sha256": "46f56f28c050511be163821048a6f5dbc38ea2217f1ba60ce05111a80649358b"
+    },
+    {
       "path": "vision-film.js",
       "bytes": 12618,
       "sha256": "a15ebb490e5d6ad75914d42b45d553b4f2a08d61a5aa5c20b2bd6df3bf6f48e6"
@@ -170,8 +165,8 @@
     },
     {
       "path": "vision.html",
-      "bytes": 2961,
-      "sha256": "0b5558abd347fb78f477df57bdd3156eabea9f7cfd8ce7d580d627d8f0a1eae7"
+      "bytes": 2951,
+      "sha256": "2629cf9d1f8958c3af9ab0ae759b552c0e1d8094621fc32e3c48f665d18279fe"
     }
   ]
 }

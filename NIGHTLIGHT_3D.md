@@ -1,5 +1,7 @@
 # Nachtlicht: räumlicher Neuaufbau
 
+**Historischer technischer Beleg, Stand 27.10.2026.** Der hier beschriebene 20-Sekunden-Clip wurde am 28.10.2026 nach gestalterischer Prüfung aus der aktuellen Website entfernt. Die aktive Fassung ist der [interaktive Perspektivkorridor](NIGHTLIGHT_EXPERIENCE.md). Die folgenden Angaben beschreiben den damaligen Renderstand; das Medienreceipt bleibt als historischer Bytebeleg erhalten.
+
 Die Nachtlicht-Seite verwendet eine neue 20-Sekunden-Animation aus einer modellierten 3D-Szene. Die bisherige Canvas-Fassung mit gezeichneten Figuren, Drohnensymbol und Dreieckslichtkegel ist nicht mehr der aktive Player oder dessen Fehlerfallback. Historische Dateien bleiben als ältere Quellen erhalten.
 
 Die Drohne besitzt Gehäuse, Arme, Motoren, vier Schutzringe und Rotoren, Landebeine, Kameragelenk und Lichtquelle. Die Umgebung besteht aus 3D-Oberflächen und Körpern. Flugbahn, Kamera, Gelenk und Rotoren werden im Raum animiert. Eine bekleidete Figuren-Mesh erhält eine kleine Kopfbewegung über ein zusätzliches Bone; sie läuft und spricht nicht. Die vorbereiteten KI-Bilder wurden als Look-Referenzen betrachtet, aber nicht als Filmframes oder Hintergrund-Billboards eingebaut.

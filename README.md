@@ -1,24 +1,24 @@
 # C-Drohne – visuelles Konzept für Beobachtung und Zusammenarbeit
 
-Ein Präsentationsprototyp mit kurzen Konzeptfilmen und Forschungsdokumentation. Die Darstellung ist von einem real eingesetzten Drohnensystem zu unterscheiden.
+Ein Präsentationsprototyp mit interaktiver 3D-Szene, älterem Konzeptfilm und Forschungsdokumentation. Die Darstellung ist von einem real eingesetzten Drohnensystem zu unterscheiden.
 
 [**Projekt öffnen →**](https://juri-halveth.github.io/c-drohne-red-room/) · [Arbeitsproben](https://juri-halveth.github.io/koennen/) · [Portfolio](https://juri-halveth.github.io/)
 
-**Nachtlicht: die neue 3D-Fassung.** Modellierte Drohne, bewegte Kamera, Rotoren und Bodenlicht. [20-Sekunden-Animation öffnen →](https://juri-halveth.github.io/c-drohne-red-room/nachtlicht.html)
+**Nachtlicht: vier Perspektiven auf denselben Fall.** Eine steuerbare 3D-Szene zeigt den Hilfsweg, den begrenzten Drohnenblick, die Weitergabe A → B, den alten Hinweis C und die offene menschliche Prüfung. [Interaktiven Fall öffnen →](https://juri-halveth.github.io/c-drohne-red-room/nachtlicht.html)
 
-![Einzelbild der neuen 3D-Animation: Drohnenkörper mit Rotoren und Scheinwerfer in einer räumlichen Straße](dist/assets/nightlight-3d-poster-20261027.png)
+![Interaktiver 3D-Fall: synthetischer Hilfsweg mit Ortsmarken für die Meldungen A, B und C](previews/c-drohne-perspective-corridor-20261028.webp)
 
-Präsentationsbasis: 19.10.2026; Nachtlicht-3D-Fassung: 27.10.2026. Die Website liegt vollständig in `dist/`. Sie ist eine öffentlich einsehbare, lokal prüfbare Präsentation für ein fachliches Erstgespräch. Der Git-Forschungszweig heißt weiterhin `CHILDDROHNE`; die Seite zeigt diesen Namen klein als Herkunftsspur. Eine Kontaktaufnahme ist damit nicht erfolgt.
+Präsentationsbasis: 19.10.2026; interaktiver Perspektivkorridor: 28.10.2026. Die Website liegt vollständig in `dist/`. Sie ist eine öffentlich einsehbare, lokal prüfbare Präsentation für ein fachliches Erstgespräch. Der Git-Forschungszweig heißt weiterhin `CHILDDROHNE`; die Seite zeigt diesen Namen klein als Herkunftsspur. Eine Kontaktaufnahme ist damit nicht erfolgt.
 
 ## Öffnen
 
-`dist/index.html` im Browser öffnen. Die ältere [24-Sekunden-Konzeptskizze](dist/vision.html) zeigt den beabsichtigten Ablauf mit grafischen Markierungen. Der neue Film [Nachtlicht](dist/nachtlicht.html) zeigt in 20 Sekunden eine modellierte 3D-Drohne mit bewegten Rotoren, schwenkbarem Licht und räumlicher Kamera in einer 3D-Straße. Die bekleidete 3D-Figur erhält eine kleine Kopfbewegung. [Herstellung, Quellen und Grenzen](NIGHTLIGHT_3D.md) sind dokumentiert. Der öffentliche Player verwendet keine externen Skripte, Schriften, Kameras, Konten, Analysewerkzeuge oder APIs. Die externen Forschungslinks öffnen erst auf Klick.
+`dist/index.html` im Browser öffnen. Die ältere [24-Sekunden-Konzeptskizze](dist/vision.html) zeigt den beabsichtigten Ablauf mit grafischen Markierungen. [Nachtlicht](dist/nachtlicht.html) ist jetzt eine steuerbare Browser-3D-Szene mit vier gebundenen Kameras und sichtbaren Quellbeziehungen. [Aufbau, Quellkoordinaten, Prüfung und Grenzen](NIGHTLIGHT_EXPERIENCE.md) sind dokumentiert. Die öffentliche Szene verwendet lokal gebündeltes Three.js, keine externen Runtime-Skripte, Schriften, Kameras, Konten, Analysewerkzeuge oder APIs. Die externen Forschungslinks öffnen erst auf Klick.
 
 Für die Browserprüfungen: `npm install`, `npx playwright install chromium` und `npm test`. Bei einem bereits installierten Chromium kann `CHROME_PATH` auf dessen ausführbare Datei zeigen. Die statische Seite selbst benötigt weder npm noch einen Server.
 
 ## Vorschau – am Desktop und unterwegs
 
-[**▶ Nachtlicht · neue 3D-Animation · 20 Sekunden**](https://juri-halveth.github.io/c-drohne-red-room/nachtlicht.html) · [Ältere Konzeptskizze · 24 Sekunden](https://juri-halveth.github.io/c-drohne-red-room/vision.html) · [**Falllabor ausprobieren →**](https://juri-halveth.github.io/c-drohne-red-room/#falllabor)
+[**Nachtlicht · 3D-Fall aus vier Blickwinkeln**](https://juri-halveth.github.io/c-drohne-red-room/nachtlicht.html) · [Ältere Konzeptskizze · 24 Sekunden](https://juri-halveth.github.io/c-drohne-red-room/vision.html) · [**Falllabor ausprobieren →**](https://juri-halveth.github.io/c-drohne-red-room/#falllabor)
 
 **Der Eingang am Desktop.** Die Filme, der ausführbare Fall und die Textfassung sind direkt erreichbar. Die folgende Aufnahme zeigt die veröffentlichte Seite bei 1440 Pixeln Breite.
 
@@ -60,7 +60,7 @@ Aufnahmen vom 27.10.2026 aus der veröffentlichten Seitenfassung `63d49bb`. Die 
 
 `dist/assets/observer-valley-20261019.png` ist eine ebenfalls eigens generierte synthetische Landschaft. Der Film `dist/assets/c-drohne-observer-film.mp4` wurde mit `dist/vision-film.js` als 24-Sekunden-Animation dieser Szene gerendert. Er ist eine Visualisierung der Produktidee, keine Aufnahme eines Flugversuchs. Die ausführbare Arbeitsprobe besteht weiterhin aus den lokal prüfbaren Browserfällen.
 
-Die aktive Nachtlicht-Fassung `dist/assets/c-drohne-nightlight-3d-20261027.mp4` stammt aus 600 einzeln gerenderten 3D-Frames. [Quellen, CC0-Modelle und Reproduktion](NIGHTLIGHT_3D.md) sowie der [Medienbeleg](NIGHTLIGHT_3D_RENDER.json) stehen separat bereit. Die abgelöste Datei `dist/night-film.js` und ihre älteren Bilder/MP4 bleiben historische Quellen; die Nachtlicht-Seite lädt diesen Canvas-Renderer auch bei einem Medienfehler nicht mehr.
+Die aktuelle Nachtlicht-Seite wird aus `src/nightlight-experience.js` und `src/nightlight-scene-data.js` gebaut; die Datei `dist/nightlight-experience.js` enthält die lokale Browserfassung. Der beanstandete 20-Sekunden-Clip und sein Poster sind aus `dist/` entfernt. [Der damalige Herstellungsbeleg](NIGHTLIGHT_3D.md) und [sein Medienreceipt](NIGHTLIGHT_3D_RENDER.json) bleiben als historische technische Dokumentation erhalten; sie sind kein aktiver Inhalt der Website. Die frühere 2D-Konzeptskizze bleibt unter `vision.html` als ältere Fassung sichtbar.
 
 ## Quellen und Status
 
