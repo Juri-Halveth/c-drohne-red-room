@@ -37,15 +37,21 @@ test('four perspective controls preserve the intended story and fit a phone', {
       assert.equal(await page.locator('#scene-stage').getAttribute('data-view'), id);
       assert.equal(await page.locator('#view-status').textContent(), expected);
     }
-    await page.locator('.view-buttons button[data-view="herkunft"]').focus();
+    await page.locator('.view-buttons button[data-view="herkunft"]').click();
+    assert.equal(await page.locator('#scene-stage').getAttribute('data-view'), 'herkunft');
     await page.keyboard.press('ArrowRight');
     assert.equal(await page.locator('#scene-stage').getAttribute('data-view'), 'entscheidung');
+    assert.equal(await page.locator('.view-buttons button[data-view="entscheidung"]').evaluate(el => el === document.activeElement), true);
+    await page.keyboard.press('ArrowLeft');
+    assert.equal(await page.locator('#scene-stage').getAttribute('data-view'), 'herkunft');
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.locator('.view-buttons button[data-view="ort"]').click();
     assert.equal(await page.locator('#view-status').textContent(), 'LAGE OFFEN');
     assert.deepEqual(errors, []);
     await page.setViewportSize({ width: 390, height: 844 });
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+    await page.locator('.view-buttons button[data-view="entscheidung"]').click();
+    assert.equal(await page.locator('[data-anchor="review"]').isVisible(), true);
     await page.close();
 
     const noScript = await browser.newPage({ javaScriptEnabled: false });
