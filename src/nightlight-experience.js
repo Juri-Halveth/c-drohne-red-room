@@ -5,6 +5,7 @@ const stage = document.getElementById('scene-stage');
 const canvas = document.getElementById('scene-canvas');
 const fallback = document.getElementById('scene-fallback');
 const buttons = [...document.querySelectorAll('.view-buttons button[data-view]')];
+const viewButtons = document.querySelector('.view-buttons');
 const title = document.getElementById('view-heading');
 const description = document.getElementById('view-description');
 const counter = document.getElementById('view-counter');
@@ -43,7 +44,7 @@ function selectView(index) {
 buttons.forEach((button, index) => button.addEventListener('click', () => selectView(index)));
 previous.addEventListener('click', () => selectView(active - 1));
 next.addEventListener('click', () => selectView(active + 1));
-stage.addEventListener('keydown', event => {
+viewButtons.addEventListener('keydown', event => {
   if (event.target instanceof HTMLButtonElement && event.key === 'ArrowRight') {
     event.preventDefault(); selectView(active + 1); buttons[active].focus();
   } else if (event.target instanceof HTMLButtonElement && event.key === 'ArrowLeft') {
@@ -215,7 +216,12 @@ function init3D() {
     const width = Math.max(1, Math.round(rect.width));
     const height = Math.max(1, Math.round(rect.height));
     renderer.setSize(width, height, false);
-    camera.aspect = width / height; camera.updateProjectionMatrix(); updateLabels(); renderer.render(scene, camera);
+    camera.aspect = width / height;
+    // Keep the desktop horizontal framing when the stage becomes portrait.
+    camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(
+      Math.tan(THREE.MathUtils.degToRad(46) / 2) / Math.min(1, camera.aspect)
+    ));
+    camera.updateProjectionMatrix(); updateLabels(); renderer.render(scene, camera);
   };
   new ResizeObserver(resize).observe(stage);
   snapCamera(VIEWS[active]); resize();

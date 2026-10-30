@@ -1,6 +1,6 @@
 {
   "schema": "C_DROHNE_STATIC_PACKAGE_V1",
-  "generatedAt": "2026-10-28T22:58:05.812Z",
+  "generatedAt": "2026-10-29T19:45:40.348Z",
   "scope": "Bytes of this local static package only; no authorship, deployment or field-effect claim",
   "files": [
     {
@@ -110,8 +110,8 @@
     },
     {
       "path": "nightlight-experience.js",
-      "bytes": 556608,
-      "sha256": "ce590f5ae137b1e71e00c13e51b1aa914b5f4a08227585adb038d0f2392d3269"
+      "bytes": 558480,
+      "sha256": "97096aed245cb71712caa006fcea647279617583f06a6d57f5a7d80f27f8afd7"
     },
     {
       "path": "privacy-demo.html",
