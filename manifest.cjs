@@ -5,7 +5,8 @@ const assert = require('node:assert/strict');
 
 const root = path.join(__dirname, 'dist');
 const manifestPath = path.join(root, 'manifest.json');
-const allowed = new Set(['.html', '.css', '.js', '.mjs', '.json', '.png', '.mp4', '.svg']);
+const allowed = new Set(['.html', '.css', '.js', '.mjs', '.json', '.png', '.mp4']);
+const approvedSvgPath = 'assets/netz-starship-hero.svg';
 const forbiddenText = [
   ['private-key-block', /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/],
   ['credential-prefix', /(?:sk-proj-|ghp_|gho_|github_pat_)[A-Za-z0-9_-]{8,}/],
@@ -21,7 +22,7 @@ function list(dir, prefix = '') {
     if (entry.isDirectory()) return list(absolute, relative);
     if (!entry.isFile()) throw new Error(`Unsupported static entry: ${relative}`);
     if (relative === 'manifest.json') return [];
-    if (!allowed.has(path.extname(entry.name).toLowerCase())) throw new Error(`Unexpected file type: ${relative}`);
+    if (!allowed.has(path.extname(entry.name).toLowerCase()) && relative !== approvedSvgPath) throw new Error(`Unexpected file type: ${relative}`);
     if (stat.size > 10 * 1024 * 1024) throw new Error(`File exceeds 10 MiB: ${relative}`);
     return [{ absolute, relative }];
   });

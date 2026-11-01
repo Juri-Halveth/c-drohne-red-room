@@ -1,6 +1,6 @@
 {
   "schema": "C_DROHNE_STATIC_PACKAGE_V1",
-  "generatedAt": "2026-11-01T22:32:11.584Z",
+  "generatedAt": "2026-11-01T22:40:13.736Z",
   "scope": "Bytes of this local static package only; no authorship, deployment or field-effect claim",
   "files": [
     {
@@ -35,8 +35,8 @@
     },
     {
       "path": "assets/netz-starship-hero.svg",
-      "bytes": 1912,
-      "sha256": "ad8805e90c332e5901dc817bc49787c9701c0d0451e3642a8c20cd0b254b62ba"
+      "bytes": 1901,
+      "sha256": "f0791762b6869fd8d1209845688296612ef50fb71f6a409ff58ca7b1ea3533f0"
     },
     {
       "path": "assets/night-street-20261019.png",
