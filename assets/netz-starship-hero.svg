@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
+<title id="title">RED ROOM · HALVETH NETZ</title><desc id="desc">Red Room im HALVETH NETZ: vier Perspektiven auf eine gebundene Szene. Navigationsgrafik zum interaktiven Starship Lab.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#080d19"/><stop offset="1" stop-color="#151327"/></linearGradient><radialGradient id="glow"><stop stop-color="#ff666e" stop-opacity=".18"/><stop offset="1" stop-color="#ff666e" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="330" rx="24" fill="url(#bg)"/><rect x="1.5" y="1.5" width="1197" height="327" rx="22.5" fill="none" stroke="#ff666e" stroke-opacity=".48" stroke-width="3"/><circle cx="870" cy="166" r="220" fill="url(#glow)"/>
+<path d="M47 65h130M47 264h130" stroke="#ff666e" stroke-width="2" stroke-opacity=".65"/><text x="48" y="54" fill="#ff666e" font-size="18" font-family="Segoe UI,Arial,sans-serif" font-weight="700" letter-spacing="5">HALVETH / NETZ</text>
+<text x="48" y="143" fill="#f3f5fa" font-size="62" font-family="Segoe UI,Arial,sans-serif" font-weight="800" letter-spacing="1">RED ROOM</text>
+<text x="49" y="188" fill="#c2c9d8" font-size="25" font-family="Segoe UI,Arial,sans-serif">Vier Perspektiven · ein gebundener Fall</text>
+<text x="49" y="238" fill="#65d7ca" font-size="17" font-family="Segoe UI,Arial,sans-serif" font-weight="600" letter-spacing="2">STARSHIP LAB · PROJEKTKARTE</text>
+<g fill="none" stroke-width="3"><path d="M860 70 1010 160 860 250 710 160Z" stroke="#ff666e"/><path d="M860 70v180M710 160h300" stroke="#65d7ca"/><circle cx="860" cy="160" r="49" stroke="#f4f5f8"/></g><g fill="#ff666e"><circle cx="860" cy="70" r="8"/><circle cx="1010" cy="160" r="8"/><circle cx="860" cy="250" r="8"/><circle cx="710" cy="160" r="8"/></g>
+</svg>
