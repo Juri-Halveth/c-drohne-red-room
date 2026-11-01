@@ -1,6 +1,6 @@
 {
   "schema": "C_DROHNE_STATIC_PACKAGE_V1",
-  "generatedAt": "2026-10-29T19:45:40.348Z",
+  "generatedAt": "2026-11-01T22:32:11.584Z",
   "scope": "Bytes of this local static package only; no authorship, deployment or field-effect claim",
   "files": [
     {
@@ -32,6 +32,11 @@
       "path": "assets/c-drohne-observer-film.mp4",
       "bytes": 3445340,
       "sha256": "1af9899390f35304996aa25c40a0e40bc76217c92c7435a598a725fb02495155"
+    },
+    {
+      "path": "assets/netz-starship-hero.svg",
+      "bytes": 1912,
+      "sha256": "ad8805e90c332e5901dc817bc49787c9701c0d0451e3642a8c20cd0b254b62ba"
     },
     {
       "path": "assets/night-street-20261019.png",
@@ -70,8 +75,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 59157,
-      "sha256": "a5d350985df72be29569414afa0b385afee9931148e4aa30cc7f0432ae1a5c75"
+      "bytes": 59426,
+      "sha256": "1f31f29b3fa6878fe63b75923402ec63b323ef06f6887f1f176adc79bc249c87"
     },
     {
       "path": "leseraum.html",
@@ -145,8 +150,8 @@
     },
     {
       "path": "style.css",
-      "bytes": 36165,
-      "sha256": "b983c72a9a57b7187fca1ee900367518087db7415b84584dba33c829aeb7749c"
+      "bytes": 36973,
+      "sha256": "2162e89834e67763729948349072d225b866f52c48452a48d4887704c74e1655"
     },
     {
       "path": "third-party.html",

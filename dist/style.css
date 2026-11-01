@@ -90,3 +90,4 @@
 }
 
 @media(max-width:1100px){.repo-tree{columns:1;padding:8px}}
+:root .netz-gateway{position:absolute;right:0;top:clamp(92px,13vh,165px);display:grid;gap:7px;width:204px;padding:8px;border:1px solid #ff768688;border-radius:10px;background:#100d17d9;text-decoration:none;box-shadow:0 8px 30px #0008}.netz-gateway img{display:block;width:100%;height:46px;object-fit:cover;border-radius:5px}.netz-gateway span{display:grid;gap:3px;color:#ffb5bd;font:700 10px Consolas,monospace;letter-spacing:.1em}.netz-gateway strong{color:#fff;font:700 12px Segoe UI,Arial,sans-serif;letter-spacing:0}.netz-gateway:hover,.netz-gateway:focus-visible{border-color:#fff}@media(max-width:720px){:root .netz-gateway{position:static;display:flex;align-items:center;width:max-content;max-width:100%;margin:8px 0 12px}.netz-gateway img{width:92px;height:34px}.netz-gateway strong{font-size:11px}}

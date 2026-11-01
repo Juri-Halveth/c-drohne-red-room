@@ -5,7 +5,7 @@ const assert = require('node:assert/strict');
 
 const root = path.join(__dirname, 'dist');
 const manifestPath = path.join(root, 'manifest.json');
-const allowed = new Set(['.html', '.css', '.js', '.mjs', '.json', '.png', '.mp4']);
+const allowed = new Set(['.html', '.css', '.js', '.mjs', '.json', '.png', '.mp4', '.svg']);
 const forbiddenText = [
   ['private-key-block', /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/],
   ['credential-prefix', /(?:sk-proj-|ghp_|gho_|github_pat_)[A-Za-z0-9_-]{8,}/],
@@ -29,7 +29,7 @@ function list(dir, prefix = '') {
 
 function receipt(file) {
   const bytes = fs.readFileSync(file.absolute);
-  if (['.html', '.css', '.js', '.mjs', '.json'].includes(path.extname(file.absolute).toLowerCase())) {
+  if (['.html', '.css', '.js', '.mjs', '.json', '.svg'].includes(path.extname(file.absolute).toLowerCase())) {
     const source = bytes.toString('utf8');
     for (const [kind, pattern] of forbiddenText) if (pattern.test(source)) throw new Error(`${kind} marker in ${file.relative}`);
   }
