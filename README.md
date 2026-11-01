@@ -1,5 +1,10 @@
 # C-Drohne – visuelles Konzept für Beobachtung und Zusammenarbeit
 
+[![Red Room im HALVETH NETZ: vier Perspektiven auf eine gebundene Szene](assets/netz-starship-hero.svg)](https://juri-halveth.github.io/universum/)
+
+**Im NETZ:** [Interaktives Starship Lab öffnen](https://juri-halveth.github.io/universum/) · Themen: Modelle & Visualisierung · Sicherheit & Belege · Welten & Interaktion. Im Katalog dieses Projekt wählen; die eigene Anwendung und ihre Quellen bleiben hier dokumentiert.
+
+
 Ein Präsentationsprototyp mit interaktiver 3D-Szene, älterem Konzeptfilm und Forschungsdokumentation. Die Darstellung ist von einem real eingesetzten Drohnensystem zu unterscheiden.
 
 [**Projekt öffnen →**](https://juri-halveth.github.io/c-drohne-red-room/) · [Arbeitsproben](https://juri-halveth.github.io/koennen/) · [Portfolio](https://juri-halveth.github.io/)
