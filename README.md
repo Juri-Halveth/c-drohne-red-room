@@ -1,15 +1,14 @@
 # C-Drohne – visuelles Konzept für Beobachtung und Zusammenarbeit
 
-[![Red Room im HALVETH NETZ: vier Perspektiven auf eine gebundene Szene](assets/netz-starship-hero.svg)](https://juri-halveth.github.io/universum/)
+Ein Präsentationsprototyp mit einer steuerbaren, synthetischen 3D-Fallszene, älterem Konzeptfilm und Forschungsdokumentation. Er zeigt keinen realen Drohneneinsatz und keine operative Steuerung.
 
-**Im NETZ:** [Interaktives Starship Lab öffnen](https://juri-halveth.github.io/universum/) · Themen: Modelle & Visualisierung · Sicherheit & Belege · Welten & Interaktion. Im Katalog dieses Projekt wählen; die eigene Anwendung und ihre Quellen bleiben hier dokumentiert.
+[**Nachtlicht-Szene direkt öffnen**](https://juri-halveth.github.io/c-drohne-red-room/nachtlicht.html) · [Projektübersicht](https://juri-halveth.github.io/c-drohne-red-room/) · [Quellcode](https://github.com/Juri-Halveth/c-drohne-red-room/tree/main)
 
+![Red Room: vier Perspektiven auf eine gebundene Szene](assets/netz-starship-hero.svg)
 
-Ein Präsentationsprototyp mit interaktiver 3D-Szene, älterem Konzeptfilm und Forschungsdokumentation. Die Darstellung ist von einem real eingesetzten Drohnensystem zu unterscheiden.
+[Starship Lab als optionaler HALVETH-Überblick](https://juri-halveth.github.io/universum/)
 
-[**Projekt öffnen →**](https://juri-halveth.github.io/c-drohne-red-room/) · [Arbeitsproben](https://juri-halveth.github.io/koennen/) · [Portfolio](https://juri-halveth.github.io/)
-
-**Nachtlicht: vier Perspektiven auf denselben Fall.** Eine steuerbare 3D-Szene zeigt den Hilfsweg, den begrenzten Drohnenblick, die Weitergabe A → B, den alten Hinweis C und die offene menschliche Prüfung. [Interaktiven Fall öffnen →](https://juri-halveth.github.io/c-drohne-red-room/nachtlicht.html)
+**Nachtlicht: vier Perspektiven auf denselben Fall.** Eine steuerbare 3D-Szene zeigt den Hilfsweg, den begrenzten Drohnenblick, die Weitergabe A → B, den alten Hinweis C und die offene menschliche Prüfung.
 
 ![Interaktiver 3D-Fall: synthetischer Hilfsweg mit Ortsmarken für die Meldungen A, B und C](previews/c-drohne-perspective-corridor-20261028.webp)
 
